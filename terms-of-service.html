@@ -1,0 +1,2409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Floorly Terms of Service — Legal terms and conditions for using the Floorly app." />
+  <title>Floorly — Terms of Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:        #E8E0D5;
+      --surface:   #F0EAE0;
+      --border:    #D4C9BB;
+      --ink:       #2B2318;
+      --ink-soft:  #6B5D4F;
+      --ink-muted: #9E9182;
+      --accent:    #B86B1F;
+      --accent-2:  #8B4A0F;
+      --accent-bg: #F5EDE0;
+      --tag-bg:    #E2D8CC;
+      --radius:    14px;
+      --radius-sm: 10px;
+      --shadow:    0 1px 3px rgba(43,35,24,0.08), 0 4px 16px rgba(43,35,24,0.06);
+    }
+    [data-theme="dark"] {
+      --bg:        #0E0E0E;
+      --surface:   #1A1A1A;
+      --border:    #2E2E2E;
+      --ink:       #F0EAD6;
+      --ink-soft:  #A89880;
+      --ink-muted: #6B6050;
+      --accent:    #D4960A;
+      --accent-2:  #B87D08;
+      --accent-bg: #1E1A10;
+      --tag-bg:    #242018;
+      --shadow:    0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.25);
+    }
+
+    [data-theme="dark"] .lang-bar {
+      background: rgba(14,14,14,0.92);
+    }
+
+    [data-theme="dark"] thead tr {
+      background: #2A2A2A;
+    }
+
+    [data-theme="dark"] thead th {
+      color: var(--ink);
+    }
+
+    [data-theme="dark"] .callout {
+      background: #1A2018;
+    }
+
+    [data-theme="dark"] .callout-warn {
+      background: #1E1810;
+      border-left-color: var(--accent);
+    }
+
+    [data-theme="dark"] .callout-critical {
+      background: #1E1010;
+      border-left-color: #C0392B;
+    }
+
+    [data-theme="dark"] .contact-card {
+      background: #111;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    /* ── LANG BAR ── */
+    .lang-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(232,224,213,0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .lang-brand {
+      font-family: 'DM Serif Display', serif;
+      font-size: 16px;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .lang-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang-buttons {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .lang-btn {
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      letter-spacing: 0.01em;
+    }
+
+    .lang-btn:hover {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--ink-soft);
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .theme-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.18s ease;
+      flex-shrink: 0;
+    }
+
+    .theme-btn:hover {
+      border-color: var(--accent);
+      background: var(--accent-bg);
+    }
+
+    /* ── HEADER ── */
+    .header {
+      padding: 48px 24px 32px;
+      max-width: 760px;
+      margin: 0 auto;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 7vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    h1 span { color: var(--accent); font-style: italic; }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--tag-bg);
+      color: var(--ink-soft);
+      font-size: 12px;
+      font-weight: 400;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .meta-chip strong { color: var(--ink); font-weight: 500; }
+
+    .header-divider {
+      height: 1px;
+      background: var(--border);
+      margin-top: 32px;
+    }
+
+    /* ── LAYOUT ── */
+    .layout {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 32px 0;
+      box-shadow: var(--shadow);
+      animation: fadeUp 0.5s 0.1s ease both;
+    }
+
+    .toc-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 16px;
+      color: var(--ink);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-title::before {
+      content: '§';
+      color: var(--accent);
+      font-size: 18px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2px;
+    }
+
+    .toc-list li a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 8px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: 13px;
+      transition: all 0.15s;
+    }
+
+    .toc-list li a:hover {
+      background: var(--accent-bg);
+      color: var(--accent);
+    }
+
+    .toc-list li a .num {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      min-width: 18px;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      margin: 40px 0;
+      scroll-margin-top: 64px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(20px, 4vw, 26px);
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    h2 .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 24px 0 10px;
+      padding-left: 12px;
+      border-left: 2.5px solid var(--accent);
+    }
+
+    p { margin-bottom: 14px; color: var(--ink); }
+    p:last-child { margin-bottom: 0; }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    strong { font-weight: 600; }
+    em { font-style: italic; color: var(--ink-soft); }
+
+    ul, ol {
+      padding-left: 0;
+      margin: 12px 0 16px;
+      list-style: none;
+    }
+
+    ul li, ol li {
+      position: relative;
+      padding: 5px 0 5px 22px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 13px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    ol { counter-reset: item; }
+    ol li { counter-increment: item; }
+    ol li::before {
+      content: counter(item) '.';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* ── CALLOUTS ── */
+    .callout {
+      background: var(--accent-bg);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .callout p { font-size: 14px; margin-bottom: 8px; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .callout-warn {
+      background: #FEF6EC;
+      border-left-color: var(--accent-2);
+    }
+
+    .callout-critical {
+      background: #FEF0EE;
+      border-left-color: #C0392B;
+      border-left-width: 4px;
+    }
+
+    .callout-critical p { font-size: 13px; }
+
+    /* ── PRICING CARDS ── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .price-card.featured {
+      border-color: var(--accent);
+      background: var(--accent-bg);
+    }
+
+    .price-card .price-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 8px;
+    }
+
+    .price-card.featured .price-label { color: var(--accent); }
+
+    .price-card .price-amount {
+      font-family: 'DM Serif Display', serif;
+      font-size: 32px;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .price-card .price-period {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-top: 4px;
+    }
+
+    .price-card .price-note {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    /* ── CANCEL STEPS ── */
+    .cancel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .cancel-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+
+    .cancel-item .platform {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .cancel-item .steps {
+      font-size: 12px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: var(--ink);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      margin: 20px 0;
+    }
+
+    .contact-card h3 {
+      color: #fff;
+      border-left-color: rgba(255,255,255,0.3);
+      margin-top: 0;
+    }
+
+    .contact-card p { color: rgba(255,255,255,0.75); font-size: 14px; }
+    .contact-card a { color: #D4960A; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .highlight-box p { font-size: 14px; }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--ink-muted);
+      font-size: 12px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── UNAVAILABLE OVERLAY ── */
+    .lang-unavail {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--ink-soft);
+    }
+
+    .lang-unavail .big-icon { font-size: 48px; margin-bottom: 16px; }
+    .lang-unavail h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+      color: var(--ink);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .header { padding: 32px 20px 24px; }
+      .layout { padding: 0 20px 60px; }
+      .toc-list { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .cancel-grid { grid-template-columns: 1fr; }
+      h2 .section-num { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="lang-bar" role="navigation" aria-label="Language selector">
+  <span class="lang-brand">Floorly</span>
+  <div class="lang-controls">
+    <div class="lang-buttons">
+      <button class="lang-btn active" onclick="setLang('en')" data-lang="en">🇬🇧 EN</button>
+      <button class="lang-btn" onclick="setLang('tr')" data-lang="tr">🇹🇷 TR</button>
+      <button class="lang-btn" onclick="setLang('es')" data-lang="es">🇪🇸 ES</button>
+      <button class="lang-btn" onclick="setLang('de')" data-lang="de">🇩🇪 DE</button>
+      <button class="lang-btn" onclick="setLang('ru')" data-lang="ru">🇷🇺 RU</button>
+      <button class="lang-btn" onclick="setLang('zh_Hans')" data-lang="zh_Hans">🇨🇳 ZH (Hans)</button>
+      <button class="lang-btn" onclick="setLang('zh_Hant')" data-lang="zh_Hant">🇹🇼 ZH (Hant)</button>
+    </div>
+    <button class="theme-btn" onclick="toggleTheme()" id="themeBtn" aria-label="Toggle theme">☀️</button>
+  </div>
+</nav>
+
+<div id="content-en">
+  <header class="header">
+    <div class="header-badge">Terms of Service</div>
+    <h1>Floorly <span>Terms</span> of Service</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Effective: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS & Android</span>
+      <span class="meta-chip">🌍 Turkey + International</span>
+      <span class="meta-chip">🔞 18+ only</span>
+    </div>
+    <div class="callout">
+      <p><strong>Publisher:</strong> İMAN HÜSEYNLİ (Individual Developer)</p>
+      <p>📍 Ulubatlı Hasan Mah. — Ankara, Turkey &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="Table of Contents">
+      <div class="toc-title">Table of Contents</div>
+      <ul class="toc-list">
+        <li><a href="#en-s1"><span class="num">1</span> Agreement to Terms</a></li>
+        <li><a href="#en-s2"><span class="num">2</span> Eligibility</a></li>
+        <li><a href="#en-s3"><span class="num">3</span> Scope of License</a></li>
+        <li><a href="#en-s4"><span class="num">4</span> Description of Service</a></li>
+        <li><a href="#en-s5"><span class="num">5</span> Subscriptions & Billing</a></li>
+        <li><a href="#en-s6"><span class="num">6</span> Ads & Anti-Fraud</a></li>
+        <li><a href="#en-s7"><span class="num">7</span> Content & Data Ownership</a></li>
+        <li><a href="#en-s8"><span class="num">8</span> Professional Disclaimer</a></li>
+        <li><a href="#en-s9"><span class="num">9</span> Acceptable Conduct</a></li>
+        <li><a href="#en-s10"><span class="num">10</span> Intellectual Property</a></li>
+        <li><a href="#en-s11"><span class="num">11</span> Warranty Disclaimers</a></li>
+        <li><a href="#en-s12"><span class="num">12</span> Limitation of Liability</a></li>
+        <li><a href="#en-s13"><span class="num">13</span> Termination</a></li>
+        <li><a href="#en-s14"><span class="num">14</span> Changes to Terms</a></li>
+        <li><a href="#en-s15"><span class="num">15</span> Governing Law</a></li>
+        <li><a href="#en-s16"><span class="num">16</span> Platform Clauses</a></li>
+        <li><a href="#en-s17"><span class="num">17</span> Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- 1 -->
+    <section class="section" id="en-s1">
+      <h2><span class="section-num">1</span> Agreement to These Terms</h2>
+      <p>By downloading, installing, registering for, or using the Floorly mobile application (the "App"), you enter into a legally binding contract with <strong>Insep</strong> ("İMAN HÜSEYNLİ", "we", "us", or "our") and agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not install or use the App.</p>
+      <p>Your interaction with the application is also explicitly subject to our <strong>Privacy Policy</strong>.</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="section" id="en-s2">
+      <h2><span class="section-num">2</span> Eligibility</h2>
+      <p>Floorly is intended solely for users who are <strong>18 years of age or older</strong>. During onboarding, the App presents an age-confirmation screen. By installing or using the App, you represent and warrant that you are at least 18 years old.</p>
+      <div class="callout callout-warn">
+        <p>The App is not directed to children. If you indicate that you are under 18, advertising and analytics features are not initialized, access to the App is restricted, and no behavioral profiling, advertising identifiers, or analytics data are processed or transmitted.</p>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="section" id="en-s3">
+      <h2><span class="section-num">3</span> Scope of License</h2>
+      <p>We grant you a personal, limited, non-exclusive, non-transferable, non-sublicensable, revocable license to install and run a copy of the App on mobile devices you lawfully own or control, solely for your personal or internal business property evaluation and organizational workflow purposes.</p>
+      <p>You are explicitly <strong>prohibited</strong> from:</p>
+      <ul>
+        <li>Copying, modifying, translating, adapting, or creating derivative works of the App.</li>
+        <li>Reverse-engineering, decompiling, disassembling, or attempting to derive the source code of the underlying software (except to the minimal extent permitted by mandatory applicable local laws).</li>
+        <li>Renting, leasing, lending, selling, sublicensing, distributing, or commercially exploiting the App's interface or assets.</li>
+        <li>Removing, altering, or obscuring any proprietary intellectual property notices or copyright watermarks.</li>
+      </ul>
+    </section>
+
+    <!-- 4 -->
+    <section class="section" id="en-s4">
+      <h2><span class="section-num">4</span> Description of Service</h2>
+      <p>Floorly is an <strong>offline-first</strong> software environment designed to facilitate property records keeping, local room measurements, 2D floor-plan visualization, metric weighting, property comparison matrices, and local checklists management. Core user content is written and read entirely on your device's native local database layer.</p>
+      <p>External network features — such as programmatic ad placements, product analytics, diagnostic error handling, automated billing reconciliation, and user-directed cloud backups — require an active internet connection and are managed via third-party infrastructure integrations as detailed in our Privacy Policy.</p>
+      <p>We reserve the right to modify, optimize, suspend, or deprecate individual software features over time to maintain product stability and cross-platform compatibility.</p>
+    </section>
+
+    <!-- 5 -->
+    <section class="section" id="en-s5">
+      <h2><span class="section-num">5</span> Subscriptions, In-App Purchases & Financial Terms</h2>
+
+      <h3>5.1 Tier Structures</h3>
+      <p>Floorly features a basic <strong>Free Tier</strong> (subject to usage caps and mandatory ads) and a premium <strong>Pro Tier</strong> which deactivates ads and unlocks advanced functionality: unlimited properties, PDF/PNG export, voice notes, and custom scoring schemas.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-label">Monthly</div>
+          <div class="price-amount">$0.99</div>
+          <div class="price-period">per month</div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-label">Annual — Best Value</div>
+          <div class="price-amount">$9.99</div>
+          <div class="price-period">per year</div>
+          <div class="price-note">Save ~16%</div>
+        </div>
+      </div>
+
+      <h3>5.2 App Store Transaction Processing</h3>
+      <p>All monetary transactions are processed exclusively by <strong>Apple App Store</strong> (iOS) and <strong>Google Play Store</strong> (Android) via the <strong>RevenueCat</strong> subscription validation engine. We do not receive, store, or process credit card credentials or payment processing telemetry — only anonymized subscription status tokens.</p>
+
+      <h3>5.3 Automated Renewal Rules</h3>
+      <p>Subscriptions auto-renew. Your platform store account will be charged automatically within 24 hours prior to the end of your active billing period, unless you manually cancel at least 24 hours before the renewal date. Free Tier remains available indefinitely for users who prefer not to subscribe.</p>
+
+      <h3>5.4 Cancellation Management</h3>
+      <div class="cancel-grid">
+        <div class="cancel-item">
+          <div class="platform">🍎 iOS</div>
+          <div class="steps">Device Settings → [Apple ID Name] → Subscriptions</div>
+        </div>
+        <div class="cancel-item">
+          <div class="platform">▶️ Android</div>
+          <div class="steps">Google Play → Profile Icon → Payments & Subscriptions → Subscriptions</div>
+        </div>
+      </div>
+      <p>Following cancellation, your Pro status remains active until the final day of your current billing period, then reverts to Free Tier.</p>
+
+      <h3>5.5 Refund Protocols & Statutory Rights</h3>
+      <p>Because all financial collections are managed by Apple and Google, we cannot issue direct refunds. All refund requests must be filed directly through Apple Support or Google Play. All claims are governed by the respective store's platform policies.</p>
+      <div class="callout">
+        <p><strong>Consumer Protection Rights Override:</strong> Nothing in these Terms excludes the <strong>14-day statutory right of withdrawal</strong> for digital goods guaranteed to EU/UK consumers, or statutory remedies under the <strong>6502 Sayılı Tüketicinin Korunması Hakkında Kanun</strong> for consumers in Turkey. Where mandatory local law grants non-waivable rights, those shall prevail.</p>
+      </div>
+
+      <h3>5.6 Data Integrity Upon Subscription Expiration</h3>
+      <div class="highlight-box">
+        <p>If a Pro subscription expires, your account degrades gracefully to Free Tier. <strong>Your existing local property data, photos, voice notes, and floor plans remain preserved, intact, and fully editable on your device.</strong> No data wiping is triggered by a subscription status change.</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="section" id="en-s6">
+      <h2><span class="section-num">6</span> Ads, Reward Mechanics & Anti-Fraud</h2>
+      <p>Free Tier functionality requires the display of programmatic and rewarded video ads. To prevent mechanical exploitation, script injection, or synthetic ad-click farming, Floorly enforces strict client-side anti-fraud checking, including validation of local hardware system clocks and execution rate-limiting parameters.</p>
+      <div class="callout callout-warn">
+        <p>Any intentional manipulation or bypass of ad display loops constitutes a <strong>material breach</strong> of these Terms and may result in immediate local feature restriction.</p>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="section" id="en-s7">
+      <h2><span class="section-num">7</span> Content Ownership, Data Loss & User Responsibility</h2>
+      <div class="highlight-box">
+        <p><strong>You retain absolute, exclusive ownership over all content, property profiles, structural inputs, room plans, custom notes, audio voice tracks, and photographs you generate within the App.</strong> We lay no claim to your data.</p>
+      </div>
+      <p>Because Floorly operates as an offline-first tool, <strong>you maintain absolute and sole responsibility for your data integrity, storage, and recovery operations.</strong> We cannot be held liable for data destruction or corruption resulting from:</p>
+      <ul>
+        <li>Physical device loss, hardware damage, or theft.</li>
+        <li>Native OS cleanup routines or automated storage optimizations.</li>
+        <li>Manual uninstallation of Floorly from your device.</li>
+        <li>Technical failures in your personal Google Drive or iCloud synchronization.</li>
+      </ul>
+      <p>You represent and warrant that you hold all necessary legal rights and permissions before capturing location coordinates, taking photographs of real estate assets, or recording audio inside private dwellings.</p>
+    </section>
+
+    <!-- 8 -->
+    <section class="section" id="en-s8">
+      <h2><span class="section-num">8</span> Proportional Estimates & Professional Disclaimer</h2>
+      <div class="callout callout-critical">
+        <p><strong>⚠️ CRITICAL NOTICE: NOT A PROFESSIONAL ARCHITECTURAL OR SURVEYING TOOL</strong></p>
+        <p style="margin-top:10px">Floorly is developed solely as a personal, mobile visualization aid and conceptual note-taking tool. All computed calculations, floor plans, 2D structural estimations, spatial orientations, dimensions, room surface areas, cubic volumes, and weighted real estate comparison scores generated by the App are <strong>approximate geometric estimations</strong> that depend entirely on the precision of manual inputs and the calibration tolerances of your mobile device's hardware sensors.</p>
+        <p style="margin-top:10px">The outputs generated by Floorly <strong>do not constitute</strong> a professional architectural survey, engineering assessment, legal property boundary definition, structural appraisal, or licensed real estate valuation. <strong>Do not make binding purchase decisions, financial commitments, or legal agreements based solely on the App's outputs.</strong> For all binding evaluations, retain a certified professional. You utilize the metrics generated by the App entirely at your own risk.</p>
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section class="section" id="en-s9">
+      <h2><span class="section-num">9</span> Acceptable Conduct & Prohibited Uses</h2>
+      <p>You agree that you will not use Floorly to:</p>
+      <ul>
+        <li>Engage in any unlawful, fraudulent, or deceptive real estate practices.</li>
+        <li>Trespass on private property or capture media asset data without explicit lawful consent.</li>
+        <li>Circumvent, deactivate, or disrupt security controls, ad-delivery frameworks, anti-fraud barriers, or subscription access gates.</li>
+        <li>Execute automated scripts, scrapers, web-spiders, or reverse-engineering toolkits against the compiled binary or memory runtime.</li>
+      </ul>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="en-s10">
+      <h2><span class="section-num">10</span> Intellectual Property Rights</h2>
+      <p>The Floorly mobile application, along with its source code, design layouts, user interface assets, original graphics, specialized scoring algorithms, branding elements, trademarks ("Floorly"), and proprietary template structures, represents the exclusive intellectual property of <strong>İMAN HÜSEYNLİ</strong> and is protected by international copyright, trademark, and intellectual property statutes. Except for the limited operational license granted in Section 3, all rights are explicitly reserved.</p>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="en-s11">
+      <h2><span class="section-num">11</span> Warranty Disclaimers</h2>
+      <p>To the maximum extent permitted by applicable statutory law, the Floorly application is delivered to you <strong>"as is"</strong> and <strong>"as available"</strong>, without warranties, guarantees, or representations of any kind, whether express, implied, or statutory. We explicitly disclaim all implied warranties of merchantability, fitness for a specific purpose, quiet enjoyment, data accuracy, non-infringement, and uninterrupted or error-free execution.</p>
+      <div class="callout">
+        <p>Nothing in this section limits the non-waivable statutory conformity rights of consumers who purchase a Pro subscription, including rights under <strong>EU Directive 2019/770</strong> on digital content and services and <strong>Turkish Consumer Protection Law No. 6502</strong>.</p>
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section class="section" id="en-s12">
+      <h2><span class="section-num">12</span> Limitation of Liability</h2>
+      <p>To the maximum extent permitted under applicable mandatory statutes, Insep (İMAN HÜSEYNLİ) shall not be held liable for any indirect, incidental, special, consequential, or exemplary damages, including loss of profits, loss of data, or financial losses incurred during property acquisitions based on the App's approximate calculations.</p>
+      <p>Except where prohibited by mandatory local consumer protection laws, our total aggregate liability shall be strictly capped at the actual net amount you paid to Apple App Store or Google Play Store for Floorly during the twelve (12) months immediately preceding the event giving rise to the claim.</p>
+      <div class="callout">
+        <p><strong>Mandatory Liability Exclusions:</strong> Nothing in these Terms restricts liability for death, personal injury resulting from negligence, intentional fraud, willful misconduct, gross negligence (<em>ağır kusur</em>), or any breach of fundamental consumer rights under Turkish Consumer Law (No. 6502) or EU/UK Consumer Protection Directives.</p>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section class="section" id="en-s13">
+      <h2><span class="section-num">13</span> Termination and License Restriction</h2>
+      <p>You may terminate this agreement at any time by deleting Floorly from your device and canceling any active platform subscription renewals.</p>
+      <p>Because Floorly operates as an offline-first application without centralized user accounts, we cannot remotely delete your local device database. However, if you commit a material breach of these Terms, we reserve the right to revoke your software license, terminate this agreement, and utilize RevenueCat or platform tools to restrict your access to future App updates or Pro tier features.</p>
+      <p>Upon termination, all provisions that by their nature should survive (including ownership rights, professional disclaimers, liability caps, indemnities, and governing law clauses) shall survive.</p>
+    </section>
+
+    <!-- 14 -->
+    <section class="section" id="en-s14">
+      <h2><span class="section-num">14</span> Changes to These Terms</h2>
+      <p>We reserve the right to modify these Terms at any time. The updated document will be stamped with a revised "Effective Date" at the top. For material changes impacting your subscription rights or liabilities, we will distribute notice prior to execution via in-app banners or through store version updates. Your continued use of the App after an update constitutes acceptance of the revised Terms.</p>
+    </section>
+
+    <!-- 15 -->
+    <section class="section" id="en-s15">
+      <h2><span class="section-num">15</span> Governing Law, Dispute Resolution & Venue</h2>
+
+      <h3>15.1 General Governing Law</h3>
+      <p>These Terms, along with any contractual or non-contractual disputes arising from them, are governed by and construed in accordance with the laws of the <strong>Republic of Turkey</strong>, without giving effect to any choice-of-law or conflict-of-laws principles.</p>
+
+      <h3>15.2 Venue and Jurisdiction</h3>
+      <p>Subject to the mandatory consumer protection exceptions below, any legal dispute connected to these Terms shall be submitted to the jurisdiction of the <strong>Ankara Courts and Enforcement Offices (Ankara Mahkemeleri ve İcra Daireleri), Turkey</strong>.</p>
+
+      <h3>15.3 Cross-Border Consumer Rights Protection</h3>
+      <div class="callout">
+        <p>If you are a consumer residing within the <strong>EU, UK</strong>, or any jurisdiction enforcing non-waivable statutory consumer forum protections, the choice of Turkish law and venue does not deprive you of protections that cannot be derogated from by agreement under your local laws. You maintain the right to file consumer complaints before competent courts or arbitration boards in your country of habitual residence.</p>
+      </div>
+    </section>
+
+    <!-- 16 -->
+    <section class="section" id="en-s16">
+      <h2><span class="section-num">16</span> Platform Provider Specific Clauses (Apple & Google)</h2>
+      <p>You acknowledge that this agreement is executed solely between you and Insep, and <strong>not</strong> with Apple Inc. or Google LLC. Apple and Google are not responsible for the App, its content, software maintenance, technical support, or the investigation of any intellectual property infringement claims.</p>
+      <p>Apple and Google, along with their subsidiaries, are third-party beneficiaries of these Terms and shall have the right to enforce them against you as a third-party beneficiary upon your acceptance.</p>
+      <p>The standard <strong>Apple Licensed Application End User License Agreement (EULA)</strong> applies to your use of the App on iOS in addition to these Terms. In the event of any conflict between Apple's standard EULA and these Terms regarding the iOS license, Apple's standard EULA prevails for that license relationship.</p>
+    </section>
+
+    <!-- 17 -->
+    <section class="section" id="en-s17">
+      <h2><span class="section-num">17</span> Contact Information</h2>
+      <div class="contact-card">
+        <h3>Insep Legal & Support Desk</h3>
+        <p><strong style="color:#fff">Lead Developer:</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">For contractual feedback, formal notices, or operational support queries.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Effective date: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-tr" style="display:none;">
+  <header class="header">
+    <div class="header-badge">Hizmet Şartları</div>
+    <h1>Floorly <span>Hizmet</span> Şartları</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Yürürlük Tarihi: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS ve Android</span>
+      <span class="meta-chip">🌍 Türkiye + Uluslararası</span>
+      <span class="meta-chip">🔞 Yalnızca 18+</span>
+    </div>
+    <div class="callout">
+      <p><strong>Yayıncı:</strong> İMAN HÜSEYNLİ (Bireysel Geliştirici)</p>
+      <p>📍 Ulubatlı Hasan Mah. — Ankara, Türkiye &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="İçindekiler">
+      <div class="toc-title">İçindekiler</div>
+      <ul class="toc-list">
+        <li><a href="#tr-s1"><span class="num">1</span> Sözleşmenin Kabulü</a></li>
+        <li><a href="#tr-s2"><span class="num">2</span> Uygunluk ve Yaş Sınırı</a></li>
+        <li><a href="#tr-s3"><span class="num">3</span> Lisansın Kapsamı</a></li>
+        <li><a href="#tr-s4"><span class="num">4</span> Hizmet Tanımı</a></li>
+        <li><a href="#tr-s5"><span class="num">5</span> Abonelikler ve Faturalandırma</a></li>
+        <li><a href="#tr-s6"><span class="num">6</span> Reklamlar ve Dolandırıcılık Karşıtı Doğrulama</a></li>
+        <li><a href="#tr-s7"><span class="num">7</span> İçerik Mülkiyeti ve Veri Kaybı Sorumluluğu</a></li>
+        <li><a href="#tr-s8"><span class="num">8</span> Profesyonel Hizmet Reddi Beyanı</a></li>
+        <li><a href="#tr-s9"><span class="num">9</span> Kabul Edilebilir Kullanım ve Yasaklar</a></li>
+        <li><a href="#tr-s10"><span class="num">10</span> Fikri Mülkiyet Hakları</a></li>
+        <li><a href="#tr-s11"><span class="num">11</span> Garanti Muafiyeti</a></li>
+        <li><a href="#tr-s12"><span class="num">12</span> Sorumluluğun Sınırlandırılması</a></li>
+        <li><a href="#tr-s13"><span class="num">13</span> Fesih ve Lisans Kısıtlaması</a></li>
+        <li><a href="#tr-s14"><span class="num">14</span> Şartlardaki Değişiklikler</a></li>
+        <li><a href="#tr-s15"><span class="num">15</span> Uygulanacak Hukuk ve Yetkili Mahkeme</a></li>
+        <li><a href="#tr-s16"><span class="num">16</span> Platform Sağlayıcı Özel Şartları</a></li>
+        <li><a href="#tr-s17"><span class="num">17</span> İletişim</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="tr-s1">
+      <h2><span class="section-num">1</span> Bu Şartların Kabulü</h2>
+      <p>Floorly mobil uygulamasını ("Uygulama") indirerek, kurarak, kayıt olarak veya kullanarak, <strong>Insep</strong> ("İMAN HÜSEYNLİ", "biz", "bize" veya "bizim") ile yasal olarak bağlayıcı bir sözleşme akdetmiş ve bu Hizmet Şartlarını ("Şartlar") kabul etmiş sayılırsınız. Bu Şartları kabul etmiyorsanız, Uygulamayı kurmayın ve kullanmayın.</p>
+      <p>Uygulama ile olan etkileşiminiz ayrıca <strong>Gizlilik Politikamıza</strong> tabidir.</p>
+    </section>
+
+    <section class="section" id="tr-s2">
+      <h2><span class="section-num">2</span> Uygunluk ve Yaş Sınırı</h2>
+      <p>Floorly, yalnızca <strong>18 yaşında veya daha büyük</strong> olan kullanıcılar için tasarlanmıştır. İlk açılış (onboarding) sürecinde Uygulama bir yaş doğrulama ekranı sunar. Uygulamayı kurarak veya kullanarak, en az 18 yaşında olduğunuzu beyan ve taahhüt edersiniz.</p>
+      <div class="callout callout-warn">
+        <p>Uygulama çocuklara yönelik değildir. 18 yaşın altında olduğunuzu belirtmeniz durumunda, reklam ve analitik özellikleri başlatılmaz, Uygulamaya erişim kısıtlanır ve hiçbir davranışsal profilleme, reklam kimliği veya analitik veri işlenmez veya iletilmez.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s3">
+      <h2><span class="section-num">3</span> Lisansın Kapsamı</h2>
+      <p>Yasal olarak sahip olduğunuz veya kontrol ettiğiniz mobil cihazlara Uygulamanın bir kopyasını kurmanız ve çalıştırmanız için size; yalnızca kişisel veya şirket içi mülk değerlendirme ve organizasyonel iş akışı amaçlarınız doğrultusunda kullanılmak üzere kişisel, sınırlı, münhasır olmayan, devredilemez, alt lisans verilemez ve iptal edilebilir bir lisans vermekteyiz.</p>
+      <p>Aşağıdaki eylemleri gerçekleştirmeniz açıkça <strong>yasaklanmıştır</strong>:</p>
+      <ul>
+        <li>Uygulamayı kopyalamak, değiştirmek, tercüme etmek, uyarlamak veya Uygulamadan türetilmiş eserler yaratmak.</li>
+        <li>Uygulamanın kaynak kodunu tersine mühendislik, kaynak koda dönüştürme, parçalara ayırma yöntemleriyle veya başka yollarla elde etmeye çalışmak (yürürlükteki zorunlu yerel yasaların izin verdiği asgari ölçü hariç).</li>
+        <li>Uygulamanın arayüzünü veya varlıklarını kiralamak, ödünç vermek, satmak, alt lisans vermek, dağıtmak veya ticari olarak sömürmek.</li>
+        <li>Uygulamadaki fikri mülkiyet bildirimlerini veya telif hakkı filigranlarını kaldırmak, değiştirmek veya gizlemek.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="tr-s4">
+      <h2><span class="section-num">4</span> Hizmet Tanımı</h2>
+      <p>Floorly; mülk kayıtlarının tutulmasını, yerel oda ölçümlerini, 2D kat planı görselleştirmesini, metrik ağırlıklandırmayı, mülk karşılaştırma matrislerini ve yerel kontrol listelerinin yönetimini kolaylaştırmak için tasarlanmış <strong>öncelikli olarak çevrimdışı çalışan (offline-first)</strong> bir yazılım ortamıdır. Temel kullanıcı içerikleri tamamen cihazınızın yerel veri tabanı katmanına yazılır ve buradan okunur.</p>
+      <p>Programatik reklam yerleştirmelerinin işlenmesi, ürün analitiği, tanılama hata yönetimi, otomatik fatura mutabakatı ve kullanıcı yönetimli bulut yedeklemeleri gibi harici ağ özellikleri aktif bir internet bağlantısı gerektirir ve Gizlilik Politikamızda detaylandırılan uzmanlaşmış üçüncü taraf altyapı entegrasyonları aracılığıyla yönetilir.</p>
+      <p>Ürün kararlılığını ve platformlar arası uyumluluğu korumak amacıyla, bireysel yazılım özelliklerini zaman içinde değiştirme, optimize etme, askıya alma veya kullanımdan kaldırma hakkımızı saklı tutarız.</p>
+    </section>
+
+    <section class="section" id="tr-s5">
+      <h2><span class="section-num">5</span> Abonelikler, Uygulama İçi Satın Alımlar ve Mali Şartlar</h2>
+
+      <h3>5.1 Katman Yapıları</h3>
+      <p>Floorly, temel bir <strong>Ücretsiz Katman</strong> (kullanım sınırlarına, mülk listeleme kısıtlamalarına ve zorunlu programatik reklam bloklarına tabidir) ve reklam eşleştirme senaryolarını devre dışı bırakarak gelişmiş özellikleri (sınırsız mülk, otomatik vektörel PDF/PNG düzeni dışa aktarma, mikrofonla sesli not kaydetme ve özel puanlama şemaları) erişime açan premium bir <strong>Ücretli Katman ("Pro")</strong> sunar.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-label">Aylık</div>
+          <div class="price-amount">$0.99</div>
+          <div class="price-period">aylık</div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-label">Yıllık — En İyi Fiyat</div>
+          <div class="price-amount">$9.99</div>
+          <div class="price-period">yıllık</div>
+          <div class="price-note">~%16 Tasarruf Edin</div>
+        </div>
+      </div>
+
+      <h3>5.2 Uygulama Mağazası İşlem Süreçleri</h3>
+      <p>Tüm parasal işlemler, faturalandırma yapılandırmaları ve abonelik yönetim süreçleri, münhasıran birincil platform mağaza işletmecileri (iOS için <strong>Apple App Store</strong>, Android için <strong>Google Play Store</strong>) tarafından <strong>RevenueCat</strong> abonelik doğrulama motoru aracılığıyla işlenir. Kredi kartı bilgilerinizi, banka hesaplarınızı veya ödeme işlemi telemetrilerini almayız, saklamayız ve işlemeyiz; Pro özelliklerine erişiminizi sağlamak ve yönetmek için RevenueCat üzerinden yalnızca anonimleştirilmiş işlem meta verilerini ve abonelik durumu belirteçlerini alırız.</p>
+
+      <h3>5.3 Otomatik Yenileme Kuralları ve Fiyatlandırma</h3>
+      <p>Abonelik yapıları otomatik yenileme mantığı ile mühendislik altına alınmıştır. Yenileme tarihinden en az 24 saat önce aboneliğinizi manuel olarak iptal etmediğiniz sürece, aktif faturalandırma döneminizin sona ermesinden önceki 24 saat içinde o anki abonelik fiyatı üzerinden platform mağaza hesabınızdan otomatik olarak tahsilat yapılacaktır.</p>
+      <p>Pro aboneliği satın almamayı tercih eden kullanıcılar, sistem tarafından uygulanan standart kullanım limitlerine, mülk listeleme sınırlarına ve zorunlu programatik reklam bloklarına tabi olmak kaydıyla Ücretsiz Katmanı süresiz olarak kullanmaya devam edebilirler.</p>
+
+      <h3>5.4 İptal Yönetimi</h3>
+      <div class="cancel-grid">
+        <div class="cancel-item">
+          <div class="platform">🍎 iOS</div>
+          <div class="steps">Cihaz Ayarları → [Apple ID Adınız] → Abonelikler</div>
+        </div>
+        <div class="cancel-item">
+          <div class="platform">▶️ Android</div>
+          <div class="steps">Google Play Uygulaması → Profil Simgesi → Ödemeler ve Abonelikler → Abonelikler</div>
+        </div>
+      </div>
+      <p>İptal talebinin ardından, Pro abonelik durumunuz mevcut ücretli faturalandırma döneminizin son gününe kadar aktif kalır ve bu sürenin sonunda Ücretsiz Katman kısıtlamalarına geri döner.</p>
+
+      <h3>5.5 İade Protokolleri ve Zorunlu Yasal Haklar</h3>
+      <p>Tüm mali tahsilatlar ve satış noktası faturalandırmaları Apple ve Google tarafından yönetildiğinden, doğrudan manuel iade yapma veya hesap kredisi ayarlama konusunda teknik erişimimiz veya yasal yetkimiz bulunmamaktadır. Herhangi bir ücret iadesi talebi, işlemin gerçekleştirildiği platform sağlayıcısının resmi destek yapıları (Apple Destek veya Google Play) aracılığıyla doğrudan iletilmelidir. Tüm iade talepleri, ilgili mağazanın platform politikalarına tabidir.</p>
+      <div class="callout">
+        <p><strong>Tüketicinin Korunması Hakları Önceliği:</strong> Bu Şartlardaki hiçbir hüküm, yerel mevzuatınız kapsamında garanti altına alınan zorunlu yasal tüketici haklarını hariç tutacak, sınırlayacak veya azaltacak şekilde işletilemez. Buna aşağıdakiler dahildir:</p>
+        <ul>
+          <li>Avrupa Birliği (AB) ve Birleşik Krallık (UK) sınırlarında ikamet eden tüketiciler için dijital mallara yönelik garanti edilen <strong>14 günlük yasal cayma hakkı</strong>.</li>
+          <li>Türkiye Cumhuriyeti sınırları içindeki tüketiciler için <strong>6502 Sayılı Tüketicinin Korunması Hakkında Kanun</strong> kapsamında kodifiye edilmiş yasal tüketici koruma hakları ve çözüm yolları.</li>
+        </ul>
+        <p>Yerel tüketici kanunlarının feragat edilemez bir sözleşmeden dönme veya iade hakkı tanıdığı durumlarda, söz konusu yasal mekanizmalar bu bölümdeki çelişen şartlara üstün gelecektir.</p>
+      </div>
+
+      <h3>5.6 Abonelik Süresi Dolduğunda Veri Bütünlüğü</h3>
+      <div class="highlight-box">
+        <p>Bir Pro aboneliğinin süresi dolarsa veya ödeme mutabakatı başarısız olursa, hesabınız sorunsuz bir şekilde Ücretsiz Katmana düşürülür. <strong>Mevcut yerel mülk verileriniz, fotoğraflarınız, sesli notlarınız ve kat planlarınız cihaz donanımınızda korunur, bozulmadan kalır ve tamamen düzenlenebilir durumda tutulur.</strong> Abonelik durumu değişikliği nedeniyle hiçbir veri silme işlemi tetiklenmez; ancak uyumluluk yeniden sağlanana veya Pro katmanı tekrar aktif edilene kadar Ücretsiz Katman sınırlarını aşan yeni girişler yapmanız engellenir.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s6">
+      <h2><span class="section-num">6</span> Reklamlar, Ödül Mekanizmaları ve Dolandırıcılık Karşıtı Doğrulama</h2>
+      <p>Ücretsiz Katman işlevselliği, programatik ve ödüllü video reklamların görüntülenmesini gerektirir. Mekanik suiistimali, betik enjeksiyonunu veya yapay reklam tıklama çiftçiliğini önlemek amacıyla Floorly; yerel donanım sistem saatlerinin doğrulanması ve yürütme hızı sınırlama parametreleri dahil olmak üzere sıkı istemci tarafı dolandırıcılık karşıtı kontroller uygular.</p>
+      <div class="callout callout-warn">
+        <p>Bu reklam gösterim döngülerinin kasıtlı olarak manipüle edilmesi veya baypas edilmesi, bu Şartların <strong>esaslı bir ihlalini</strong> teşkil eder ve yerel özelliklerin derhal kısıtlanmasıyla sonuçlanabilir.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s7">
+      <h2><span class="section-num">7</span> İçerik Mülkiyeti, Veri Kaybı ve Kullanıcı Sorumluluğu</h2>
+      <div class="highlight-box">
+        <p><strong>Uygulama içinde oluşturduğunuz tüm içeriklerin, mülk profillerinin, yapısal girdilerin, oda planlarının, özel notların, ses parçalarının ve fotoğrafların mutlak ve münhasır mülkiyeti size aittir.</strong> Verileriniz üzerinde hiçbir hak iddia etmeyiz.</p>
+      </div>
+      <p>Floorly öncelikli olarak çevrimdışı çalışan bir araç olduğundan, <strong>veri bütünlüğünüz, depolama ve kurtarma işlemlerinizle ilgili mutlak ve yegane sorumluluk size aittir.</strong> Cihaz veri tabanınıza erişimimiz yoktur ve kaybolan kayıtları kurtarmak için hiçbir teknik imkanımız bulunmamaktadır. Aşağıdaki durumlardan kaynaklanan herhangi bir veri yok olması, bozulması veya veri tabanı silinmesinden dolayı sorumluluk kabul edilmez:</p>
+      <ul>
+        <li>Fiziksel cihaz kaybı, donanım hasarı veya hırsızlık.</li>
+        <li>İşletim sisteminin yerel temizlik rutinleri veya otomatik OS depolama optimizasyonları.</li>
+        <li>Floorly uygulamasının cihazınızdan manuel olarak kaldırılması.</li>
+        <li>Kişisel Google Drive veya iCloud yedekleme senkronizasyon süreçlerinizde meydana gelen teknik arızalar.</li>
+      </ul>
+      <p>Coğrafi konum koordinatlarını yakalamadan, gayrimenkul varlıklarının fotoğraflarını çekmeden veya özel meskenlerin içinde ses kaydı yapmadan önce gerekli tüm yasal haklara, izinlere ve mülkiyet muvafakatlerine sahip olduğunuzu beyan ve taahhüt edersiniz.</p>
+    </section>
+
+    <section class="section" id="tr-s8">
+      <h2><span class="section-num">8</span> Oransal Tahminler ve Profesyonel Hizmet Reddi Beyanı</h2>
+      <div class="callout callout-critical">
+        <p><strong>⚠️ KRİTİK UYARI: PROFESYONEL BİR MİMARLIK VEYA HARİTACILIK ARACI DEĞİLDİR</strong></p>
+        <p style="margin-top:10px">Floorly, yalnızca kişisel, mobil bir görselleştirme yardımı ve kavramsal not alma aracı olarak geliştirilmiştir. Uygulama tarafından üretilen tüm hesaplamalar, kat planları, 2D yapısal tahminler, mekansal yönelimler, boyutlar, oda yüzey alanları, kübik hacimler ve ağırlıklı gayrimenkul karşılaştırma puanları <strong>yaklaşık geometrik tahminlerdir</strong>. Bu değerler tamamen manuel girdilerin hassasiyetine ve mobil cihazınızın fiziksel donanım sensörlerinin (kamera, pusula, jiroskop) kalibrasyon toleranslarına bağlıdır. Kullanıcı kolaylığı amacıyla, hesaplama mantığına ilişkin bilgilendirici rehberlik ipuçlarına, mülk oluşturma akışı içindeki Odalar arayüzünün ("ODALAR") hemen yanında bulunan özel "Bilgi" (Info) simgesi aracılığıyla doğrudan erişilebilir. İlk yapılandırmada sunulan önceden doldurulmuş veri tabanı yapıları, varsayılan oda düzeni şablonları veya örnek boyutlar tamamen örnekleme amaçlı yer tutuculardır ve gerçek veya önerilen ölçümleri temsil etmezler. Bu varsayılan değerleri doğrulamak ve gerçek dünya metrikleriyle değiştirmek tamamen sizin sorumluluğunuzdadır.</p>
+        <p style="margin-top:10px">Floorly tarafından üretilen çıktılar profesyonel bir mimari ölçüm, mühendislik değerlendirmesi, yasal mülkiyet sınırı tanımı, yapısal ekspertiz veya lisanslı gayrimenkul değerlemesi <strong>teşkil etmez</strong>. Bu Uygulama, profesyonel hesaplamaların yerine kullanılmamalıdır. Yalnızca Uygulamanın çıktılarına dayanarak bağlayıcı satın alma kararları, mali taahhütler, mimari değişiklikler, yapısal inşaat sözleşmeleri veya yasal anlaşmalar yapmayın. Tüm bağlayıcı değerlendirmeler için sertifikalı bir uzmandan (lisanslı mimar, inşaat mühendisi, profesyonel harita mühendisi veya lisanslı gayrimenkul değerleme uzmanı) hizmet almalısınız. Uygulama tarafından üretilen metrikleri kullanmanın riski tamamen size aittir.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s9">
+      <h2><span class="section-num">9</span> Kabul Edilebilir Kullanım ve Yasaklar</h2>
+      <p>Floorly'yi aşağıdaki amaçlarla kullanmayacağınızı kabul edersiniz:</p>
+      <ul>
+        <li>Yasalara aykırı, hileli veya aldatıcı gayrimenkul uygulamalarında bulunmak.</li>
+        <li>Açık yasal izin olmaksızın özel mülke tecavüz etmek veya medya varlık verisi yakalamak.</li>
+        <li>Güvenlik kontrollerini, reklam sunum çerçevelerini, dolandırıcılık karşıtı bariyerleri veya abonelik erişim kapılarını devre dışı bırakmak, bozmak veya etrafından dolanmak.</li>
+        <li>Derlenmiş ikili dosyaya (binary) veya bellek çalışma zamanına (runtime) karşı otomatik betikler, kazıyıcılar (scrapers), web örümcekleri veya tersine mühendislik araç setleri çalıştırmak.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="tr-s10">
+      <h2><span class="section-num">10</span> Fikri Mülkiyet Hakları</h2>
+      <p>Floorly mobil uygulaması; kaynak kodu, tasarım düzenleri, kullanıcı arayüzü varlıkları, orijinal grafikleri, özelleşmiş puanlama algoritmaları, markalama öğeleri, ticari markaları ("Floorly") ve tescilli şablon yapıları ile birlikte <strong>İMAN HÜSEYNLİ</strong>'nin münhasır fikri mülkiyetini temsil eder ve uluslararası telif hakkı, ticari marka ve fikri mülkiyet yasalarıyla korunmaktadır. Bölüm 3'te verilen sınırlı işletim lisansı hariç olmak üzere, tüm haklar açıkça saklıdır.</p>
+    </section>
+
+    <section class="section" id="tr-s11">
+      <h2><span class="section-num">11</span> Garanti Muafiyeti</h2>
+      <p>Yürürlükteki yasal kanunların izin verdiği azami ölçüde, Floorly uygulaması size <strong>"olduğu gibi"</strong> ve <strong>"mevcut olduğu sürece"</strong>, açık, zımni veya yasal hiçbir garanti, taahhüt veya beyan içermeksizin sunulmaktadır. Ticarete elverişlilik, belirli bir amaca uygunluk, zilliyetlik, veri doğruluğu, ihlal etmeme ve kesintisiz veya hatasız sistem çalışmasıyla ilgili tüm zımni garantileri açıkça reddediyoruz.</p>
+      <div class="callout">
+        <p>Bu bölümdeki hiçbir hüküm, Pro aboneliği satın alan tüketicilerin yasal uygunluk haklarını sınırlamaz; buna dijital içerik ve dijital hizmetlerin sağlanmasına ilişkin <strong>(AB) 2019/770 Sayılı Direktif</strong> ve <strong>6502 Sayılı Tüketicinin Korunması Hakkında Kanun</strong> kapsamındaki haklar dahildir.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s12">
+      <h2><span class="section-num">12</span> Sorumluluğun Sınırlandırılması</h2>
+      <p>Yürürlükteki zorunlu kanunların izin verdiği azami ölçüde, Insep (İMAN HÜSEYNLİ, Bireysel Geliştirici); Uygulamanın yaklaşık hesaplamalarına dayanarak yapılan mülk edinimleri veya gayrimenkul yatırım tercihleri sırasında meydana gelen kar kayıpları, veri kayıpları, mülk hasarları veya mali kayıplar dahil ancak bunlarla sınırlı olmamak üzere, hiçbir dolaylı, arızi, özel, sonuçsal veya örnek niteliğindeki zarardan sorumlu tutulamaz.</p>
+      <p>Zorunlu yerel tüketici koruma kanunları tarafından yasaklanan durumlar hariç olmak üzere, bu Şartlar kapsamında veya Floorly kullanımıyla bağlantılı olarak ortaya çıkan tüm iddialar için toplam sorumluluğumuz, talebe yol açan olaydan hemen önceki on iki (12) ay boyunca Floorly uygulaması için Apple App Store veya Google Play Store'a ödediğiniz net finansal tutar ile kesin olarak sınırlandırılmıştır. Ücretsiz Katmanda faaliyet gösteren kullanıcılar için sorumluluğumuz, yürürlükteki zorunlu yasaların izin verdiği azami ölçüde sınırlandırılmıştır.</p>
+      <div class="callout">
+        <p><strong>Zorunlu Sorumluluk Muafiyetleri Koruması:</strong> Bu Şartlardaki hiçbir hüküm; ihmalden kaynaklanan ölüm veya kişisel yaralanma, kasıtlı dolandırıcılık, kasıtlı kusur, ağır kusur veya 6502 Sayılı Tüketici Kanunu ya da AB/UK Tüketiciyi Koruma Direktifleri kapsamında garanti edilen temel tüketici haklarının ihlali durumlarında sorumluluğu kısıtlayacak, hariç tutacak veya azaltacak şekilde işletilemez.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s13">
+      <h2><span class="section-num">13</span> Fesih ve Lisans Kısıtlaması</h2>
+      <p>Floorly'yi mobil cihazınızdan kalıcı olarak silerek ve aktif platform abonelik yenilemelerini iptal ederek bu sözleşmeyi dilediğiniz zaman feshedebilirsiniz.</p>
+      <p>Floorly, merkezi kullanıcı hesapları olmaksızın öncelikli olarak çevrimdışı çalışan bir uygulama olduğundan, yerel cihaz veri tabanınızı uzaktan silemeyiz. Ancak bu Şartları esaslı bir şekilde ihlal ederseniz, yazılım lisansınızı iptal etme, bu sözleşmeyi feshetme ve gelecekteki Uygulama güncellemelerine veya Pro katmanı özelliklerine erişiminizi kısıtlamak için RevenueCat veya platform araçlarını kullanma hakkımızı saklı tutarız. Fesih üzerine, yapısal nitelikleri gereği fesihten sonra da geçerliliğini koruması gereken tüm hükümler (mülkiyet hakları, profesyonel sorumluluk reddi beyanları, sorumluluk sınırları, tazminatlar ve uygulanacak hukuk maddeleri dahil) geçerliliğini koruyacaktır.</p>
+    </section>
+
+    <section class="section" id="tr-s14">
+      <h2><span class="section-num">14</span> Şartlardaki Değişiklikler</h2>
+      <p>Bu Şartları dilediğimiz zaman değiştirme hakkımızı saklı tutarız. Güncellenen belge, metnin üst kısmında revize edilmiş bir "Yürürlük Tarihi" ile damgalanacaktır. Abonelik haklarınızı veya yükümlülüklerinizi etkileyen esaslı değişiklikler için, değişikliklerin yürürlüğe girmesinden önce uygulama içi afişler (banner) veya mağaza sürüm güncellemeleri aracılığıyla bildirim dağıtılacaktır. Bir güncelleme yürürlüğe girdikten sonra yazılımı kullanmaya devam etmeniz, revize edilmiş Şartları kabul ettiğiniz anlamına gelir.</p>
+    </section>
+
+    <section class="section" id="tr-s15">
+      <h2><span class="section-num">15</span> Uygulanacak Hukuk, Uyuşmazlık Çözümü ve Yetkili Mahkeme</h2>
+
+      <h3>15.1 Genel Uygulanacak Hukuk</h3>
+      <p>Bu Şartlar ve bunlardan kaynaklanan sözleşmesel veya sözleşme dışı tüm uyuşmazlıklar, kanunlar ihtilafı ilkelerine yer verilmeksizin <strong>Türkiye Cumhuriyeti</strong> kanunlarına tabidir ve bu kanunlara göre yorumlanır.</p>
+
+      <h3>15.2 Yetkili Mahkeme ve Sorumluluk Alanı</h3>
+      <p>Bölüm 15.3'teki zorunlu tüketici koruma istisnalarına tabi olmak kaydıyla, bu Şartlarla bağlantılı her türlü hukuki uyuşmazlık <strong>Ankara Mahkemeleri ve İcra Daireleri (Türkiye)</strong> yetkisine sunulacaktır. Bu yetkili mahkeme seçimi, tüketiciyi mutad meskeninin bulunduğu ülkenin kanunlarının emredici hükümleriyle sağlanan korumadan mahrum bırakmaz.</p>
+
+      <h3>15.3 Sınır Ötesi Tüketici Hakları Koruması İstisnası</h3>
+      <div class="callout">
+        <p>Avrupa Birliği (AB), Birleşik Krallık (UK) veya feragat edilemez yasal tüketici mahkemesi korumaları uygulayan herhangi bir yargı alanında ikamet eden bir tüketiciyseniz, Türk hukuku ve mahkemesi seçimi, yerel yasalarınız uyarınca anlaşmayla aksi kararlaştırılamayan hükümlerin size sağladığı korumalardan sizi mahrum bırakmaz. Bu durumlarda, mutad meskeninizin bulunduğu ülkedeki yetkili tüketici hakem heyetleri veya mahkemeleri nezdinde yasal tüketici şikayetlerinde bulunma veya yasal işlem başlatma hakkınızı korursunuz.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s16">
+      <h2><span class="section-num">16</span> Platform Sağlayıcı Özel Şartları (Apple ve Google)</h2>
+      <p>Bu sözleşmenin Apple Inc. veya Google LLC ile değil, yalnızca sizinle Insep arasında akdedildiğini kabul edersiniz. Apple ve Google; Uygulamadan, içeriğinden, yazılım bakımından, teknik destekten veya herhangi bir fikri mülkiyet ihlali iddiasının araştırılmasından sorumlu değildir.</p>
+      <p>Apple ve Google, iştirakleriyle birlikte bu Şartların üçüncü taraf lehtarlarıdır ve bu Şartları kabul etmeniz üzerine, üçüncü taraf lehtar olarak bunları size karşı uygulama hakkına sahip olacaklardır.</p>
+      <p>Standart Apple Lisanslı Uygulama Son Kullanıcı Lisans Sözleşmesi (EULA), bu Şartlara ek olarak Uygulamayı iOS üzerinde kullanmanız için de geçerlidir. iOS uygulama lisansı ile ilgili olarak Apple'ın standart EULA'sı ile bu Şartlar arasında herhangi bir çelişki olması durumunda, söz konusu lisans ilişkisi için Apple'ın standart EULA'sı üstün gelir.</p>
+    </section>
+
+    <section class="section" id="tr-s17">
+      <h2><span class="section-num">17</span> İletişim Bilgileri</h2>
+      <div class="contact-card">
+        <h3>Insep Hukuk & Destek Masası</h3>
+        <p><strong style="color:#fff">Sorumlu Geliştirici:</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">Sözleşme geri bildirimleri, resmi bildirimler veya operasyonel destek talepleri için.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Yürürlük tarihi: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-es" style="display:none;">
+  <header class="header">
+    <div class="header-badge">Términos de Servicio</div>
+    <h1>Floorly <span>Términos</span> de Servicio</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Vigente desde: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS & Android</span>
+      <span class="meta-chip">🌍 Turquía + Internacional</span>
+      <span class="meta-chip">🔞 Solo mayores de 18 años</span>
+    </div>
+    <div class="callout">
+      <p><strong>Editor:</strong> İMAN HÜSEYNLİ (Desarrollador Individual)</p>
+      <p>📍 Ulubatlı Hasan Mah. — Ankara, Turquía &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="Tabla de Contenidos">
+      <div class="toc-title">Tabla de Contenidos</div>
+      <ul class="toc-list">
+        <li><a href="#es-s1"><span class="num">1</span> Aceptación</a></li>
+        <li><a href="#es-s2"><span class="num">2</span> Elegibilidad</a></li>
+        <li><a href="#es-s3"><span class="num">3</span> Alcance de Licencia</a></li>
+        <li><a href="#es-s4"><span class="num">4</span> Descripción del Servicio</a></li>
+        <li><a href="#es-s5"><span class="num">5</span> Suscripciones y Facturación</a></li>
+        <li><a href="#es-s6"><span class="num">6</span> Anuncios y Anti-Fraude</a></li>
+        <li><a href="#es-s7"><span class="num">7</span> Propiedad y Pérdida de Datos</a></li>
+        <li><a href="#es-s8"><span class="num">8</span> Descargo Profesional</a></li>
+        <li><a href="#es-s9"><span class="num">9</span> Conducta Aceptable</a></li>
+        <li><a href="#es-s10"><span class="num">10</span> Propiedad Intelectual</a></li>
+        <li><a href="#es-s11"><span class="num">11</span> Exclusión de Garantías</a></li>
+        <li><a href="#es-s12"><span class="num">12</span> Limitación de Responsabilidad</a></li>
+        <li><a href="#es-s13"><span class="num">13</span> Rescisión</a></li>
+        <li><a href="#es-s14"><span class="num">14</span> Cambios en los Términos</a></li>
+        <li><a href="#es-s15"><span class="num">15</span> Ley Aplicable</a></li>
+        <li><a href="#es-s16"><span class="num">16</span> Cláusulas de Plataformas</a></li>
+        <li><a href="#es-s17"><span class="num">17</span> Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- 1 -->
+    <section class="section" id="es-s1">
+      <h2><span class="section-num">1</span> Aceptación de estos Términos</h2>
+      <p>Al descargar, instalar, registrarse o utilizar la aplicación móvil Floorly (la "Aplicación"), usted celebra un contrato legalmente vinculante con <strong>Insep</strong> ("İMAN HÜSEYNLİ", "nosotros", "nos" o "nuestro") y acepta cumplir con estos Términos de Servicio ("Términos"). Si no está de acuerdo con estos Términos, no instale ni utilice la Aplicación.</p>
+      <p>Su interacción con la aplicación también está sujeta explícitamente a nuestra <strong>Política de Privacidad</strong>.</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="section" id="es-s2">
+      <h2><span class="section-num">2</span> Elegibilidad</h2>
+      <p>Floorly está destinada únicamente a usuarios que tengan <strong>18 años de edad o más</strong>. Durante el proceso de incorporación, la Aplicación presenta una pantalla de confirmación de edad. Al instalar o utilizar la Aplicación, usted declara y garantiza que tiene al menos 18 años.</p>
+      <div class="callout callout-warn">
+        <p>La Aplicación no está dirigida a niños. Si indica que es menor de 18 años, las funciones de publicidad y análisis no se inicializarán, se restringirá el acceso a la Aplicación y no se procesará ni transmitirá ningún perfil de comportamiento, identificador publicitario o dato analítico.</p>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="section" id="es-s3">
+      <h2><span class="section-num">3</span> Alcance de la Licencia</h2>
+      <p>Le otorgamos una licencia personal, limitada, no exclusiva, no transferable, no sublicenciable y revocable para instalar y ejecutar una copia de la Aplicación en dispositivos móviles de su propiedad o bajo su control legal, únicamente para sus fines personales o internos de evaluación de propiedades comerciales y flujos de trabajo organizacionales.</p>
+      <p>Usted tiene explícitamente <strong>prohibido</strong>:</p>
+      <ul>
+        <li>Copiar, modificar, traducir, adaptar o crear obras derivadas de la Aplicación.</li>
+        <li>Realizar ingeniería inversa, decompile, desensamblar o intentar derivar el código fuente del software subyacente (excepto en la medida mínima permitida por las leyes locales obligatorias aplicables).</li>
+        <li>Alquilar, arrendar, prestar, vender, sublicenciar, distribuir o explotar comercialmente la interfaz o los activos de la Aplicación.</li>
+        <li>Eliminar, alterar u ocultar cualquier aviso de propiedad intelectual o marca de agua de derechos de autor.</li>
+      </ul>
+    </section>
+
+    <!-- 4 -->
+    <section class="section" id="es-s4">
+      <h2><span class="section-num">4</span> Descripción del Servicio</h2>
+      <p>Floorly es un entorno de software <strong>offline-first</strong> (prioridad sin conexión) diseñado para facilitar el registro de propiedades, mediciones locales de habitaciones, visualización de planos en 2D, ponderación métrica, matrices de comparación de propiedades y gestión de listas de verificación locales. El contenido principal del usuario se escribe y lee completamente en la capa de base de datos local nativa de su dispositivo.</p>
+      <p>Las funciones de red externas — como el procesamiento de ubicaciones de anuncios programáticos, análisis de productos, manejo de errores de diagnóstico, conciliación automatizada de facturación y copias de seguridad en la nube dirigidas por el usuario — requieren una conexión activa a Internet y se gestionan a través de integraciones de infraestructura de terceros especializadas, tal como se detalla en nuestra Política de Privacidad.</p>
+      <p>Nos reservamos el derecho de modificar, optimizar, suspender o descontinuar funciones de software individuales a lo largo del tiempo para mantener la estabilidad del producto y la compatibilidad multiplataforma.</p>
+    </section>
+
+    <!-- 5 -->
+    <section class="section" id="es-s5">
+      <h2><span class="section-num">5</span> Suscripciones, Compras en la Aplicación y Términos Financieros</h2>
+
+      <h3>5.1 Estructuras de Tarifas</h3>
+      <p>Floorly cuenta con un <strong>Nivel Gratuito</strong> básico (sujeto a límites de uso, restricciones en el listado de propiedades y bloques de anuncios programáticos obligatorios) y un Nivel Premium de Pago (<strong>"Pro"</strong>) que desactiva los scripts de anuncios y desbloquea funciones avanzadas: propiedades ilimitadas, exportación automatizada de planos vectoriales en PDF/PNG, notas de voz con micrófono y esquemas de puntuación personalizados.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-label">Mensual</div>
+          <div class="price-amount">$0.99</div>
+          <div class="price-period">por mes</div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-label">Anual — Mejor Valor</div>
+          <div class="price-amount">$9.99</div>
+          <div class="price-period">por año</div>
+          <div class="price-note">Ahorre ~16%</div>
+        </div>
+      </div>
+
+      <h3>5.2 Procesamiento de Transacciones en Tiendas de Aplicaciones</h3>
+      <p>Todas las transacciones monetarias, configuraciones de facturación y canales de gestión de suscripciones se procesan exclusivamente por los operadores de las tiendas de las plataformas principales (<strong>Apple App Store</strong> para iOS y <strong>Google Play Store</strong> para Android) a través del motor de validación de suscripciones <strong>RevenueCat</strong>. Nosotros no recibimos, almacenamos ni procesamos credenciales de tarjetas de crédito o telemetría de procesamiento de pagos; solo recibimos tokens de estado de suscripción anonimizados.</p>
+
+      <h3>5.3 Reglas de Renovación Automática y Precios</h3>
+      <p>Las suscripciones se renuevan automáticamente. Se cobrará automáticamente a la cuenta de la tienda de su plataforma el precio de suscripción vigente en ese momento dentro de las 24 horas anteriores a la conclusión de su período de facturación activo, a menos que cancele la suscripción manualmente al menos 24 horas antes de la fecha de renovación. El Nivel Gratuito sigue estando disponible indefinidamente para los usuarios que prefieran no suscribirse.</p>
+
+      <h3>5.4 Gestión de Cancelaciones</h3>
+      <div class="cancel-grid">
+        <div class="cancel-item">
+          <div class="platform">🍎 iOS</div>
+          <div class="steps">Ajustes del dispositivo → [Nombre de Apple ID] → Suscripciones</div>
+        </div>
+        <div class="cancel-item">
+          <div class="platform">▶️ Android</div>
+          <div class="steps">Google Play App → Icono de Perfil → Pagos y suscripciones → Suscripciones</div>
+        </div>
+      </div>
+      <p>Tras una solicitud de cancelación, su estado Pro permanecerá activo hasta el último día de su período de facturación pagado actual, momento en el que volverá a las restricciones del Nivel Gratuito.</p>
+
+      <h3>5.5 Protocolos de Reembolso y Derechos Legales Obligatorios</h3>
+      <p>Debido a que todas las recaudaciones financieras y la facturación en el punto de venta son gestionadas por Apple y Google, no poseemos el acceso técnico ni la autoridad legal para emitir reembolsos manuales directos. Cualquier solicitud de reembolso financiero debe presentarse directamente a través de las estructuras de soporte oficiales de la plataforma proveedora (Soporte de Apple o Google Play).</p>
+      <div class="callout">
+        <p><strong>Anulación de los Derechos de Protección al Consumidor:</strong> Nada en estos Términos opera para excluir o limitar los derechos del consumidor garantizados por su jurisdicción local, incluidos: El <strong>derecho legal de desistimiento de 14 días</strong> para bienes digitales garantizado a los consumidores que residen dentro de la Unión Europea (UE) y el Reino Unido (UK), o los recursos legales de protección al consumidor codificados bajo la ley <strong>6502 Sayılı Tüketicinin Korunması Hakkında Kanun</strong> para los consumidores dentro de la República de Turquía. Prevalecerán los mecanismos legales locales obligatorios.</p>
+      </div>
+
+      <h3>5.6 Integridad de Datos al Vencer la Suscripción</h3>
+      <div class="highlight-box">
+        <p>Si una suscripción Pro expira o falla la conciliación del pago, su cuenta se degrada gradualmente al Nivel Gratuito. <strong>Sus datos locales existentes de propiedades, fotos, notas de voz y planos de planta permanecen preservados, intactos y completamente editables en el hardware de su dispositivo.</strong> Ningún cambio de estado de suscripción desencadena el borrado de datos.</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="section" id="es-s6">
+      <h2><span class="section-num">6</span> Anuncios, Mecánicas de Recompensa y Verificación Anti-Fraude</h2>
+      <p>La funcionalidad del Nivel Gratuito requiere la visualización de anuncios de video programáticos y con recompensa. Para evitar la explotación mecánica, la inyección de scripts o el cultivo sintético de clics en anuncios, Floorly aplica estrictas comprobaciones anti-fraude en el lado del cliente, incluida la validación de los relojes del sistema de hardware local y parámetros de limitación de velocidad de ejecución.</p>
+      <div class="callout callout-warn">
+        <p>Cualquier manipulación intencional o elusión de estos bucles de visualización de anuncios constituye un <strong>incumplimiento material</strong> de estos Términos y puede dar lugar a la restricción inmediata de funciones locales.</p>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="section" id="es-s7">
+      <h2><span class="section-num">7</span> Propiedad del Contenido, Pérdida de Datos y Responsabilidad del Usuario</h2>
+      <div class="highlight-box">
+        <p><strong>Usted conserva la propiedad absoluta y exclusiva de todo el contenido, perfiles de propiedades, entradas estructurales, planos de habitaciones, notas personalizadas, pistas de voz de audio y fotografías que genere dentro de la Aplicación.</strong> No reclamamos ningún derecho sobre sus datos.</p>
+      </div>
+      <p>Debido a que Floorly funciona como una herramienta con prioridad sin conexión (offline-first), <strong>usted mantiene la responsabilidad absoluta y exclusiva de la integridad, el almacenamiento y las operaciones de recuperación de sus datos.</strong> No nos hacemos responsables de la destrucción, corrupción o borrado de la base de datos que resulte de:</p>
+      <ul>
+        <li>Pérdida física del dispositivo, daños en el hardware o robo.</li>
+        <li>Rutinas de limpieza nativas del sistema operativo o optimizaciones automáticas de almacenamiento del SO.</li>
+        <li>La desinstalación manual de Floorly de su dispositivo.</li>
+        <li>Fallos técnicos que ocurran dentro de sus procesos personales de sincronización de copias de seguridad de Google Drive o iCloud.</li>
+      </ul>
+      <p>Usted declara y garantiza que posee todos los derechos legales, permisos y consentimientos de propiedad necesarios antes de capturar coordenadas de ubicación geográfica, tomar fotografías de activos inmobiliarios o grabar archivos de audio dentro de viviendas privadas.</p>
+    </section>
+
+    <!-- 8 -->
+    <section class="section" id="es-s8">
+      <h2><span class="section-num">8</span> Estimaciones Proporcionales y Descargo de Responsabilidad Profesional</h2>
+      <div class="callout callout-critical">
+        <p><strong>⚠️ AVISO CRÍTICO: NO ES UNA HERRAMIENTA ARQUITECTÓNICA O DE TOPOGRAFÍA PROFESIONAL</strong></p>
+        <p style="margin-top:10px">Floorly se desarrolla únicamente como una ayuda de visualización móvil personal y una herramienta conceptual para la toma de notas. Todos los cálculos computados, planos de planta, estimaciones estructurales en 2D, orientaciones espaciales, dimensiones, áreas de superficie de habitaciones, volúmenes cúbicos y puntuaciones de comparación de bienes raíces ponderadas generados por la Aplicación son <strong>estimaciones geométricas aproximadas</strong> que dependen completamente de la precisión de las entradas manuales y las tolerancias de calibración de los sensores físicos de hardware de su dispositivo móvil.</p>
+        <p style="margin-top:10px">Los resultados generados por Floorly <strong>no constituyen</strong> un levantamiento arquitectónico profesional, evaluación de ingeniería, definición legal de límites de propiedad, tasación estructural o valoración inmobiliaria con licencia. <strong>No tome decisiones de compra vinculantes, compromisos financieros, modificaciones arquitectónicas o contratos legales basados únicamente en los resultados de la Aplicación.</strong> Para todas las evaluaciones vinculantes, contrate a un profesional certificado. Utiliza las métricas generadas por la aplicación bajo su propio riesgo.</p>
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section class="section" id="es-s9">
+      <h2><span class="section-num">9</span> Conducta Aceptable y Usos Prohibidos</h2>
+      <p>Usted acepta que no utilizará Floorly para:</p>
+      <ul>
+        <li>Participar en prácticas inmobiliarias ilegales, fraudulentas o engañosas.</li>
+        <li>Traspasar propiedades privadas o capturar datos de activos multimedia sin un consentimiento legal explícito.</li>
+        <li>Evadir, desactivar o interrumpir los controles de seguridad, marcos de entrega de anuncios, barreras anti-fraude o puertas de acceso a suscripciones.</li>
+        <li>Ejecutar scripts automatizados, scrapers, web-spiders o kits de herramientas de ingeniería inversa contra el binario compilado o el entorno de ejecución de memoria.</li>
+      </ul>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="es-s10">
+      <h2><span class="section-num">10</span> Derechos de Propiedad Intelectual</h2>
+      <p>La aplicación móvil Floorly, junto con su código fuente, diseños de diseño, activos de interfaz de usuario, gráficos originales, algoritmos de puntuación especializados, elementos de marca, marcas comerciales ("Floorly") y estructuras de plantillas patentadas, representa la propiedad intelectual exclusiva de <strong>İMAN HÜSEYNLİ</strong> y está protegida por estatutos internacionales de derechos de autor, marcas comerciales y propiedad intelectual. Excepto por la licencia operativa limitada otorgada en la Sección 3, todos los derechos están explícitamente reservados.</p>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="es-s11">
+      <h2><span class="section-num">11</span> Exclusión de Garantías</h2>
+      <p>En la medida máxima permitida por la ley estatutaria aplicable, la aplicación Floorly se le entrega <strong>"tal cual" ("as is")</strong> y <strong>"según disponibilidad" ("as available")</strong>, sin garantías, avales ni representaciones de ningún tipo, ya sean expresas, implícitas o estatutarias. Rechazamos explícitamente todas las garantías implícitas de comerciabilidad, idoneidad para un propósito específico, disfrute pacífico, precisión de datos, no infracción y ejecución del sistema ininterrumpida o libre de errores.</p>
+      <div class="callout">
+        <p>Nada en esta sección limita los derechos legales de conformidad no renunciables de los consumidores que compran una suscripción Pro, incluidos los derechos bajo la <strong>Directiva de la UE 2019/770</strong> sobre el suministro de contenidos y servicios digitales y la Ley de Protección al Consumidor de Turquía N° 6502.</p>
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section class="section" id="es-s12">
+      <h2><span class="section-num">12</span> Limitación de Responsabilidad</h2>
+      <p>En la medida máxima permitida por los estatutos obligatorios aplicables, Insep (İMAN HÜSEYNLİ, desarrollador individual) no será responsable de ningún daño indirecto, incidental, especial, consecuente o ejemplar, incluidos, entre otros, la pérdida de ganancias, la pérdida de datos, daños a la propiedad o pérdidas financieras incurridas durante adquisiciones de propiedades basadas en los cálculos aproximados de la Aplicación.</p>
+      <p>Excepto donde esté prohibido por las leyes locales obligatorias de protección al consumidor (incluida la Ley del Consumidor de Turquía N° 6502 y las Directivas de Protección al Consumidor de la UE), nuestra responsabilidad agregada total se limitará estrictamente a la cantidad financiera neta real que pagó a Apple App Store o Google Play Store específicamente para la aplicación Floorly durante los doce (12) meses inmediatamente anteriores al evento que dio lugar a dicha reclamación. Para los usuarios del Nivel Gratuito, nuestra responsabilidad estará limitada a la medida máxima permitida por la ley aplicable.</p>
+      <div class="callout">
+        <p><strong>Protección de Exclusiones de Responsabilidad Obligatorias:</strong> Nada en estos Términos opera para restringir, excluir o disminuir la responsabilidad donde esté prohibido por las leyes locales obligatorias, incluida la responsabilidad por muerte, lesiones personales resultantes de negligencia, fraude intencional, mala conducta voluntaria, negligencia grave (<em>ağır kusur</em>) o cualquier violación de los derechos fundamentales de protección al consumidor garantizados por la Ley del Consumidor de Turquía o las Directivas de Protección al Consumidor de la UE/Reino Unido.</p>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section class="section" id="es-s13">
+      <h2><span class="section-num">13</span> Rescisión y Restricción de Licencia</h2>
+      <p>Usted tiene derecho a rescindir este acuerdo en cualquier momento eliminando Floorly permanentemente de su dispositivo móvil y cancelando cualquier renovación activa de suscripción en las plataformas.</p>
+      <p>Debido a que Floorly funciona como una aplicación con prioridad sin conexión sin cuentas de usuario centralizadas, no podemos eliminar de forma remota la base de datos de su dispositivo local. Sin embargo, si comete un incumplimiento material de estos Términos, nos reservamos el derecho de revocar su licencia de software, rescindir este acuerdo y utilizar herramientas de RevenueCat o de la plataforma para restringir su acceso a futuras actualizaciones de la Aplicación o funciones del nivel Pro. Tras la rescisión, sobrevivirán todas las disposiciones que por su naturaleza estructural deban subsistir.</p>
+    </section>
+
+    <!-- 14 -->
+    <section class="section" id="es-s14">
+      <h2><span class="section-num">14</span> Cambios en estos Términos</h2>
+      <p>Nos reservamos el derecho de modificar estos Términos en cualquier momento. El documento actualizado se sellará con una "Fecha de vigencia" revisada en la parte superior del texto. Para cambios materiales que afecten sus derechos o responsabilidades de suscripción, distribuiremos un aviso antes de la ejecución de los cambios a través de banners en la aplicación o mediante actualizaciones de la versión de la tienda. El uso continuado del software después de una actualización constituye la aceptación de los Términos revisados.</p>
+    </section>
+
+    <!-- 15 -->
+    <section class="section" id="es-s15">
+      <h2><span class="section-num">15</span> Ley Aplicable, Resolución de Disputas y Jurisdicción</h2>
+
+      <h3>15.1 Ley Aplicable General</h3>
+      <p>Estos Términos, junto con cualquier disputa contractual o no contractual que surja de ellos, se rigen y construyen de acuerdo con las leyes de la <strong>República de Turquía</strong>, sin dar efecto a ningún principio de elección de ley o conflicto de leyes.</p>
+
+      <h3>15.2 Sede y Jurisdicción</h3>
+      <p>Sujeto a las excepciones obligatorias de protección al consumidor de la Sección 15.3, cualquier disputa legal relacionada con estos Términos se someterá a la jurisdicción de los <strong>Tribunales y Oficinas de Ejecución de Ankara (Ankara Mahkemeleri ve İcra Daireleri), Turquía</strong>.</p>
+
+      <h3>15.3 Excepción de Protección de los Derechos del Consumidor Transfronterizo</h3>
+      <div class="callout">
+        <p>Si usted es un consumidor que reside dentro de la UE, el Reino Unido o cualquier jurisdicción que aplique protecciones legales no renunciables para los consumidores, la elección de la ley y la sede turcas no le priva de la protección que le ofrecen las disposiciones que no pueden ser derogadas por acuerdo según sus leyes locales. En tales casos, mantiene el derecho legal de presentar reclamaciones de consumo o iniciar acciones legales ante las juntas de arbitraje de consumo o los tribunales competentes ubicados dentro de su país de residencia habitual.</p>
+      </div>
+    </section>
+
+    <!-- 16 -->
+    <section class="section" id="es-s16">
+      <h2><span class="section-num">16</span> Cláusulas Específicas del Proveedor de la Plataforma (Apple & Google)</h2>
+      <p>Usted reconoce que este acuerdo se celebra únicamente entre usted e Insep, y <strong>no</strong> con Apple Inc. o Google LLC. Apple y Google no son responsables de la Aplicación, su contenido, mantenimiento de software, soporte técnico o la investigación de cualquier reclamación por infracción de propiedad intelectual.</p>
+      <p>Apple y Google, junto con sus subsidiarias, son terceros beneficiarios de estos Términos y tendrán derecho a exigirlos en su contra como terceros beneficiarios tras su aceptación.</p>
+      <p>El <strong>Acuerdo de Licencia de Usuario Final (EULA) de la Aplicación Licenciada estándar de Apple</strong> se aplica al uso de la Aplicación en iOS además de estos Términos. En caso de conflicto entre el EULA estándar de Apple y estos Términos con respecto a la licencia de la aplicación iOS, prevalecerá el EULA estándar de Apple para esa relación de licencia.</p>
+    </section>
+
+    <!-- 17 -->
+    <section class="section" id="es-s17">
+      <h2><span class="section-num">17</span> Información de Contacto</h2>
+      <div class="contact-card">
+        <h3>Insep Legal & Support Desk</h3>
+        <p><strong style="color:#fff">Desarrollador Principal:</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">Para comentarios contractuales, notificaciones formales o consultas de soporte operativo.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Fecha de vigencia: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-de" style="display:none;">
+  <header class="header">
+    <div class="header-badge">Nutzungsbedingungen</div>
+    <h1>Floorly <span>Nutzungs</span>bedingungen</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Gültig ab: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS & Android</span>
+      <span class="meta-chip">🌍 Türkei + International</span>
+      <span class="meta-chip">🔞 Nur ab 18 Jahren</span>
+    </div>
+    <div class="callout">
+      <p><strong>Herausgeber:</strong> İMAN HÜSEYNLİ (Einzelentwickler)</p>
+      <p>📍 Ulubatlı Hasan Mah. — Ankara, Türkei &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="Inhaltsverzeichnis">
+      <div class="toc-title">Inhaltsverzeichnis</div>
+      <ul class="toc-list">
+        <li><a href="#de-s1"><span class="num">1</span> Zustimmung</a></li>
+        <li><a href="#de-s2"><span class="num">2</span> Berechtigung</a></li>
+        <li><a href="#de-s3"><span class="num">3</span> Lizenzumfang</a></li>
+        <li><a href="#de-s4"><span class="num">4</span> Dienstleistung</a></li>
+        <li><a href="#de-s5"><span class="num">5</span> Abos & Abrechnung</a></li>
+        <li><a href="#de-s6"><span class="num">6</span> Werbung & Anti-Betrug</a></li>
+        <li><a href="#de-s7"><span class="num">7</span> Eigentum & Datenverlust</a></li>
+        <li><a href="#de-s8"><span class="num">8</span> Haftungsausschluss</a></li>
+        <li><a href="#de-s9"><span class="num">9</span> Zulässiges Verhalten</a></li>
+        <li><a href="#de-s10"><span class="num">10</span> Geistiges Eigentum</a></li>
+        <li><a href="#de-s11"><span class="num">11</span> Gewährleistungsausschluss</a></li>
+        <li><a href="#de-s12"><span class="num">12</span> Haftungsbeschränkung</a></li>
+        <li><a href="#de-s13"><span class="num">13</span> Kündigung</a></li>
+        <li><a href="#de-s14"><span class="num">14</span> Änderungen</a></li>
+        <li><a href="#de-s15"><span class="num">15</span> Anwendbares Recht</a></li>
+        <li><a href="#de-s16"><span class="num">16</span> Plattform-Klauseln</a></li>
+        <li><a href="#de-s17"><span class="num">17</span> Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="de-s1">
+      <h2><span class="section-num">1</span> Zustimmung zu diesen Bedingungen</h2>
+      <p>Durch das Herunterladen, Installieren, Registrieren oder Nutzen der mobilen Anwendung Floorly (die "App") gehen Sie einen rechtsverbindlichen Vertrag mit <strong>Insep</strong> ("İMAN HÜSEYNLİ", "wir", "uns" oder "unser") ein und erklären sich mit diesen Nutzungsbedingungen ("Bedingungen") einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, installieren oder nutzen Sie die App nicht.</p>
+      <p>Ihre Interaktion mit der Anwendung unterliegt zudem ausdrücklich unserer <strong>Datenschutzerklärung</strong>.</p>
+    </section>
+
+    <section class="section" id="de-s2">
+      <h2><span class="section-num">2</span> Berechtigung</h2>
+      <p>Floorly ist ausschließlich für Nutzer bestimmt, die <strong>18 Jahre oder älter</strong> sind. Während des Onboardings zeigt die App einen Bildschirm zur Altersbestätigung an. Durch die Installation oder Nutzung der App versichern und garantieren Sie, dass Sie mindestens 18 Jahre alt sind.</p>
+      <div class="callout callout-warn">
+        <p>Die App richtet sich nicht an Kinder. Wenn Sie angeben, unter 18 Jahre alt zu sein, werden Werbe- und Analysefunktionen nicht initialisiert, der Zugriff auf die App wird beschränkt und es werden keine Verhaltensprofile, Werbeidentifikatoren oder Analysedaten verarbeitet oder übertragen.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s3">
+      <h2><span class="section-num">3</span> Scope of License (Lizenzumfang)</h2>
+      <p>Wir gewähren Ihnen eine persönliche, beschränkte, nicht exklusive, nicht übertragbare, nicht unterlizenzierbare und widerrufbare Lizenz zur Installation und Ausführung einer Kopie der App auf mobilen Geräten, die Sie rechtmäßig besitzen oder kontrollieren, ausschließlich für Ihre persönlichen oder internen geschäftlichen Zwecke der Immobilienbewertung und organisatorischen Arbeitsabläufe.</p>
+      <p>Es ist Ihnen ausdrücklich <strong>untersagt</strong>:</p>
+      <ul>
+        <li>Die App zu kopieren, zu modifizieren, zu übersetzen, anzupassen oder abgeleitete Werke von ihr zu erstellen.</li>
+        <li>Die App im Reverse-Engineering zu untersuchen, zu dekompilieren, zu disassemblieren oder zu versuchen, den Quellcode der zugrundeliegenden Software abzuleiten (außer in dem minimalen Umfang, der durch zwingendes lokales Recht zulässig ist).</li>
+        <li>Die Benutzeroberfläche oder die Assets der App zu vermieten, zu verleasen, zu verleihen, zu verkaufen, unterzulizenzieren, zu vertreiben oder anderweitig kommerziell zu verwerten.</li>
+        <li>Proprietäre Hinweise auf geistiges Eigentum oder Urheberrechts-Wasserzeichen zu entfernen, zu verändern oder zu verdecken.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="de-s4">
+      <h2><span class="section-num">4</span> Beschreibung der Dienstleistung</h2>
+      <p>Floorly ist eine <strong>Offline-First</strong>-Softwareumgebung, die entwickelt wurde, um die Verwaltung von Immobilienunterlagen, lokale Raumessungen, 2D-Grundrissvisualisierungen, metrische Gewichtungen, Immobilienvergleichsmatrizen und die lokale Checklistenverwaltung zu erleichtern. Die Kerninhalte der Nutzer werden vollständig auf der nativen, lokalen Datenbankebene Ihres Geräts geschrieben und gelesen.</p>
+      <p>Externe Netzwerkfunktionen — wie die Platzierung programmatischer Werbung, Produktanalysen, diagnostische Fehlerbehandlung, automatischer Abgleich von Abrechnungen und nutzergesteuerte Cloud-Backups — erfordern eine aktive Internetverbindung und werden über Infrastruktur-Integrationen von Drittanbietern verwaltet, wie in unserer Datenschutzerklärung detailliert beschrieben.</p>
+      <p>Wir behalten uns das Recht vor, einzelne Softwarefunktionen im Laufe der Zeit zu modifizieren, zu optimieren, auszusetzen oder einzustellen, um die Produktstabilität und die plattformübergreifende Kompatibilität zu gewährleisten.</p>
+    </section>
+
+    <section class="section" id="de-s5">
+      <h2><span class="section-num">5</span> Abonnements, In-App-Käufe und finanzielle Bedingungen</h2>
+
+      <h3>5.1 Tarife und Strukturen</h3>
+      <p>Floorly bietet eine grundlegende <strong>kostenlose Version (Free Tier)</strong> (unterliegt Nutzungsobergrenzen, Beschränkungen bei den Immobilien-Einträgen und verpflichtenden Werbeblöcken) und eine Premium-Bezahlversion (<strong>"Pro"</strong>), die Werbe-Skripte deaktiviert und erweiterte Funktionen freischaltet: unbegrenzte Immobilien, automatisierten PDF/PNG-Layout-Export, Mikrofon-Sprachnotizen und benutzerdefinierte Bewertungsschemata.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-label">Monatlich</div>
+          <div class="price-amount">$0.99</div>
+          <div class="price-period">pro Monat</div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-label">Jährlich — Bester Wert</div>
+          <div class="price-amount">$9.99</div>
+          <div class="price-period">pro Jahr</div>
+          <div class="price-note">Sparen Sie ~16%</div>
+        </div>
+      </div>
+
+      <h3>5.2 Zahlungsabwicklung über App Stores</h3>
+      <p>Alle Geldtransaktionen, Abrechnungskonfigurationen und Abonnement-Verwaltungsprozesse werden exklusiv von den primären Store-Betreibern (<strong>Apple App Store</strong> für iOS und <strong>Google Play Store</strong> für Android) über die Abonnement-Validierungs-Engine <strong>RevenueCat</strong> verarbeitet. Wir empfangen, speichern oder verarbeiten keine Kreditkartendaten, Bankverbindungen oder Zahlungsabwicklungs-Telemetrie — wir erhalten lediglich anonymisierte Transaktions-Metadaten und Abonnement-Status-Tokens.</p>
+
+      <h3>5.3 Automatische Verlängerungsregeln & Preise</h3>
+      <p>Abonnements verlängern sich automatisch. Ihr Store-Konto wird automatisch innerhalb von 24 Stunden vor dem Ende Ihres aktiven Abrechnungszeitraums mit dem jeweils aktuellen Abonnementpreis belastet, es sei denn, Sie kündigen das Abonnement mindestens 24 Stunden vor dem Verlängerungsdatum manuell. Die kostenlose Version bleibt für Nutzer, die kein Abonnement abschließen möchten, auf unbestimmte Zeit verfügbar.</p>
+
+      <h3>5.4 Kündigungsmanagement</h3>
+      <div class="cancel-grid">
+        <div class="cancel-item">
+          <div class="platform">🍎 iOS</div>
+          <div class="steps">Geräteeinstellungen → [Apple-ID Name] → Abonnements</div>
+        </div>
+        <div class="cancel-item">
+          <div class="platform">▶️ Android</div>
+          <div class="steps">Google Play App → Profilsymbol → Zahlungen & Abonnements → Abonnements</div>
+        </div>
+      </div>
+      <p>Nach einer Kündigung bleibt Ihr Pro-Status bis zum letzten Tag Ihres aktuellen bezahlten Abrechnungszeitraums aktiv und fällt danach auf die Einschränkungen der kostenlosen Version zurück.</p>
+
+      <h3>5.5 Erstattungsrichtlinien & Gesetzliche Rechte</h3>
+      <p>Da alle finanziellen Einnahmen und Rechnungsstellungen von Apple und Google verwaltet werden, haben wir weder den technischen Zugriff noch die rechtliche Befugnis, direkte Rückerstattungen zu leisten. Alle Erstattungsanträge müssen direkt über die offiziellen Support-Strukturen der Plattform eingereicht werden, auf der die Transaktion stattgefunden hat (Apple Support oder Google Play).</p>
+      <div class="callout">
+        <p><strong>Vorrang von Verbraucherschutzrechten:</strong> Nichts in diesen Bedingungen schränkt die zwingenden gesetzlichen Verbraucherrechte Ihrer lokalen Gerichtsbarkeit ein oder schließt diese aus, einschließlich: Das <strong>14-tägige gesetzliche Widerrufsrecht</strong> für digitale Güter für Verbraucher mit Wohnsitz in der Europäischen Union (EU) und dem Vereinigten Königreich (UK) sowie die gesetzlichen Rechtsbehelfe nach dem Gesetz <strong>6502 Sayılı Tüketicinin Korunması Hakkında Kanun</strong> für Verbraucher in der Republik Türkei. Wenn lokales Verbraucherrecht ein nicht abdingbares Rücktritts- oder Rückerstattungsrecht gewährt, geht dieses vor.</p>
+      </div>
+
+      <h3>5.6 Datenintegrität bei Ablauf des Abonnements</h3>
+      <div class="highlight-box">
+        <p>Wenn ein Pro-Abonnement abläuft oder die Zahlung fehlschlägt, wird Ihr Konto schrittweise auf die kostenlose Version zurückgestuft. <strong>Ihre bestehenden lokalen Immobiliendaten, Fotos, Sprachnotizen und Grundrisse bleiben geschützt, intakt und auf Ihrer Gerätehardware voll editierbar.</strong> Es werden keine Datenlöschungen durch eine Änderung des Abonnementstatus ausgelöst.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s6">
+      <h2><span class="section-num">6</span> Werbung, Belohnungsmechanismen und Anti-Betrug</h2>
+      <p>Die Funktionalität der kostenlosen Version erfordert die Anzeige von programmatischen und belohnten Video-Anzeigen (Rewarded Ads). Um mechanische Ausnutzung, Script-Injektionen oder künstliches Klick-Farming zu verhindern, erzwingt Floorly strenge clientseitige Anti-Betrugs-Prüfungen, einschließlich der Validierung lokaler Hardware-Systemuhren und Ratenbegrenzungsparametern.</p>
+      <div class="callout callout-warn">
+        <p>Jede vorsätzliche Manipulation oder Umgehung von Werbe-Anzeigeschleifen stellt einen <strong>wesentlichen Verstoß</strong> gegen diese Bedingungen dar und kann zu einer sofortigen Einschränkung lokaler Funktionen führen.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s7">
+      <h2><span class="section-num">7</span> Eigentum an Inhalten, Datenverlust und Nutzerverantwortung</h2>
+      <div class="highlight-box">
+        <p><strong>Sie behalten das absolute, exklusive Eigentum an allen Inhalten, Immobilienprofilen, strukturellen Eingaben, Raumplänen, benutzerdefinierten Notizen, Audiospuren und Fotografien, die Sie innerhalb der App generieren.</strong> Wir erheben keinen Anspruch auf Ihre Daten.</p>
+      </div>
+      <p>Da Floorly als Offline-First-Tool arbeitet, <strong>tragen Sie die absolute und alleinige Verantwortung für Ihre Datenintegrität, Speicherung und Wiederherstellungsvorgänge.</strong> Wir haben keinen Zugriff auf Ihre Gerätedatenbank und können nicht für die Zerstörung oder Beschädigung von Daten haftbar gemacht werden, die resultieren aus:</p>
+      <ul>
+        <li>Physischem Geräteverlust, Hardwareschäden oder Diebstahl.</li>
+        <li>Nativen Bereinigungsroutinen des Betriebssystems oder automatisierten OS-Speicheroptimierungen.</li>
+        <li>Der manuellen Deinstallation von Floorly von Ihrem Gerät.</li>
+        <li>Technischen Fehlern bei der Synchronisierung Ihres persönlichen Google Drive- oder iCloud-Backups.</li>
+      </ul>
+      <p>Sie versichern und garantieren, dass Sie alle erforderlichen gesetzlichen Rechte und Genehmigungen besitzen, bevor Sie Standortkoordinaten erfassen, Fotos von Immobilienobjekten aufnehmen oder Audioaufnahmen in privaten Wohnungen machen.</p>
+    </section>
+
+    <section class="section" id="de-s8">
+      <h2><span class="section-num">8</span> Unverbindliche Schätzungen & Professioneller Haftungsausschluss</h2>
+      <div class="callout callout-critical">
+        <p><strong>⚠️ WICHTIGER HINWEIS: KEIN PROFESSIONELLES ARCHITEKTUR- ODER VERMESSUNGSWERKZEUG</strong></p>
+        <p style="margin-top:10px">Floorly wurde ausschließlich als persönliche, mobile Visualisierungshilfe und konzeptionelles Notizwerkzeug entwickelt. Alle von der App generierten Berechnungen, Grundrisse, 2D-Strukturschätzungen, räumlichen Orientierungen, Abmessungen, Raumoberflächen, kubischen Volumina und gewichteten Immobilienvergleichswerte sind <strong>näherungsweise geometrische Schätzungen</strong>, die vollständig von der Genauigkeit manueller Eingaben und den Kalibrierungstoleranzen der Hardwaresensoren Ihres Mobilgeräts abhängen. Informationen zur Berechnungslogik sind direkt im Erstellungsfluss über das "Info"-Symbol neben der Raumschnittstelle ("ODALAR") zugänglich. Voreingestellte Datenbankstrukturen, Standardlayouts oder Beispielmaße dienen nur der Veranschaulichung; Sie sind allein dafür verantwortlich, diese durch präzise, reale Metriken zu überschreiben.</p>
+        <p style="margin-top:10px">Die von Floorly generierten Ergebnisse <strong>stellen keine</strong> professionelle architektonische Vermessung, ingenieurtechnische Bewertung, rechtliche Immobiliengrenzenbestimmung, bauliche Begutachtung oder lizenzierte Immobilienbewertung dar. <strong>Treffen Sie keine verbindlichen Kaufentscheidungen, finanziellen Verpflichtungen oder rechtlichen Vereinbarungen ausschließlich auf Basis der App-Ergebnisse.</strong> Ziehen Sie für alle verbindlichen Bewertungen einen zertifizierten Fachmann hinzu. Die Nutzung der Metriken erfolgt vollständig auf eigene Gefahr.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s9">
+      <h2><span class="section-num">9</span> Zulässiges Verhalten und unzulässige Nutzung</h2>
+      <p>Sie erklären sich damit einverstanden, Floorly nicht zu nutzen, um:</p>
+      <ul>
+        <li>Rechtswidrige, betrügerische oder täuschende Immobilienpraktiken auszuüben.</li>
+        <li>Private Grundstücke ohne ausdrückliche rechtliche Zustimmung zu betreten (Hausfriedensbruch) oder Mediennutzungsdaten dort zu erfassen.</li>
+        <li>Sicherheitskontrollen, Werbeauslieferungs-Frameworks, Anti-Betrugs-Barrieren oder Abonnement-Zugangstore zu umgehen, zu deaktivieren oder zu stören.</li>
+        <li>Automatisierte Skripte, Scraper, Web-Spider oder Reverse-Engineering-Toolkits gegen die kompilierte Binärdatei oder die Speicherlaufzeit auszuführen.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="de-s10">
+      <h2><span class="section-num">10</span> Rechte an geistigem Eigentum</h2>
+      <p>Die mobile Anwendung Floorly sowie deren Quellcode, Design-Layouts, Assets der Benutzeroberfläche, Originalgrafiken, spezialisierte Bewertungsalgorithmen, Branding-Elemente, Marken ("Floorly") und proprietäre Vorlagenstrukturen stellen das exklusive geistige Eigentum von <strong>İMAN HÜSEYNLİ</strong> dar und sind durch internationale Urheberrechts-, Marken- und Gesetze zum geistigen Eigentum geschützt. Mit Ausnahme der in Abschnitt 3 gewährten beschränkten Betriebslizenz sind alle Rechte ausdrücklich vorbehalten.</p>
+    </section>
+
+    <section class="section" id="de-s11">
+      <h2><span class="section-num">11</span> Gewährleistungsausschluss</h2>
+      <p>Soweit nach geltendem Recht zulässig, wird die Floorly-Anwendung im Zustand <strong>"wie besehen" ("as is")</strong> und <strong>"nach Verfügbarkeit" ("as available")</strong> ohne jegliche ausdrückliche, implizite oder gesetzliche Gewährleistungen oder Zusicherungen bereitgestellt. Wir schließen ausdrücklich alle impliziten Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck, ungestörten Nutzung, Datengenauigkeit sowie der ununterbrochenen oder fehlerfreien Ausführung aus.</p>
+      <div class="callout">
+        <p>Nichts in diesem Abschnitt schränkt die nicht abdingbaren gesetzlichen Konformitätsrechte von Verbrauchern ein, die ein Pro-Abonnement erwerben, einschließlich der Rechte gemäß der <strong>EU-Richtlinie 2019/770</strong> über digitale Inhalte und Dienstleistungen sowie dem türkischen Verbraucherschutzgesetz Nr. 6502.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s12">
+      <h2><span class="section-num">12</span> Haftungsbeschränkung</h2>
+      <p>Soweit nach anwendbaren zwingenden Gesetzen zulässig, haftet Insep (İMAN HÜSEYNLİ, Einzelentwickler) nicht für indirekte, zufällige, besondere, Folgeschäden oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf entgangenen Gewinn, Datenverlust, Sachschäden oder finanzielle Verluste, die bei Immobilienkäufen oder Investitionsentscheidungen auf Basis der Näherungsberechnungen der App entstehen.</p>
+      <p>Außer dort, wo es durch zwingendes lokales Verbraucherschutzrecht verboten ist, ist unsere gesamte kumulierte Haftung strikt auf den tatsächlichen Nettobetrag begrenzt, den Sie in den zwölf (12) Monaten unmittelbar vor dem schadenstiftenden Ereignis für die Floorly-Anwendung im Apple App Store oder Google Play Store gezahlt haben. Für Nutzer der kostenlosen Version ist unsere Haftung auf das gesetzlich minimal zulässige Maß beschränkt.</p>
+      <div class="callout">
+        <p><strong>Zwingende Haftungsausschlüsse:</strong> Nichts in diesen Bedingungen schränkt die Haftung für Todesfälle, Personenschäden infolge von Fahrlässigkeit, vorsätzlichen Betrug, vorsätzliches Fehlverhalten, grobe Fahrlässigkeit (<em>ağır kusur</em>) oder Verletzungen grundlegender Verbraucherrechte nach dem türkischen Verbraucherschutzgesetz (Nr. 6502) oder den Verbraucherschutzrichtlinien der EU/des Vereinigten Königreichs ein.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s13">
+      <h2><span class="section-num">13</span> Kündigung und Lizenzbeschränkung</h2>
+      <p>Sie können diese Vereinbarung jederzeit kündigen, indem Sie Floorly dauerhaft von Ihrem Mobilgerät löschen und alle aktiven Abonnementverlängerungen auf den Plattformen kündigen.</p>
+      <p>Da Floorly als Offline-First-Anwendung ohne zentrale Benutzerkonten operiert, können wir Ihre lokale Gerätedatenbank nicht aus der Ferne löschen. Wenn Sie jedoch einen materiellen Verstoß gegen diese Bedingungen begehen, behalten wir uns das Recht vor, Ihre Softwarelizenz zu widerrufen, diese Vereinbarung zu kündigen und RevenueCat oder Plattform-Tools zu nutzen, um Ihren Zugriff auf zukünftige App-Updates oder Pro-Funktionen zu beschränken. Nach der Kündigung überdauern alle Klauseln, die ihrer Natur nach fortgelten sollten, das Ende der Vereinbarung.</p>
+    </section>
+
+    <section class="section" id="de-s14">
+      <h2><span class="section-num">14</span> Änderungen an diesen Bedingungen</h2>
+      <p>Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Das aktualisierte Dokument wird oben im Text mit einem neuen "Gültig ab"-Datum versehen. Bei wesentlichen Änderungen, die Ihre Abonnementrechte oder Pflichten betreffen, werden wir Sie vor Inkrafttreten der Änderungen über In-App-Banner oder über Store-Versionsupdates informieren. Ihre fortgesetzte Nutzung der Software nach Inkrafttreten einer Aktualisierung gilt als Annahme der geänderten Bedingungen.</p>
+    </section>
+
+    <section class="section" id="de-s15">
+      <h2><span class="section-num">15</span> Anwendbares Recht, Streitbeilegung und Gerichtsstand</h2>
+
+      <h3>15.1 Allgemeines anwendbares Recht</h3>
+      <p>Diese Bedingungen sowie alle vertraglichen oder außervertraglichen Streitigkeiten, die sich daraus ergeben, unterliegen den Gesetzen der <strong>Republik Türkei</strong> und werden in Übereinstimmung mit diesen ausgelegt, unter Ausschluss des Kollisionsrechts.</p>
+
+      <h3>15.2 Gerichtsstand und Zuständigkeit</h3>
+      <p>Vorbehaltlich der zwingenden Verbraucherschutzausnahmen in Abschnitt 15.3 werden alle Rechtsstreitigkeiten im Zusammenhang mit diesen Bedingungen der Gerichtsbarkeit der <strong>Gerichte und Vollstreckungsbehörden von Ankara (Ankara Mahkemeleri ve İcra Daireleri), Türkei</strong>, unterworfen.</p>
+
+      <h3>15.3 Ausnahme zum Schutz grenzüberschreitender Verbraucherrechte</h3>
+      <div class="callout">
+        <p>Wenn Sie ein Verbraucher mit Wohnsitz in der EU, dem Vereinigten Königreich oder einer Gerichtsbarkeit sind, die unhabdingbare gesetzliche Verbrauchergerichtsstände vorschreibt, entzieht Ihnen die Wahl des türkischen Rechts und Gerichtsstands nicht den Schutz der Bestimmungen, von denen durch Vereinbarung nach Ihrem lokalen Recht nicht abgewichen werden darf. In solchen Fällen behalten Sie das Recht, Verbraucherbeschwerden oder rechtliche Schritte vor den zuständigen Verbraucherschiedsstellen oder Gerichten in Ihrem Land des gewöhnlichen Aufenthalts einzuleiten.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s16">
+      <h2><span class="section-num">16</span> Spezifische Klauseln der Plattform-Anbieter (Apple & Google)</h2>
+      <p>Sie erkennen an, dass diese Vereinbarung ausschließlich zwischen Ihnen und Insep und <strong>nicht</strong> mit Apple Inc. oder Google LLC geschlossen wird. Apple und Google sind nicht verantwortlich für die App, deren Inhalt, Softwarewartung, technischen Support oder die Untersuchung von Ansprüchen wegen der Verletzung geistigen Eigentums.</p>
+      <p>Apple und Google sowie deren Tochtergesellschaften sind Drittbegünstigte dieser Bedingungen und haben das Recht, diese nach Ihrer Annahme der Bedingungen als Drittbegünstigte gegen Sie durchzusetzen.</p>
+      <p>Die Standard-Endnutzer-Lizenzvereinbarung (EULA) für lizenzierte Anwendungen von Apple gilt für Ihre Nutzung della App auf iOS zusätzlich zu diesen Bedingungen. Im Falle eines Konflikts zwischen der Standard-EULA von Apple und diesen Bedingungen in Bezug auf die iOS-Lizenz hat die Standard-EULA von Apple Vorrang.</p>
+    </section>
+
+    <section class="section" id="de-s17">
+      <h2><span class="section-num">17</span> Kontaktinformationen</h2>
+      <div class="contact-card">
+        <h3>Insep Legal & Support Desk</h3>
+        <p><strong style="color:#fff">Hauptentwickler:</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">Für vertragliches Feedback, formelle Mitteilungen oder betriebliche Support-Anfragen.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Effektives Datum: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-ru" style="display:none;">
+  <header class="header">
+    <div class="header-badge">Условия использования</div>
+    <h1>Условия <span>использования</span> Floorly</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Дата вступления в силу: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS и Android</span>
+      <span class="meta-chip">🌍 Турция + Международный рынок</span>
+      <span class="meta-chip">🔞 Только 18+</span>
+    </div>
+    <div class="callout">
+      <p><strong>Издатель:</strong> ИМАН ГУСЕЙНЛИ (Индивидуальный разработчик)</p>
+      <p>📍 Улубатлы Хасан Мах. — Анкара, Турция &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="Содержание">
+      <div class="toc-title">Содержание</div>
+      <ul class="toc-list">
+        <li><a href="#ru-s1"><span class="num">1</span> Согласие с Условиями</a></li>
+        <li><a href="#ru-s2"><span class="num">2</span> Соответствие требованиям</a></li>
+        <li><a href="#ru-s3"><span class="num">3</span> Объем лицензии</a></li>
+        <li><a href="#ru-s4"><span class="num">4</span> Описание Услуг</a></li>
+        <li><a href="#ru-s5"><span class="num">5</span> Подписки и Финансовые условия</a></li>
+        <li><a href="#ru-s6"><span class="num">6</span> Реклама и Борьба с мошенничеством</a></li>
+        <li><a href="#ru-s7"><span class="num">7</span> Права на контент и Ответственность</a></li>
+        <li><a href="#ru-s8"><span class="num">8</span> Отказ от профессиональной ответственности</a></li>
+        <li><a href="#ru-s9"><span class="num">9</span> Правила поведения и Запреты</a></li>
+        <li><a href="#ru-s10"><span class="num">10</span> Интеллектуальная собственность</a></li>
+        <li><a href="#ru-s11"><span class="num">11</span> Отказ от гарантий</a></li>
+        <li><a href="#ru-s12"><span class="num">12</span> Ограничение ответственности</a></li>
+        <li><a href="#ru-s13"><span class="num">13</span> Прекращение действия соглашения</a></li>
+        <li><a href="#ru-s14"><span class="num">14</span> Изменение Условий</a></li>
+        <li><a href="#ru-s15"><span class="num">15</span> Применимое право и Разрешение споров</a></li>
+        <li><a href="#ru-s16"><span class="num">16</span> Положения платформ (Apple и Google)</a></li>
+        <li><a href="#ru-s17"><span class="num">17</span> Контактная информация</a></li>
+      </ul>
+    </nav>
+
+    <!-- 1 -->
+    <section class="section" id="ru-s1">
+      <h2><span class="section-num">1</span> Согласие с настоящими Условиями</h2>
+      <p>Скачивая, устанавливая, регистрируясь или используя мобильное приложение Floorly (далее «Приложение»), вы заключаете юридически обязывающий договор с компанией <strong>Insep</strong> («ИМАН ГУСЕЙНЛИ», «мы», «нам» или «наш») и соглашаетесь соблюдать настоящие Условия использования (далее «Условия»). Если вы не согласны с данными Условиями, не устанавливайте и не используйте Приложение.</p>
+      <p>Ваше взаимодействие с Приложением также регулируется нашей <strong>Политикой конфиденциальности</strong>.</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="section" id="ru-s2">
+      <h2><span class="section-num">2</span> Соответствие требованиям и возрастные ограничения</h2>
+      <p>Приложение Floorly предназначено исключительно для пользователей в возрасте <strong>18 лет и старше</strong>. Во время первоначальной настройки Приложение отображает экран подтверждения возраста. Устанавливая или используя Приложение, вы подтверждаете и гарантируете, что вам исполнилось 18 лет.</p>
+      <div class="callout callout-warn">
+        <p>Приложение не предназначено для детей. Если вы укажете, что вам меньше 18 лет, функции рекламы и аналитики не будут запущены, доступ к Приложению будет ограничен, а поведенческое профилирование, рекламные идентификаторы и аналитические данные не будут обрабатываться или передаваться.</p>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="section" id="ru-s3">
+      <h2><span class="section-num">3</span> Объем лицензии</h2>
+      <p>Мы предоставляем вам личную, ограниченную, неисключительную, непередаваемую, не подлежащую сублицензированию, отзываемую лицензию на установку и запуск копии Приложения на мобильных устройствах, которыми вы законно владеете или распоряжаетесь, исключительно для ваших личных целей или для целей внутренней оценки недвижимости и организации рабочих процессов предприятия.</p>
+      <p>Вам прямо <strong>запрещается</strong>:</p>
+      <ul>
+        <li>Копировать, изменять, переводить, адаптировать или создавать производные продукты на основе Приложения.</li>
+        <li>Производить обратную разработку, декомпиляцию, деассемблирование или пытаться извлечь исходный код базового программного обеспечения (за исключением минимальных пределов, разрешенных применимым местным законодательством).</li>
+        <li>Сдавать в аренду, лизинг, прокат, продавать, сублицензировать, распространять или коммерчески эксплуатировать интерфейс или ресурсы Приложения.</li>
+        <li>Удалять, изменять или скрывать любые уведомления об интеллектуальной собственности или водяные знаки авторских прав.</li>
+      </ul>
+    </section>
+
+    <!-- 4 -->
+    <section class="section" id="ru-s4">
+      <h2><span class="section-num">4</span> Описание Услуг</h2>
+      <p>Floorly — это программная среда, работающая по принципу <strong>«сначала автономно» (offline-first)</strong>, предназначенная для ведения учета объектов недвижимости, локального измерения комнат, 2D-визуализации планов этажей, взвешивания метрик, ведения матриц сравнения объектов недвижимости и управления локальными контрольными списками. Основной контент пользователя записывается и считывается исключительно на уровне встроенной локальной базы данных вашего устройства.</p>
+      <p>Внешние сетевые функции (такие как обработка автоматического размещения рекламы, продуктовая аналитика, диагностическая обработка ошибок, автоматическая сверка счетов и управляемое пользователем облачное резервное копирование) требуют активного интернет-соединения и осуществляются через специализированные интеграции со сторонними инфраструктурами, как подробно описано в нашей Политике конфиденциальности.</p>
+      <p>Мы оставляем за собой право изменять, оптимизировать, приостанавливать или прекращать поддержку отдельных функций программного обеспечения с течением времени для поддержания стабильности продукта и кроссплатформенной совместимости.</p>
+    </section>
+
+    <!-- 5 -->
+    <section class="section" id="ru-s5">
+      <h2><span class="section-num">5</span> Подписки, покупки в приложении и финансовые условия</h2>
+
+      <h3>5.1 Структура тарифных планов</h3>
+      <p>В Floorly предусмотрен базовый <strong>Бесплатный тариф</strong> (с ограничениями по использованию, лимитами на количество объектов недвижимости и обязательными программными рекламными блоками) и премиальный <strong>Платный тариф («Pro»)</strong>, который отключает сценарии инициализации рекламы и открывает расширенные функции (неограниченное количество объектов, автоматический экспорт макетов в векторный PDF/PNG, запись голосовых заметок через микрофон и настраиваемые схемы оценки).</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-label">Ежемесячно</div>
+          <div class="price-amount">$0.99</div>
+          <div class="price-period">в месяц</div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-label">Ежегодно — Лучшая цена</div>
+          <div class="price-amount">$9.99</div>
+          <div class="price-period">в год</div>
+          <div class="price-note">Экономия ~16%</div>
+        </div>
+      </div>
+
+      <h3>5.2 Обработка транзакций в магазинах приложений</h3>
+      <p>Все денежные транзакции, конфигурации биллинга и процессы управления подписками обрабатываются исключительно операторами основных платформ (<strong>Apple App Store</strong> для iOS и <strong>Google Play Store</strong> для Android) через механизм валидации подписок <strong>RevenueCat</strong>. Мы не получаем, не храним и не обрабатываем данные кредитных карт, банковских счетов или телеметрию платежей. Мы получаем только анонимизированные метаданные транзакций и токены статуса подписки (например, активна, истекла) через RevenueCat для предоставления, проверки и управления вашим доступом к функциям Pro.</p>
+
+      <h3>5.3 Правила автоматического продления и цены</h3>
+      <p>Подписки спроектированы с логикой автоматического продления. С вашего счета в магазине платформы будет автоматически списана плата по текущей цене подписки в течение 24 часов до окончания активного расчетного периода, если вы не отмените подписку вручную по крайней мере за 24 часа до даты продления.</p>
+      <p>Пользователи, предпочитающие не приобретать подписку Pro, могут продолжать использовать Приложение на Бесплатном тарифе без ограничения по времени, с учетом стандартных лимитов использования, ограничений на списки недвижимости и обязательных блоков программной рекламы, предусмотренных системой.</p>
+
+      <h3>5.4 Управление отменой подписки</h3>
+      <div class="cancel-grid">
+        <div class="cancel-item">
+          <div class="platform">🍎 iOS</div>
+          <div class="steps">Настройки устройства → [Имя Apple ID] → Подписки</div>
+        </div>
+        <div class="cancel-item">
+          <div class="platform">▶️ Android</div>
+          <div class="steps">Приложение Google Play → Иконка профиля → Платежи и подписки → Подписки</div>
+        </div>
+      </div>
+      <p>После запроса на отмену статус вашей подписки Pro остается активным до последнего дня текущего оплаченного расчетного периода, после чего аккаунт возвращается к ограничениям Бесплатного тарифа.</p>
+
+      <h3>5.5 Протоколы возврата средств и законные права потребителей</h3>
+      <p>Поскольку все финансовые сборы и выставление счетов на точках продаж осуществляются компаниями Apple и Google, мы не имеем технического доступа или законных полномочий для осуществления прямых возвратов средств вручную или корректировки баланса учетной записи. Любой запрос на возврат денежных средств должен подаваться непосредственно через официальные структуры поддержки провайдера платформы, где была совершена транзакция (Поддержка Apple или Google Play). Все претензии по возврату средств регулируются исключительно правилами соответствующего магазина платформ.</p>
+      <div class="callout">
+        <p><strong>Приоритет прав потребителей:</strong> Ничто в настоящих Условиях не направлено на исключение, ограничение или уменьшение обязательных законных прав потребителей, гарантированных законодательством вашей страны, включая:</p>
+        <ul>
+          <li>Гарантированное для потребителей, проживающих в Европейском Союзе (ЕС) и Великобритании (UK), <strong>14-дневное законное право на отказ</strong> от цифровых товаров.</li>
+          <li>Законные средства защиты прав потребителей, кодифицированные в Законе Туртивной Республики <strong>№ 6502 «О защите прав потребителей»</strong> (6502 Sayılı Tüketicinin Korunması Hakkında Kanun) для пользователей на территории Турецкой Республики.</li>
+        </ul>
+        <p>В случаях, когда местное законодательство о правах потребителей предоставляет неотъемлемое право на расторжение договора или возврат средств, такие правовые механизмы имеют преимущественную силу перед любыми противоречащими им положениями данного раздела.</p>
+      </div>
+
+      <h3>5.6 Сохранность данных при истечении срока действия подписки</h3>
+      <div class="highlight-box">
+        <p>Если срок действия подписки Pro истекает или списание оплаты завершается неудачей, ваш аккаунт автоматически переводится на Бесплатный тариф. <strong>Ваши существующие локальные данные о недвижимости, фотографии, голосовые заметки и планы этажей сохраняются в неизменном виде и остаются полностью доступными для редактирования на вашем устройстве.</strong> Изменение статуса подписки не вызывает удаления данных, однако создание новых записей, превышающих лимиты Бесплатного тарифа, будет заблокировано до возобновления подписки Pro.</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="section" id="ru-s6">
+      <h2><span class="section-num">6</span> Реклама, вознаграждения и защита от мошенничества</h2>
+      <p>Функциональность Бесплатного тарифа требует отображения программной рекламы и видеороликов с вознаграждением. Чтобы предотвратить автоматическое манипулирование, внедрение скриптов или искусственную накрутку кликов по рекламе, Floorly применяет строгие проверки на стороне клиента для предотвращения мошенничества, включая валидацию системных часов оборудования и параметры ограничения частоты запросов.</p>
+      <div class="callout callout-warn">
+        <p>Любое умышленное манипулирование или обход циклов отображения рекламы составляет <strong>существенное нарушение</strong> настоящих Условий и может привести к немедленному ограничению локальных функций Приложения.</p>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="section" id="ru-s7">
+      <h2><span class="section-num">7</span> Права на контент, потеря данных и ответственность пользователя</h2>
+      <div class="highlight-box">
+        <p><strong>Вы сохраняете абсолютное, исключительное право собственности на весь контент, профили объектов, структурные данные, планы комнат, пользовательские заметки, аудиозаписи и фотографии, которые вы создаете внутри Приложения.</strong> Мы не претендуем на ваши данные.</p>
+      </div>
+      <p>Поскольку Floorly работает по принципу локального хранения («сначала автономно»), <strong>вы несете абсолютную и единоличную ответственность за целостность, хранение и операции по восстановлению ваших данных.</strong> Мы не имеем доступа к базе данных вашего устройства и не располагаем техническими средствами для восстановления утраченных записей. Мы не несем ответственности за любое уничтожение, повреждение или стирание базы данных, произошедшее в результате:</p>
+      <ul>
+        <li>Физической утраты устройства, повреждения оборудования или кражи.</li>
+        <li>Встроенных процедур очистки операционной системы или автоматических оптимизаций хранилища ОС.</li>
+        <li>Ручного удаления Приложения Floorly с вашего устройства.</li>
+        <li>Технических сбоев, возникающих внутри ваших личных процессов синхронизации резервных копий Google Диска или iCloud.</li>
+      </ul>
+      <p>Вы заявляете и гарантируете, что обладаете всеми необходимыми законными правами, разрешениями и согласием собственников перед фиксацией географических координат, фотографированием объектов недвижимости или записью аудио внутри частных жилых помещений.</p>
+    </section>
+
+    <!-- 8 -->
+    <section class="section" id="ru-s8">
+      <h2><span class="section-num">8</span> Ориентировочные расчеты и отказ от профессиональной ответственности</h2>
+      <div class="callout callout-critical">
+        <p><strong>⚠️ ВАЖНОЕ УВЕДОМЛЕНИЕ: НЕ ЯВЛЯЕТСЯ ПРОФЕССИОНАЛЬНЫМ ИНСТРУМЕНТОМ ДЛЯ АРХИТЕКТУРЫ ИЛИ ГЕОДЕЗИИ</strong></p>
+        <p style="margin-top:10px">Floorly разработан исключительно как личный мобильный инструмент для визуализации и создания концептуальных заметок. Все вычисления, планы этажей, 2D-структурные оценки, пространственная ориентация, размеры, площади помещений, кубические объемы и взвешенные оценки сравнения недвижимости, генерируемые Приложением, являются <strong>приблизительными геометрическими оценками</strong>. Эти значения полностью зависят от точности ручного ввода и допусков калибровки физических датчиков вашего мобильного устройства (камера, компас, гироскоп). Для удобства пользователей информационные подсказки по логике расчетов доступны непосредственно в процессе создания объектов с помощью специальной иконки «Информация» (Info) рядом с интерфейсом комнат («ODALAR»). Любые предварительно заполненные структуры базы данных, шаблоны планировки комнат по умолчанию или примерные размеры, предоставляемые при первоначальной настройке, являются исключительно заполнителями для иллюстративных целей и не представляют собой фактические или рекомендуемые измерения. Вы несете единоличную ответственность за проверку и замену этих значений по умолчанию точными реальными метриками.</p>
+        <p style="margin-top:10px">Результаты, полученные с помощью Floorly, <strong>не представляют собой</strong> профессиональную архитектурную съемку, инженерную оценку, юридическое определение границ собственности, структурную экспертизу или лицензированную оценку недвижимости. Данное Приложение не должно использоваться в качестве замены профессиональных расчетов. Не принимайте обязывающих решений о покупке, финансовых обязательствах, архитектурных изменениях, строительных подрядах или юридических соглашениях исключительно на основе результатов работы Приложения. Для проведения любых юридически значимых и обязывающих оценок вы должны привлечь сертифицированного специалиста (лицензированного архитектора, инженера-строителя, профессионального кадастрового инженера или лицензированного оценщика недвижимости). Вы используете метрики, полученные с помощью Приложения, исключительно на свой страх и страх и риск.</p>
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section class="section" id="ru-s9">
+      <h2><span class="section-num">9</span> Правила приемлемого поведения и запрещенные способы использования</h2>
+      <p>Вы соглашаетесь с тем, что не будете использовать Floorly для:</p>
+      <ul>
+        <li>Участия в любых незаконных, мошеннических или вводящих в заблуждение операциях с недвижимостью.</li>
+        <li>Проникновения на частную территорию или сбора медиаданных об активах без явного законного согласия.</li>
+        <li>Обхода, отключения или нарушения работы средств безопасности, систем доставки рекламы, барьеров против мошенничества или шлюзов доступа к подписке.</li>
+        <li>Запуска автоматических скриптов, скреперов (scrapers), веб-пауков или средств обратной разработки в отношении скомпилированного бинарного файла или среды выполнения памяти.</li>
+      </ul>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="ru-s10">
+      <h2><span class="section-num">10</span> Права на интеллектуальную собственность</h2>
+      <p>Мобильное приложение Floorly, а также его исходный код, макеты дизайна, элементы пользовательского интерфейса, оригинальная графика, специализированные алгоритмы оценки, элементы брендинга, товарные знаки («Floorly») и проприетарные структуры шаблонов представляют собой исключительную интеллектуальную собственность <strong>ИМАНА ГУСЕЙНЛИ</strong> и защищены международными законами об авторском праве, товарных знаках и интеллектуальной собственности. За исключением ограниченной операционной лицензии, предоставленной в Разделе 3, все права прямо защищены.</p>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="ru-s11">
+      <h2><span class="section-num">11</span> Отказ от гарантий</h2>
+      <p>В максимальной степени, разрешенной применимым законодательством, приложение Floorly предоставляется вам на условиях <strong>«как есть» (as is)</strong> и <strong>«по мере доступности» (as available)</strong>, без каких-либо гарантий, обязательств или заверений любого рода, явных, подразумеваемых или предусмотренных законом. Мы прямо отказываемся от всех подразумеваемых гарантий товарной пригодности, пригодности для определенной цели, беспрепятственного пользования, точности данных, ненарушения прав и бесперебойного или безошибочного выполнения системы.</p>
+      <div class="callout">
+        <p>Ничто в настоящем разделе не ограничивает неотъемлемые законные права потребителей, приобретающих подписку Pro, включая права в соответствии с <strong>Директивой ЕС 2019/770</strong> о поставке цифрового контента и цифровых услуг и <strong>Законом Турции о защите прав потребителей № 6502</strong>.</p>
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section class="section" id="ru-s12">
+      <h2><span class="section-num">12</span> Ограничение ответственности</h2>
+      <p>В максимальной степени, разрешенной применимым императивным законодательством, Insep (ИМАН ГУСЕЙНЛИ, Индивидуальный разработчик) не несет ответственности за любые косвенные, случайные, специальные, вытекающие или штрафные убытки, включая, помимо прочего, упущенную выгоду, потерю данных, материальный ущерб или финансовые потери, понесенные в ходе приобретения недвижимости или принятия инвестиционных решений на основе приблизительных расчетов Приложения.</p>
+      <p>За исключением случаев, запрещенных обязательными местными законами о защите прав потребителей, наша общая совокупная ответственность по любым претензиям, возникающим в связи с настоящими Условиями или использованием Floorly, будет строго ограничена фактической чистой финансовой суммой, выплаченной вами в Apple App Store или Google Play Store конкретно за приложение Floorly в течение двенадцати (12) месяцев, непосредственно предшествующих событию, вызвавшему такую претензию. Для пользователей Бесплатного тарифа наша ответственность ограничена в максимальной степени, разрешенной применимым обязательным правом.</p>
+      <div class="callout">
+        <p><strong>Защита обязательных исключений ответственности:</strong> Ничто в настоящих Условиях не действует в направлении ограничения, исключения или уменьшения ответственности, где это запрещено императивными местными законами, включая ответственность за смерть, телесные повреждения, возникшие в результате халатности, умышленное мошенничество, сознательные неправомерные действия, грубую неосторожность (<em>ağır kusur</em>) или любое нарушение фундаментальных прав потребителей, гарантированных Законом Турции о защите прав потребителей (Закон № 6502) или Директивами ЕС/Великобритании о защите прав потребителей.</p>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section class="section" id="ru-s13">
+      <h2><span class="section-num">13</span> Прекращение действия соглашения и ограничение лицензии</h2>
+      <p>Вы имеете право расторгнуть настоящее соглашение в любое время, навсегда удалив Floorly со своего мобильного устройства и отменив любые активные продления подписок на платформах.</p>
+      <p>Поскольку Floorly работает как приложение с локальным приоритетом хранения данных без централизованных учетных записей пользователей, мы не можем удаленно стереть базу данных вашего локального устройства. Однако, если вы совершите существенное нарушение настоящих Условий, мы оставляем за собой право отозвать вашу лицензию на программное обеспечение, расторгнуть настоящее соглашение и использовать RevenueCat или инструменты платформы для ограничения вашего доступа к будущим обновлениям Приложения или функциям уровня Pro. После прекращения действия соглашения все положения, которые по своей структурной природе должны сохранять силу, сохраняют силу (включая права собственности, профессиональные отказы от ответственности, ограничения ответственности, возмещение ущерба и положения о применимом праве).</p>
+    </section>
+
+    <!-- 14 -->
+    <section class="section" id="ru-s14">
+      <h2><span class="section-num">14</span> Изменения в настоящих Условиях</h2>
+      <p>Мы оставляем за собой право изменять настоящие Условия в любое время. Обновленный документ будет помечен измененной «Датой вступления в силу» в верхней части текста. В случае существенных изменений, влияющих на ваши права по подписке или обязанности, мы распространим уведомление до вступления изменений в силу посредством внутриигровых баннеров или через обновления версий в магазинах приложений. Ваше дальнейшее использование программного обеспечения после вступления изменений в силу означает согласие с пересмотренными Условиями.</p>
+    </section>
+
+    <!-- 15 -->
+    <section class="section" id="ru-s15">
+      <h2><span class="section-num">15</span> Применимое право, разрешение споров и юрисдикция</h2>
+
+      <h3>15.1 Общее применимое право</h3>
+      <p>Настоящие Условия, а также любые договорные или внедоговорные споры, возникающие из них, регулируются и толкуются в соответствии с законодательством <strong>Республики Турция</strong>, без придания силы каким-либо принципам выбора права или коллизионного права.</p>
+
+      <h3>15.2 Место рассмотрения споров и юрисдикция</h3>
+      <p>С учетом обязательных исключений по защите прав потребителей в Разделе 15.3, любые юридические споры, связанные с настоящими Условиями, подлежат юрисдикции <strong>Судов и исполнительных органов Анкары (Ankara Mahkemeleri ve İcra Daireleri), Турция</strong>. Этот выбор места рассмотрения споров не лишает потребителя защиты, обеспечиваемой обязательными положениями законодательства страны его постоянного проживания.</p>
+
+      <h3>15.3 Исключение в целях трансграничной защиты прав потребителей</h3>
+      <div class="callout">
+        <p>Если вы являетесь потребителем, проживающим в <strong>Европейском Союзе (ЕС), Великобритании (UK)</strong> или любой юрисдикции, применяющей неотъемлемые законодательные меры защиты прав потребителей по месту жительства, выбор турецкого права и места рассмотрения споров не лишает вас защиты, предоставляемой вам положениями, от которых невозможно отступить по соглашению в соответствии с вашим местным законодательством. В таких случаях вы сохраняете законное право подавать установленные законом потребительские жалобы или инициировать судебные иски в компетентных потребительских арбитражных советах или судах, расположенных в стране вашего постоянного проживания.</p>
+      </div>
+    </section>
+
+    <!-- 16 -->
+    <section class="section" id="ru-s16">
+      <h2><span class="section-num">16</span> Специальные положения для провайдеров платформ (Apple и Google)</h2>
+      <p>Вы подтверждаете, что настоящее соглашение заключается исключительно между вами и Insep, а <strong>не</strong> с Apple Inc. или Google LLC. Компании Apple и Google не несут ответственности за Приложение, его контент, техническое обслуживание программного обеспечения, техническую поддержку или расследование любых претензий о нарушении прав интеллектуальной собственности.</p>
+      <p>Apple и Google, наряду со своими дочерними компаниями, являются сторонними бенефициарами настоящих Условий, и после вашего принятия настоящих Условий будут иметь право применять их в отношении вас в качестве стороннего бенефициара.</p>
+      <p>Стандартное лицензионное соглашение с конечным пользователем лицензируемого приложения Apple (EULA) применяется к использованию вами Приложения на iOS в дополнение к настоящим Условиям. В случае любого конфликта между стандартным EULA Apple и настоящими Условиями в отношении лицензии на Приложение для iOS, стандартное EULA Apple имеет преимущественную силу для этих лицензионных отношений.</p>
+    </section>
+
+    <!-- 17 -->
+    <section class="section" id="ru-s17">
+      <h2><span class="section-num">17</span> Контактная информация</h2>
+      <div class="contact-card">
+        <h3>Служба поддержки и правовых вопросов Insep</h3>
+        <p><strong style="color:#fff">Ведущий разработчик:</strong> ИМАН ГУСЕЙНЛИ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">Для договорных отзывов, официальных уведомлений или запросов по операционной поддержке.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 ИМАН ГУСЕЙНЛИ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Дата вступления в силу: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-zh_Hant" style="display: none;">
+  <header class="header">
+    <div class="header-badge">服務條款</div>
+    <h1>Floorly <span>服務</span>條款</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 生效日期：<strong>2026年6月3日</strong></span>
+      <span class="meta-chip">📱 支援系統：iOS & Android</span>
+      <span class="meta-chip">🌍 目標市場：土耳其 + 國際市場</span>
+      <span class="meta-chip">🔞 年齡限制：僅限18歲以上</span>
+    </div>
+    <div class="callout">
+      <p><strong>發行方：</strong>İMAN HÜSEYNLİ（獨立開發者）</p>
+      <p>📍 地址：[Ulubatlı Hasan Mah. — 土耳其安卡拉] &nbsp;·&nbsp; ✉️ 電子郵件：<a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="目錄">
+      <div class="toc-title">目錄</div>
+      <ul class="toc-list">
+        <li><a href="#zh-hant-s1"><span class="num">1</span> 接受本條款</a></li>
+        <li><a href="#zh-hant-s2"><span class="num">2</span> 用户資格</a></li>
+        <li><a href="#zh-hant-s3"><span class="num">3</span> 許可範圍</a></li>
+        <li><a href="#zh-hant-s4"><span class="num">4</span> 服務內容說明</a></li>
+        <li><a href="#zh-hant-s5"><span class="num">5</span> 訂閱與計費</a></li>
+        <li><a href="#zh-hant-s6"><span class="num">6</span> 廣告與反作弊</a></li>
+        <li><a href="#zh-hant-s7"><span class="num">7</span> 內容與數據所有權</a></li>
+        <li><a href="#zh-hant-s8"><span class="num">8</span> 專業免責聲明</a></li>
+        <li><a href="#zh-hant-s9"><span class="num">9</span> 可接受的行為</a></li>
+        <li><a href="#zh-hant-s10"><span class="num">10</span> 知識產權</a></li>
+        <li><a href="#zh-hant-s11"><span class="num">11</span> 保證免責聲明</a></li>
+        <li><a href="#zh-hant-s12"><span class="num">12</span> 責任限制</a></li>
+        <li><a href="#zh-hant-s13"><span class="num">13</span> 條款終止</a></li>
+        <li><a href="#zh-hant-s14"><span class="num">14</span> 條款變更</a></li>
+        <li><a href="#zh-hant-s15"><span class="num">15</span> 適用法律</a></li>
+        <li><a href="#zh-hant-s16"><span class="num">16</span> 平台方特定條款</a></li>
+        <li><a href="#zh-hant-s17"><span class="num">17</span> 聯繫信息</a></li>
+      </ul>
+    </nav>
+
+    <!-- 1 -->
+    <section class="section" id="zh-hant-s1">
+      <h2><span class="section-num">1</span> 接受本條款</h2>
+      <p>通過下載、安裝、註冊或使用 Floorly 條碼應用程式（以下簡稱「本應用」），即表示您與 <strong>Insep</strong>（「İMAN HÜSEYNLİ」、「我們」、「我們的」）訂立了一份具有法律約束力的合同，並同意受這些服務條款（以下簡稱「本條款」）的約束。如果您不同意本條款，請勿安裝或使用本應用。</p>
+      <p>您與本應用程式的交互同時明確受我們 <strong>《隱私政策》</strong> 的約束。</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="section" id="zh-hant-s2">
+      <h2><span class="section-num">2</span> 用户資格</h2>
+      <p>Floorly 僅供 <strong>18周歲及以上</strong> 的用戶使用。在用戶首次使用引導（Onboarding）過程中，應用會顯示一个年齡確認畫面。通過安裝或使用本應用，即表示您聲明並保證您已年滿 18 周歲。</p>
+      <div class="callout callout-warn">
+        <p>本應用不面向兒童。如果您表明自己未滿 18 周歲，系統將不會初始化廣告和分析功能，應用的使用權限將受到限制，並且不會處理或傳輸任何行為畫像、廣告標識符或分析數據。</p>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="section" id="zh-hant-s3">
+      <h2><span class="section-num">3</span> 許可範圍</h2>
+      <p>我們授予您一項個人的、有限的、非排他性的、不可轉讓的、不可轉許可的、可撤銷的許可，允許您在您合法擁有或控制的移動設備上安裝和運行本应用的副本，此許可僅用於您的個人或內部業務房產評估及組織工作流目的。</p>
+      <p>您被明確<strong>禁止</strong>進行以下行為：</p>
+      <ul>
+        <li>複製、修改、翻譯、改編本應用或創作其衍生作品。</li>
+        <li>對本應用進行逆向工程、反編譯、匯編或試圖獲取底層軟件的源代碼（強制性適用本地法律允許的最低限度除外）。</li>
+        <li>出租、租賃、出借、出售、轉許可、分發或商業化利用本应用的界面或資產。</li>
+        <li>刪除、更改或遮擋任何所有權知識產權聲明或版權水印。</li>
+      </ul>
+    </section>
+
+    <!-- 4 -->
+    <section class="section" id="zh-hant-s4">
+      <h2><span class="section-num">4</span> 服務內容說明</h2>
+      <p>Floorly 是一個<strong>本地優先（Offline-first）</strong>的軟件環境，旨在提供房產記錄留存、本地房間測量、2D 戶型圖可視化、指標權重計算、房產對比矩陣以及本地清單管理。核心用戶內容完全寫入您設備的原生本地數據庫層並從中讀取。</p>
+      <p>外部網絡功能（例如處理程序化廣告投放、產品分析、診斷錯誤處理、自動計費核對以及用戶控制的自動雲備份）需要激活互聯網連接，並通過第三方基礎設施集成進行管理，具體詳見我們的《隱私政策》。</p>
+      <p>我們保留隨著時間的推移修改、優化、暫停或廢棄部分軟件功能的權利，以維護產品穩定性和跨平台兼容性。</p>
+    </section>
+
+    <!-- 5 -->
+    <section class="section" id="zh-hant-s5">
+      <h2><span class="section-num">5</span> 訂閱、應用內購買及財務條款</h2>
+
+      <h3>5.1 版本級別結構</h3>
+      <p>Floorly 包含基礎的<strong>免費版（Free Tier）</strong>（受限於使用額度上限和強制性程序化廣告顯示）以及高級的<strong>高級付費版（Pro Tier）</strong>。高級版將關閉廣告初始化腳本並解鎖高級功能：無限房產數量、自動矢量 PDF/PNG 布局導出、麥克風語音筆記錄製以及自定義評分機制。</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-label">按月訂閱</div>
+          <div class="price-amount">$0.99</div>
+          <div class="price-period">每個月</div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-label">按年訂閱 — 最佳價值</div>
+          <div class="price-amount">$9.99</div>
+          <div class="price-period">每整年</div>
+          <div class="price-note">節約約 16%</div>
+        </div>
+      </div>
+
+      <h3>5.2 應用商店交易處理</h3>
+      <p>所有貨幣交易均由主流平台商店運營商（iOS 端的 <strong>Apple App Store</strong> 和 Android 端的 <strong>Google Play Store</strong>）通過 <strong>RevenueCat</strong> 訂閱驗證引擎獨家處理。我們不會接收、存儲或處理您的信用卡憑證或支付處理流水數據——我們僅通過 RevenueCat 接收匿名交易元數據和訂閱狀態令牌。</p>
+
+      <h3>5.3 自動續費規則</h3>
+      <p>訂閱採用自動續費邏輯。您的平台商店帳戶將在當前計費週期結束前 24 小時內，按照屆時有效的訂閱價格自動扣費，除非您在續費日前至少 24 小時手動取消訂閱。不想購買高級版訂閱的用户可以無限期繼續使用免費版，但需遵守標準使用限制和程序化廣告區塊限制。</p>
+
+      <h3>5.4 取消續費管理</h3>
+      <div class="cancel-grid">
+        <div class="cancel-item">
+          <div class="platform">🍎 iOS 系統</div>
+          <div class="steps">設備設置 → [您的 Apple ID 姓名] → 訂閱</div>
+        </div>
+        <div class="cancel-item">
+          <div class="platform">▶️ Android 系統</div>
+          <div class="steps">Google Play 應用 → 個人資料圖標 → 付款和訂閱 → 訂閱</div>
+        </div>
+      </div>
+      <p>取消續費請求提交後，您的高級版狀態將保持有效，直至當前已付費計費週期的最後一天，隨後降級回免費版限制。</p>
+
+      <h3>5.5 退款協議與法定權利</h3>
+      <p>由於所有財務收款均由 Apple 和 Google 管理，我們不具備直接進行手動退款或調整帳戶額度的技術權限。任何退款請求必須直接提交給發生交易的官方平台支持渠道（Apple 支持或 Google Play）。所有退款訴求嚴格遵守各應用商店的平台政策。</p>
+      <div class="callout">
+        <p><strong>消費者權益保護法覆蓋條款：</strong>本條款中的任何內容均不旨在排除或限制您所在本地司法管轄區內強制性法定消費者權利，包括：</p>
+        <p>· 居住在歐盟（EU）和英國（UK）境內的消費者依法享有的數字商品 <strong>14天法定冷靜期解約退款權（Right of withdrawal）</strong>。</p>
+        <p>· 在土耳其共和國境內的消費者享有基於 <strong>《第6502號消費者保護法》（6502 Sayılı Tüketicinin Korunması Hakkında Kanun）</strong> 所賦予的法定救濟權利。</p>
+        <p>如果本地消費者法律賦予了不可放棄的解約或退款權利，則這些法定法律機制應優先於本節中任何衝突的條款。</p>
+      </div>
+
+      <h3>5.6 訂閱過期後的數據完整性</h3>
+      <div class="highlight-box">
+        <p>如果高級版訂閱過期或支付核對失敗，您的帳戶將優雅地降級至免費版。<strong>您現有的本地房產數據、照片、語音筆記和戶型圖將完好無損地保留在您的設備硬件上，並支持完全編輯。</strong> 訂閱狀態的變化絕不會觸發數據清空；但是，在您重新激活高級版或恢復合規前，您將無法創建超出免費版額度邊界的新條目。</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="section" id="zh-hant-s6">
+      <h2><span class="section-num">6</span> 廣告、獎勵機制與反作弊</h2>
+      <p>免費版功能需要展示程序化廣告和激勵視頻廣告。為了防止通過機械化漏洞利用、腳本注入或虛擬廣告點擊農場進行作弊，Floorly 實施了嚴格的客戶端反作弊檢查，包括驗證本地硬件系統時鐘和執行速率限制參數。</p>
+      <div class="callout callout-warn">
+        <p>任何故意操縱或繞過這些廣告展示循環的行為均構成對本條款的<strong>實質性違約</strong>，可能導致本地功能立即受到限制。</p>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="section" id="zh-hant-s7">
+      <h2><span class="section-num">7</span> 内容所有權、數據丟失與用戶責任</h2>
+      <div class="highlight-box">
+        <p><strong>對於您在應用內生成的全部內容、房產配置文件、結構輸入、房間規劃、自定義筆記、音頻語音軌跡和照片，您保留絕對、排他的所有權。</strong> 我們不對您的數據主張任何權利。</p>
+      </div>
+      <p>由於 Floorly 是一款本地優先的工具，因此<strong>您對自身的數據完整性、存儲和恢復操作承擔絕對且唯一的責任。</strong> 我們無法訪問您的設備數據庫，也沒有技術手段來恢復丟失的記錄。我們對因以下原因導致的任何數據銷毀、損壞或數據庫清空概不負責：</p>
+      <ul>
+        <li>物理設備丟失、硬件損壞或失竊。</li>
+        <li>原生操作系統清理程序或自動 OS 存儲優化。</li>
+        <li>從您的設備上卸載 Floorly。</li>
+        <li>您個人的 Google 雲端硬碟（Google Drive）或 iCloud 備份同步過程中發生的內部技術故障。</li>
+      </ul>
+      <p>您聲明並保證，在獲取地理定位坐標、拍攝不動產資產照片或在私人住宅內錄製音頻文件之前，您已獲得了所有必要的合法權利、許可和產權人同意。</p>
+    </section>
+
+    <!-- 8 -->
+    <section class="section" id="zh-hant-s8">
+      <h2><span class="section-num">8</span> 比例估算與專業服務免責聲明</h2>
+      <div class="callout callout-critical">
+        <p><strong>⚠️ 重要通知：本應用並非專業建築或測繪工具</strong></p>
+        <p style="margin-top:10px">Floorly 僅作為個人移動端可視化輔助及概念記事工具開發。應用生成的所有計算數值、戶型圖、2D 結構估算、空間朝向、尺寸、房間表面積、立方體積以及加權房產對比評分均為<strong>近似的幾何估算值</strong>。這些數值完全取決於您手動輸入的精準度以及您移動設備物理硬件傳感器（攝像頭、指南針、陀螺儀）的校準公差。為方便用戶使用，您可以在創建房產流程中點擊“房間”（“ODALAR”）界面旁的“信息（Info）”圖標直接查看關於計算邏輯的指導說明。首次配置時提供的任何預填數據庫結構、默認房間布局模板或示例尺寸均僅為展示目的的占位符，並不代表實際或推薦的測量值。您有責任自行核實並使用現實世界的精準度量值覆蓋這些默認值。</p>
+        <p style="margin-top:10px">Floorly 生成的輸出結果<strong>不構成</strong>專業的建築測繪、工程評估、法定產權邊界界定、結構鑑定或持牌房地產估價。<strong>請勿完全依賴本應用的輸出結果做出具有約束力的購買決定、財務承諾或法律協議。</strong> 對於所有具有法律效力的評估，您必須聘請認證的專業人員（持牌建築師、結構工程師、專業土地測繪師或持牌房地產估價師）。使用本應用產生的度量指標，風險完全由您自行承擔。</p>
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section class="section" id="zh-hant-s9">
+      <h2><span class="section-num">9</span> 可接受的行為與禁止的用途</h2>
+      <p>您同意您不會將 Floorly 用於：</p>
+      <ul>
+        <li>從事任何違法、欺詐或欺騙性的房地產不當行為。</li>
+        <li>在未獲得明確法律許可的情況下侵入私有財產或獲取媒體資產數據。</li>
+        <li>繞過、停用或破壞安全控制、廣告投放框架、反作弊屏障或訂閱訪問閘門。</li>
+        <li>針對已編譯的二進制文件或內存運行期執行自動化腳本、抓取工具、網絡蜘蛛或逆向工程工具包。</li>
+      </ul>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="zh-hant-s10">
+      <h2><span class="section-num">10</span> 知識產權</h2>
+      <p>Floorly 移動應用程序及其源代碼、設計布局、用戶界面資產、原創圖形、專屬評分算法、品牌元素、商標（“Floorly”）和專有模板結構，均代表 <strong>İMAN HÜSEYNLİ</strong> 的獨家知識產權，並受到國際版權、商標和知識產權法律的保護。除第 3 節中授予的有限操作許可外，所有權利均予以明確保留。</p>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="zh-hant-s11">
+      <h2><span class="section-num">11</span> 保證免責聲明</h2>
+      <p>在適用法律允許的最大範圍內，本應用是以<strong>“按現狀（As is）”</strong>和<strong>“可獲得性（As available）”</strong>狀態向您交付的，不包含任何明示、暗示或法定形式的保證、擔保或陳述。我們明確免除所有關於適銷性、特定用途的適用性、寧靜享有權、數據準確性、不侵權以及無中斷或無錯誤系統運行的暗示保證。</p>
+      <div class="callout">
+        <p>本節中的任何內容均不限制購買高級版訂閱的消費者依法享有不可放棄的法定符合性權利，包括根據關於數字內容和服務供應的 <strong>《歐盟第2019/770號指令》</strong> 以及 <strong>《土耳其第6502號消費者保護法》</strong> 所享有的權利。</p>
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section class="section" id="zh-hant-s12">
+      <h2><span class="section-num">12</span> 責任限制</h2>
+      <p>在適用強制性法律允許的最大範圍內，發行方 Insep（İMAN HÜSEYNLİ 獨立開發者）對基於應用近似計算做出房產購置或房地產投資選擇所引發的任何間接、附帶、特殊、衍生性或懲罰性損害（包括但不限於利潤損失、數據丟失、財產損失或經濟損失）概不負責。</p>
+      <p>除強制性本地消費者保護法禁止的情況外，我們因本條款或與使用 Floorly 相關而引發的任何索賠所承擔的總累計賠償責任，嚴格限制並封頂於您在引發該索賠的事件發生前十二（12）個月內向 Apple App Store 或 Google Play Store 為該 Floorly 应用實際支付的淨財務金額。對於使用免費版的用户，我們的責任將在強制性適用法律允許的最大範圍內予以限制。</p>
+      <div class="callout">
+        <p><strong>強制性責任排除保護：</strong> 本條款中的任何內容均不旨在限制或排除本地強制性法律禁止排除的法律責任，包括因疏忽導致的死亡或人身傷害、蓄意欺詐、故意不當行為、重大過失（<em>ağır kusur</em>），或任何對土耳其消費者法（第6502號法律）及歐盟/英國消費者保護指令所保障的基本消費者權益的侵害責任。</p>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section class="section" id="zh-hant-s13">
+      <h2><span class="section-num">13</span> 條款終止與許可限制</h2>
+      <p>您可以隨時通過從您的移動設備中永久刪除 Floorly 並取消任何有效的平台訂閱續費來終止本協議。</p>
+      <p>由於 Floorly 作為一款本地優先的應用運行，不具備中央用戶帳戶體系，因此我們無法遠程刪除您的本地設備數據庫。但是，如果您發生實質性違約，我們保留撤銷您的軟件許可、終止本協議並利用 RevenueCat 或平台工具限制您獲取未來應用更新或高級版功能的權利。本協議終止後，所有按其本質結構應繼續有效的條款（包括所有權、專業免責聲明、責任限制封頂、賠償和管轄法律條款）均應在終止後繼續有效。</p>
+    </section>
+
+    <!-- 14 -->
+    <section class="section" id="zh-hant-s14">
+      <h2><span class="section-num">14</span> 條款變更</h2>
+      <p>我們保留隨時修改本條款的權利。更新後的文件將在文本頂部標註修訂後的“生效日期”。對於影響您訂閱權益或責任的實質性變更，我們將在變更生效前通過應用內橫幅或應用商店版本更新的形式發布通知。您在變更生效後繼續使用本軟件的行為，即構成您對修訂後條款的接受。</p>
+    </section>
+
+    <!-- 15 -->
+    <section class="section" id="zh-hant-s15">
+      <h2><span class="section-num">15</span> 適用法律、爭議解決與管轄場所</h2>
+
+      <h3>15.1 通用適用法律</h3>
+      <p>本條款以及因本條款引起的或與其相關的任何合同或非合同爭議，均受<strong>土耳其共和國</strong>法律管轄並按其解釋，不觸動任何法律選擇或法律衝突原則。</p>
+
+      <h3>15.2 訴訟管轄地</h3>
+      <p>在服從下述第 15.3 節強制性消費者保護例外情況的前提下，與本條款相關的任何法律爭議均應提交至<strong>土耳其安卡拉法院及執行局（Ankara Mahkemeleri ve İcra Daireleri）</strong>專屬管轄。此管轄地選擇並不會駁奪消費者其經常居住國法律強制性條文對其所提供的保護。</p>
+
+      <h3>15.3 跨境消費者權益保護例外條款</h3>
+      <div class="callout">
+        <p>如果您是居住在<strong>歐盟（EU）、英國（UK）</strong>或任何執行不可放棄的法定消費者法庭保護的司法管轄區內的消費者，對土耳其法律和管轄地的選擇並不會駁奪您在本地法律下通過協議無法規避的保護權利。在此類情況下，您保留向您經常居住國內具有管轄權的消費者仲裁委員會或法院提起法定消費者投訴或法律訴訟的合法權利。</p>
+      </div>
+    </section>
+
+    <!-- 16 -->
+    <section class="section" id="zh-hant-s16">
+      <h2><span class="section-num">16</span> 平台方特定條款（Apple & Google）</h2>
+      <p>您承認本協議僅在您與 Insep 之間簽署，<strong>而非</strong>與 Apple Inc. 或 Google LLC 簽署。Apple 和 Google 不對本應用、應用內容、軟件維護、技術支持或任何知識產權侵權索賠的調查承擔任何責任。</p>
+      <p>Apple 和 Google 及其子公司是本條款的第三方受益人。在您接受本條款後，Apple 和 Google 將有權作為第三方受益人依據本條款向您強制執行相關權利。</p>
+      <p>在 iOS 設備上使用本應用時，除本條款外，還應同時適用標準的 <strong>《Apple 許可應用程式最終用戶許可協議（EULA）》</strong>。如果標準的 Apple EULA 與本條款就 iOS 應用許可關係存在任何衝突，則就該許可關係而言，以 Apple 標準的 EULA 為准。</p>
+    </section>
+
+    <!-- 17 -->
+    <section class="section" id="zh-hant-s17">
+      <h2><span class="section-num">17</span> 聯繫信息</h2>
+      <div class="contact-card">
+        <h3>Insep 法律與支持專區</h3>
+        <p><strong style="color:#fff">主導開發者：</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ 電子郵件：<a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">適用於合同反饋、正式法律通知或運營支持諮詢。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">生效日期：2026年6月3日</p>
+  </footer>
+</div>
+
+<div id="content-zh_Hans" style="display: none;">
+  <header class="header">
+    <div class="header-badge">服务条款</div>
+    <h1>Floorly <span>服务</span>条款</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 生效日期：<strong>2026年6月3日</strong></span>
+      <span class="meta-chip">📱 支持系统：iOS & Android</span>
+      <span class="meta-chip">🌍 目标市场：土耳其 + 国际市场</span>
+      <span class="meta-chip">🔞 年龄限制：仅限18岁以上</span>
+    </div>
+    <div class="callout">
+      <p><strong>发行方：</strong>İMAN HÜSEYNLİ（独立开发者）</p>
+      <p>📍 地址：[Ulubatlı Hasan Mah. — 土耳其安卡拉] &nbsp;·&nbsp; ✉️ 电子邮箱：<a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="目录">
+      <div class="toc-title">目录</div>
+      <ul class="toc-list">
+        <li><a href="#zh-s1"><span class="num">1</span> 接受本条款</a></li>
+        <li><a href="#zh-s2"><span class="num">2</span> 用户资格</a></li>
+        <li><a href="#zh-s3"><span class="num">3</span> 许可范围</a></li>
+        <li><a href="#zh-s4"><span class="num">4</span> 服务内容说明</a></li>
+        <li><a href="#zh-s5"><span class="num">5</span> 订阅与计费</a></li>
+        <li><a href="#zh-s6"><span class="num">6</span> 广告与反作弊</a></li>
+        <li><a href="#zh-s7"><span class="num">7</span> 内容与数据所有权</a></li>
+        <li><a href="#zh-s8"><span class="num">8</span> 专业免责声明</a></li>
+        <li><a href="#zh-s9"><span class="num">9</span> 可接受的行为</a></li>
+        <li><a href="#zh-s10"><span class="num">10</span> 知识产权</a></li>
+        <li><a href="#zh-s11"><span class="num">11</span> 保证免责声明</a></li>
+        <li><a href="#zh-s12"><span class="num">12</span> 责任限制</a></li>
+        <li><a href="#zh-s13"><span class="num">13</span> 条款终止</a></li>
+        <li><a href="#zh-s14"><span class="num">14</span> 条款变更</a></li>
+        <li><a href="#zh-s15"><span class="num">15</span> 适用法律</a></li>
+        <li><a href="#zh-s16"><span class="num">16</span> 平台方特定条款</a></li>
+        <li><a href="#zh-s17"><span class="num">17</span> 联系信息</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="zh-s1">
+      <h2><span class="section-num">1</span> 接受本条款</h2>
+      <p>通过下载、安装、注册或使用 Floorly 移动应用程序（以下简称“本应用”），即表示您与 <strong>Insep</strong>（“İMAN HÜSEYNLİ”、“我们”、“我们的”）订立了一份具有法律约束力的合同，并同意受这些服务条款（以下简称“本条款”）的约束。如果您不同意本条款，请勿安装或使用本应用。</p>
+      <p>您与本应用的交互同时明确受我们 <strong>《隐私政策》</strong> 的约束。</p>
+    </section>
+
+    <section class="section" id="zh-s2">
+      <h2><span class="section-num">2</span> 用户资格</h2>
+      <p>Floorly 仅供 <strong>18周岁及以上</strong> 的用户使用。在用户首次使用引导（Onboarding）过程中，应用会显示一个年龄确认界面。通过安装或使用本应用，即表示您声明并保证您已年满 18 周岁。</p>
+      <div class="callout callout-warn">
+        <p>本应用不面向儿童。如果您表明自己未满 18 周岁，系统将不会初始化广告和分析功能，应用的使用权限将受到限制，并且不会处理或传输任何行为画像、广告标识符或分析数据。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s3">
+      <h2><span class="section-num">3</span> 许可范围</h2>
+      <p>我们授予您一项个人的、有限的、非排他性的、不可转让的、不可转许可的、可撤销的许可，允许您在您合法拥有或控制的移动设备上安装和运行本应用的副本，此许可仅用于您的个人或内部业务房产评估及组织工作流目的。</p>
+      <p>您被明确<strong>禁止</strong>进行以下行为：</p>
+      <ul>
+        <li>复制、修改、翻译、改编本应用或创作其衍生作品。</li>
+        <li>对本应用进行逆向工程、反编译、汇编或试图获取底层软件的源代码（强制性适用本地法律允许的最低限度除外）。</li>
+        <li>出租、租赁、出借、出售、转许可、分发或商业化利用本应用的界面或资产。</li>
+        <li>删除、更改或遮挡任何所有权知识产权声明或版权水印。</li>
+      </ul>
+    </section>
+
+    <section class="section" id="zh-s4">
+      <h2><span class="section-num">4</span> 服务内容说明</h2>
+      <p>Floorly 是一个<strong>本地优先（Offline-first）</strong>的软件环境，旨在提供房产记录留存、本地房间测量、2D 户型图可视化、指标权重计算、房产对比矩阵以及本地清单管理。核心用户内容完全写入您设备的原生本地数据库层并从中读取。</p>
+      <p>外部网络功能（例如处理程序化广告投放、产品分析、诊断错误处理、自动计费核对以及用户控制的自动云备份）需要激活互联网连接，并通过第三方基础设施集成进行管理，具体详见我们的《隐私政策》。</p>
+      <p>我们保留随着时间的推移修改、优化、暂停或废弃部分软件功能的权利，以维护产品稳定性和跨平台兼容性。</p>
+    </section>
+
+    <section class="section" id="zh-s5">
+      <h2><span class="section-num">5</span> 订阅、应用内购买及财务条款</h2>
+
+      <h3>5.1 版本级别结构</h3>
+      <p>Floorly 包含基础的<strong>免费版（Free Tier）</strong>（受限于使用额度上限和强制性程序化广告显示）以及高级的<strong>高级付费版（Pro Tier）</strong>。高级版将关闭广告初始化脚本并解锁高级功能：无限房产数量、自动矢量 PDF/PNG 布局导出、麦克风语音笔记录制以及自定义评分机制。</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-label">按月订阅</div>
+          <div class="price-amount">$0.99</div>
+          <div class="price-period">每个月</div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-label">按年订阅 — 最佳价值</div>
+          <div class="price-amount">$9.99</div>
+          <div class="price-period">每整年</div>
+          <div class="price-note">节约约 16%</div>
+        </div>
+      </div>
+
+      <h3>5.2 应用商店交易处理</h3>
+      <p>所有货币交易均由主流平台商店运营商（iOS 端的 <strong>Apple App Store</strong> 和 Android 端的 <strong>Google Play Store</strong>）通过 <strong>RevenueCat</strong> 订阅验证引擎独家处理。我们不会接收、存储或处理您的信用卡凭证或支付处理流水数据——我们仅通过 RevenueCat 接收匿名交易元数据和订阅状态令牌。</p>
+
+      <h3>5.3 自动续费规则</h3>
+      <p>订阅采用自动续费逻辑。您的平台商店账户将在当前计费周期结束前 24 小时内，按照届时有效的订阅价格自动扣费，除非您在续费日前至少 24 小时手动取消订阅。不想购买高级版订阅的用户可以无限期继续使用免费版，但需遵守标准使用限制和程序化广告区块限制。</p>
+
+      <h3>5.4 取消续费管理</h3>
+      <div class="cancel-grid">
+        <div class="cancel-item">
+          <div class="platform">🍎 iOS 系统</div>
+          <div class="steps">设备设置 → [您的 Apple ID 姓名] → 订阅</div>
+        </div>
+        <div class="cancel-item">
+          <div class="platform">▶️ Android 系统</div>
+          <div class="steps">Google Play 应用 → 个人资料图标 → 付款和订阅 → 订阅</div>
+        </div>
+      </div>
+      <p>取消续费请求提交后，您的高级版状态将保持有效，直至当前已付费计费周期的最后一天，随后降级回免费版限制。</p>
+
+      <h3>5.5 退款协议与法定权利</h3>
+      <p>由于所有财务收款均由 Apple 和 Google 管理，我们不具备直接进行手动退款或调整账户额度的技术权限。任何退款请求必须直接提交给发生交易的官方平台支持渠道（Apple 支持或 Google Play）。所有退款诉求严格遵守各应用商店的平台政策。</p>
+      <div class="callout">
+        <p><strong>消费者权益保护法覆盖条款：</strong>本条款中的任何内容均不旨在排除或限制您所在本地司法管辖区内强制性法定消费者权利，包括：</p>
+        <p>· 居住在欧盟（EU）和英国（UK）境内的消费者依法享有的数字商品 <strong>14天法定冷静期解约退款权（Right of withdrawal）</strong>。</p>
+        <p>· 在土耳其共和国境内的消费者享有基于 <strong>《第6502号消费者保护法》（6502 Sayılı Tüketicinin Korunması Hakkında Kanun）</strong> 所赋予的法定救济权利。</p>
+        <p>如果本地消费者法律赋予了不可放弃的解约或退款权利，则这些法定法律机制应优先于本节中任何冲突的条款。</p>
+      </div>
+
+      <h3>5.6 订阅过期后的数据完整性</h3>
+      <div class="highlight-box">
+        <p>如果高级版订阅过期或支付核对失败，您的账户将优雅地降级至免费版。<strong>您现有的本地房产数据、照片、语音笔记和户型图将完好无损地保留在您的设备硬件上，并支持完全编辑。</strong> 订阅状态的变化绝不会触发数据清空；但是，在您重新激活高级版或恢复合规前，您将无法创建超出免费版额度边界的新条目。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s6">
+      <h2><span class="section-num">6</span> 广告、奖励机制与反作弊</h2>
+      <p>免费版功能需要展示程序化广告和激励视频广告。为了防止通过机械化漏洞利用、脚本注入或虚拟广告点击农场进行作弊，Floorly 实施了严格的客户端反作弊检查，包括验证本地硬件系统时钟和执行速率限制参数。</p>
+      <div class="callout callout-warn">
+        <p>任何故意操纵或绕过这些广告展示循环的行为均构成对本条款的<strong>实质性违约</strong>，可能导致本地功能立即受到限制。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s7">
+      <h2><span class="section-num">7</span> 内容所有权、数据丢失与用户责任</h2>
+      <div class="highlight-box">
+        <p><strong>对于您在应用内生成的全部内容、房产配置文件、结构输入、房间规划、自定义笔记、音频语音轨迹和照片，您保留绝对、排他的所有权。</strong> 我们不对您的数据主张任何权利。</p>
+      </div>
+      <p>由于 Floorly 是一款本地优先的工具，因此<strong>您对自身的数据完整性、存储和恢复操作承担绝对且唯一的责任。</strong> 我们无法访问您的设备数据库，也没有技术手段来恢复丢失的记录。我们对因以下原因导致的任何数据销毁、损坏或数据库清空概不负责：</p>
+      <ul>
+        <li>物理设备丢失、硬件损坏或失窃。</li>
+        <li>原生操作系统清理程序或自动 OS 存储优化。</li>
+        <li>从您的设备上卸载 Floorly。</li>
+        <li>您个人的 Google 云端硬盘（Google Drive）或 iCloud 备份同步过程中发生的内部技术故障。</li>
+      </ul>
+      <p>您声明并保证，在获取地理定位坐标、拍摄不动产资产照片或在私人住宅内录制音频文件之前，您已获得了所有必要的合法权利、许可和产权人同意。</p>
+    </section>
+
+    <section class="section" id="zh-s8">
+      <h2><span class="section-num">8</span> 比例估算与专业服务免责声明</h2>
+      <div class="callout callout-critical">
+        <p><strong>⚠️ 重要通知：本应用并非专业建筑或测绘工具</strong></p>
+        <p style="margin-top:10px">Floorly 仅作为个人移动端可视化辅助及概念记事工具开发。应用生成的所有计算数值、户型图、2D 结构估算、空间朝向、尺寸、房间表面积、立方体积以及加权房产对比评分均为<strong>近似的几何估算值</strong>。这些数值完全取决于您手动输入的精准度以及您移动设备物理硬件传感器（摄像头、指南针、陀螺仪）的校准公差。为方便用户使用，您可以在创建房产流程中点击“房间”（“ODALAR”）界面旁的“信息（Info）”图标直接查看关于计算逻辑的指导说明。首次配置时提供的任何预填数据库结构、默认房间布局模板或示例尺寸均仅为展示目的的占位符，并不代表实际或推荐的测量值。您有责任自行核实并使用现实世界的精准度量值覆盖这些默认值。</p>
+        <p style="margin-top:10px">Floorly 生成的输出结果<strong>不构成</strong>专业的建筑测绘、工程评估、法定产权边界界定、结构鉴定或持牌房地产估价。<strong>请勿完全依赖本应用的输出结果做出具有约束力的购买决定、财务承诺或法律协议。</strong> 对于所有具有法律效力的评估，您必须聘请认证的专业人员（持牌建筑师、结构工程师、专业土地测绘师或持牌房地产估价师）。使用本应用产生的度量指标，风险完全由您自行承担。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s9">
+      <h2><span class="section-num">9</span> 可接受的行为与禁止的用途</h2>
+      <p>您同意您不会将 Floorly 用于：</p>
+      <ul>
+        <li>从事任何违法、欺诈或欺骗性的房地产不当行为。</li>
+        <li>在未获得明确法律许可的情况下侵入私有财产或获取媒体资产数据。</li>
+        <li>绕过、停用或破坏安全控制、广告投放框架、反作弊屏障或订阅访问闸门。</li>
+        <li>针对已编译的二进制文件或内存运行期执行自动化脚本、抓取工具、网络蜘蛛或逆向工程工具包。</li>
+      </ul>
+    </section>
+
+    <section class="section" id="zh-s10">
+      <h2><span class="section-num">10</span> 知识产权</h2>
+      <p>Floorly 移动应用程序及其源代码、设计布局、用户界面资产、原创图形、专属评分算法、品牌元素、商标（“Floorly”）和专有模板结构，均代表 <strong>İMAN HÜSEYNLİ</strong> 的独家知识产权，并受到国际版权、商标和知识产权法律的保护。除第 3 节中授予的有限操作许可外，所有权利均予以明确保留。</p>
+    </section>
+
+    <section class="section" id="zh-s11">
+      <h2><span class="section-num">11</span> 保证免责声明</h2>
+      <p>在适用法律允许的最大范围内，本应用是以<strong>“按现状（As is）”</strong>和<strong>“可获得性（As available）”</strong>状态向您交付的，不包含任何明示、暗示或法定形式的保证、担保或陈述。我们明确免除所有关于适销性、特定用途的适用性、宁静享有权、数据准确性、不侵权以及无中断或无错误系统运行的暗示保证。</p>
+      <div class="callout">
+        <p>本节中的任何内容均不限制购买高级版订阅的消费者依法享有不可放弃的法定符合性权利，包括根据关于数字内容和服务供应的 <strong>《欧盟第2019/770号指令》</strong> 以及 <strong>《土耳其第6502号消费者保护法》</strong> 所享有的权利。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s12">
+      <h2><span class="section-num">12</span> 责任限制</h2>
+      <p>在适用强制性法律允许的最大范围内，发行方 Insep（İMAN HÜSEYNLİ 独立开发者）对基于应用近似计算做出房产购置或房地产投资选择所引发的任何间接、附带、特殊、衍生性或惩罚性损害（包括但不限于利润损失、数据丢失、财产损失或经济损失）概不负责。</p>
+      <p>除强制性本地消费者保护法禁止的情况外，我们因本条款或与使用 Floorly 相关而引发的任何索赔所承担的总累计赔偿责任，严格限制并封顶于您在引发该索赔的事件发生前十二（12）个月内向 Apple App Store 或 Google Play Store 为该 Floorly 应用实际支付的净财务金额。对于使用免费版的用户，我们的责任将在强制性适用法律允许的最大范围内予以限制。</p>
+      <div class="callout">
+        <p><strong>强制性责任排除保护：</strong> 本条款中的任何内容均不旨在限制或排除本地强制性法律禁止排除的法律责任，包括因疏忽导致的死亡或人身伤害、蓄意欺诈、故意不当行为、重大过失（<em>ağır kusur</em>），或任何对土耳其消费者法（第6502号法律）及欧盟/英国消费者保护指令所保障的基本消费者权益的侵害责任。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s13">
+      <h2><span class="section-num">13</span> 条款终止与许可限制</h2>
+      <p>您可以随时通过从您的移动设备中永久删除 Floorly 并取消任何有效的平台订阅续费来终止本协议。</p>
+      <p>由于 Floorly 作为一款本地优先的应用运行，不具备中央用户账户体系，因此我们无法远程删除您的本地设备数据库。但是，如果您发生实质性违约，我们保留撤销您的软件许可、终止本协议并利用 RevenueCat 或平台工具限制您获取未来应用更新或高级版功能的权利。本协议终止后，所有按其本质结构应继续有效的条款（包括所有权、专业免责声明、责任限制封顶、赔偿和管辖法律条款）均应在终止后继续有效。</p>
+    </section>
+
+    <section class="section" id="zh-s14">
+      <h2><span class="section-num">14</span> 条款变更</h2>
+      <p>我们保留随时修改本条款的权利。更新后的文件将在文本顶部标注修订后的“生效日期”。对于影响您订阅权益或责任的实质性变更，我们将在变更生效前通过应用内横幅或应用商店版本更新的形式发布通知。您在变更生效后继续使用本软件的行为，即构成您对修订后条款的接受。</p>
+    </section>
+
+    <section class="section" id="zh-s15">
+      <h2><span class="section-num">15</span> 适用法律、争议解决与管辖场所</h2>
+
+      <h3>15.1 通用适用法律</h3>
+      <p>本条款以及因本条款引起的或与其相关的任何合同或非合同争议，均受<strong>土耳其共和国</strong>法律管辖并按其解释，不触动任何法律选择或法律冲突原则。</p>
+
+      <h3>15.2 诉讼管辖地</h3>
+      <p>在服从下述第 15.3 节强制性消费者保护例外情况的前提下，与本条款相关的任何法律争议均应提交至<strong>土耳其安卡拉法院及执行局（Ankara Mahkemeleri ve İcra Daireleri）</strong>专属管辖。此管辖地选择并不会剥夺消费者其经常居住国法律强制性条文对其所提供的保护。</p>
+
+      <h3>15.3 跨境消费者权益保护例外条款</h3>
+      <div class="callout">
+        <p>如果您是居住在<strong>欧盟（EU）、英国（UK）</strong>或任何执行不可放弃的法定消费者法庭保护的司法管辖区内的消费者，对土耳其法律和管辖地的选择并不会剥夺您在本地法律下通过协议无法规避的保护权利。在此类情况下，您保留向您经常居住国内具有管辖权的消费者仲裁委员会或法院提起法定消费者投诉或法律诉讼的合法权利。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s16">
+      <h2><span class="section-num">16</span> 平台方特定条款（Apple & Google）</h2>
+      <p>您承认本协议仅在您与 Insep 之间签署，<strong>而非</strong>与 Apple Inc. 或 Google LLC 签署。Apple 和 Google 不对本应用、应用内容、软件维护、技术支持或任何知识产权侵权索赔的调查承担任何责任。</p>
+      <p>Apple 和 Google 及其子公司是本条款的第三方受益人。在您接受本条款后，Apple 和 Google 将有权作为第三方受益人依据本条款向您强制执行相关权利。</p>
+      <p>在 iOS 设备上使用本应用时，除本条款外，还应同时适用标准的 <strong>《Apple 许可应用程序最终用户许可协议（EULA）》</strong>。如果标准的 Apple EULA 与本条款就 iOS 应用许可关系存在任何冲突，则就该许可关系而言，以 Apple 标准的 EULA 为准。</p>
+    </section>
+
+    <section class="section" id="zh-s17">
+      <h2><span class="section-num">17</span> 联系信息</h2>
+      <div class="contact-card">
+        <h3>Insep 法律与支持专区</h3>
+        <p><strong style="color:#fff">主导开发者：</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ 电子邮箱：<a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">适用于合同反馈、正式法律通知或运营支持咨询。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">生效日期：2026年6月3日</p>
+  </footer>
+</div>
+
+<script>
+  const LANGS = ['en', 'tr', 'es', 'de', 'ru', 'zh_Hant', 'zh_Hans'];
+
+  function setLang(lang) {
+    LANGS.forEach(l => {
+      const el = document.getElementById('content-' + l);
+      if (el) el.style.display = (l === lang) ? '' : 'none';
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    document.documentElement.lang = lang;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    try { localStorage.setItem('floorly-tos-lang', lang); } catch(e) {}
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    document.getElementById('themeBtn').textContent = isDark ? '🌙' : '☀️';
+    try { localStorage.setItem('floorly-tos-theme', next); } catch(e) {}
+  }
+
+  try {
+    const savedTheme = localStorage.getItem('floorly-tos-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('themeBtn');
+      if (btn) btn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    });
+  } catch(e) {}
+
+  try {
+    const savedLang = localStorage.getItem('floorly-tos-lang') || 'en';
+    if (LANGS.includes(savedLang)) setLang(savedLang);
+  } catch(e) {}
+</script>
+
+</body>
+</html>
