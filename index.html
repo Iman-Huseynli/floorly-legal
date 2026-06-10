@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Floorly Privacy Policy — Data protection and privacy information." />
+  <title>Floorly — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+        --bg:        #E8E0D5;
+        --surface:   #F0EAE0;
+        --border:    #D4C9BB;
+        --ink:       #2B2318;
+        --ink-soft:  #6B5D4F;
+        --ink-muted: #9E9182;
+        --accent:    #B86B1F;
+        --accent-2:  #8B4A0F;
+        --accent-bg: #F5EDE0;
+        --tag-bg:    #E2D8CC;
+        --radius:    14px;
+        --radius-sm: 10px;
+        --shadow:    0 1px 3px rgba(43,35,24,0.08), 0 4px 16px rgba(43,35,24,0.06);
+
+    }
+
+    [data-theme="dark"] {
+        --bg:        #0E0E0E;
+        --surface:   #1A1A1A;
+        --border:    #2E2E2E;
+        --ink:       #F0EAD6;
+        --ink-soft:  #A89880;
+        --ink-muted: #6B6050;
+        --accent:    #D4960A;
+        --accent-2:  #B87D08;
+        --accent-bg: #1E1A10;
+        --tag-bg:    #242018;
+        --shadow:    0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.25);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .theme-btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1.5px solid var(--border);
+        background: var(--surface);
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.18s ease;
+        flex-shrink: 0;
+    }
+
+    .theme-btn:hover {
+        border-color: var(--accent);
+        background: var(--accent-bg);
+    }
+    
+    .lang-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245,242,236,0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    [data-theme="dark"] .lang-bar {
+        background: rgba(14,14,14,0.9);
+    }
+
+    [data-theme="dark"] .contact-card {
+        background: #111;
+    }
+
+    .lang-brand {
+      font-family: 'DM Serif Display', serif;
+      font-size: 16px;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .lang-buttons {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .lang-btn {
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      letter-spacing: 0.01em;
+    }
+
+    .lang-btn:hover {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--ink-soft);
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── HEADER ── */
+    .header {
+      padding: 48px 24px 32px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 7vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--tag-bg);
+      color: var(--ink-soft);
+      font-size: 12px;
+      font-weight: 400;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .meta-chip strong { color: var(--ink); font-weight: 500; }
+
+    .header-divider {
+      height: 1px;
+      background: var(--border);
+      margin-top: 32px;
+    }
+
+    /* ── LAYOUT ── */
+    .layout {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 32px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .toc-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 16px;
+      color: var(--ink);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-title::before {
+      content: '§';
+      color: var(--accent);
+      font-size: 18px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2px;
+    }
+
+    .toc-list li a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 8px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: 13px;
+      transition: all 0.15s;
+    }
+
+    .toc-list li a:hover {
+      background: var(--accent-bg);
+      color: var(--accent);
+    }
+
+    .toc-list li a .num {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      min-width: 18px;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      margin: 40px 0;
+      scroll-margin-top: 64px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(20px, 4vw, 26px);
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    h2 .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 24px 0 10px;
+      padding-left: 12px;
+      border-left: 2.5px solid var(--accent);
+    }
+
+    p { margin-bottom: 14px; color: var(--ink); }
+
+    p:last-child { margin-bottom: 0; }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+    strong { font-weight: 600; }
+
+    em { font-style: italic; color: var(--ink-soft); }
+
+    ul, ol {
+      padding-left: 0;
+      margin: 12px 0 16px;
+      list-style: none;
+    }
+
+    ul li, ol li {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 5px 0 5px 22px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    ol { counter-reset: item; }
+
+    ol li {
+      counter-increment: item;
+    }
+
+    ol li::before {
+      content: counter(item) '.';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: var(--accent-bg);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    [data-theme="dark"] .callout {
+        background: #1A2018;
+    }
+
+    [data-theme="dark"] .callout-warn {
+        background: #1E1810;
+        border-left-color: var(--accent);
+    }
+
+    .callout p { font-size: 14px; margin-bottom: 8px; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .callout-warn {
+      background: #FEF6EC;
+      border-left-color: var(--accent-2);
+    }
+
+    /* ── TABLE ── */
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 20px 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 600px;
+    }
+
+    thead tr {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    thead th {
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    [data-theme="dark"] thead tr {
+        background: #2A2A2A;
+    }
+
+    [data-theme="dark"] thead th {
+        color: var(--ink);
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.12s;
+    }
+
+    tbody tr:last-child { border-bottom: none; }
+
+    tbody tr:hover { background: var(--accent-bg); }
+
+    tbody td {
+      padding: 12px 14px;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    tbody td:first-child { font-weight: 500; }
+
+    .legal-basis {
+      display: inline-block;
+      background: var(--accent-bg);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* ── LINKS LIST ── */
+    .links-grid {
+      display: grid;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+
+    .link-item:hover {
+      border-color: var(--accent);
+      background: var(--accent-bg);
+    }
+
+    .link-item .link-name {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--ink);
+      display: block;
+    }
+
+    .link-item .link-url {
+      font-size: 12px;
+      color: var(--ink-muted);
+      display: block;
+      margin-top: 1px;
+      word-break: break-all;
+    }
+
+    .link-icon {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 8px;
+      background: var(--tag-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: var(--ink);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      margin: 20px 0;
+    }
+
+    .contact-card h3 {
+      color: #fff;
+      border-left-color: rgba(255,255,255,0.3);
+      margin-top: 0;
+    }
+
+    .contact-card p { color: rgba(255,255,255,0.75); font-size: 14px; }
+
+    .contact-card a {
+      color: #8FB89F;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .perm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .perm-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+    }
+
+    .perm-item .perm-icon {
+      font-size: 20px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .perm-item .perm-name {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .perm-item .perm-desc {
+      font-size: 12px;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--ink-muted);
+      font-size: 12px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .header { animation: fadeUp 0.5s ease both; }
+    .toc     { animation: fadeUp 0.5s 0.1s ease both; }
+    .section { animation: fadeUp 0.5s ease both; }
+
+    .lang-unavail {
+      display: none;
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--ink-soft);
+    }
+
+    .lang-unavail .big-icon { font-size: 48px; margin-bottom: 16px; }
+    .lang-unavail h2 { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--ink); margin-bottom: 8px; }
+
+    @media (max-width: 480px) {
+      .header { padding: 32px 20px 24px; }
+      .layout { padding: 0 20px 60px; }
+      .toc-list { grid-template-columns: 1fr; }
+      .perm-grid { grid-template-columns: 1fr 1fr; }
+      h2 .section-num { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="lang-bar" role="navigation" aria-label="Language selector">
+  <span class="lang-brand">Floorly</span>
+  <div class="lang-buttons">
+    <button class="lang-btn active" onclick="setLang('en')" data-lang="en">🇬🇧 EN</button>
+    <button class="lang-btn" onclick="setLang('tr')" data-lang="tr">🇹🇷 TR</button>
+    <button class="lang-btn" onclick="setLang('es')" data-lang="es">🇪🇸 ES</button>
+    <button class="lang-btn" onclick="setLang('de')" data-lang="de">🇩🇪 DE</button>
+    <button class="lang-btn" onclick="setLang('ru')" data-lang="ru">🇷🇺 RU</button>
+    <button class="lang-btn" onclick="setLang('zh_Hans')" data-lang="zh_Hans">🇨🇳 ZH (Hans)</button>
+    <button class="lang-btn" onclick="setLang('zh_Hant')" data-lang="zh_Hant">🇹🇼 ZH (Hant)</button>
+  </div>
+  <button class="theme-btn" onclick="toggleTheme()" id="themeBtn" aria-label="Toggle theme">
+    🌙
+  </button>
+</nav>
+
+<div id="content-en" style="display:none">
+
+  <header class="header">
+    <div class="header-badge">Privacy Policy</div>
+    <h1>Floorly <span>Privacy</span> Policy</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Effective: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS & Android</span>
+      <span class="meta-chip">🌍 Turkey + International</span>
+    </div>
+    <div class="callout">
+      <p><strong>Data Controller:</strong> İMAN HÜSEYNLİ (Individual Developer)</p>
+      <p>📍 Ulubatlı Hasan Mah. — Ankara, Turkey &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="Table of Contents">
+      <div class="toc-title">Table of Contents</div>
+      <ul class="toc-list">
+        <li><a href="#en-s1"><span class="num">1</span> Summary</a></li>
+        <li><a href="#en-s2"><span class="num">2</span> Data Controller</a></li>
+        <li><a href="#en-s3"><span class="num">3</span> On-Device Only Data</a></li>
+        <li><a href="#en-s4"><span class="num">4</span> Data Leaving Your Device</a></li>
+        <li><a href="#en-s5"><span class="num">5</span> Third-Party SDKs</a></li>
+        <li><a href="#en-s6"><span class="num">6</span> Permissions</a></li>
+        <li><a href="#en-s7"><span class="num">7</span> Cloud Backup</a></li>
+        <li><a href="#en-s8"><span class="num">8</span> Sharing & Export</a></li>
+        <li><a href="#en-s9"><span class="num">9</span> Advertising Identifiers</a></li>
+        <li><a href="#en-s10"><span class="num">10</span> Data Retention</a></li>
+        <li><a href="#en-s11"><span class="num">11</span> Your Rights</a></li>
+        <li><a href="#en-s12"><span class="num">12</span> International Transfers</a></li>
+        <li><a href="#en-s13"><span class="num">13</span> Children's Privacy</a></li>
+        <li><a href="#en-s14"><span class="num">14</span> Data Security</a></li>
+        <li><a href="#en-s15"><span class="num">15</span> Changes</a></li>
+        <li><a href="#en-s16"><span class="num">16</span> Contact</a></li>
+        <li><a href="#en-s17"><span class="num">17</span> Data Erasure</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="en-s1">
+      <h2><span class="section-num">1</span> Summary (Plain Language)</h2>
+      <p>Floorly is an <strong>offline-first</strong> app. The home, room, photo, voice-note, checklist, and floor-plan data you create is stored <strong>locally on your device</strong> and is <strong>not</strong> uploaded to our servers.</p>
+      <p>However, Floorly is <strong>not</strong> a "nothing ever leaves your device" app. To run ads, understand crashes, measure usage, and process subscriptions, the app integrates third-party SDKs that transmit specific technical data off the device:</p>
+      <ul>
+        <li><strong>Advertising SDKs</strong> (Google AdMob, AppLovin MAX) collect your advertising identifier and device/ad-interaction data to serve ads, including personalized ads, subject to your explicit consent.</li>
+        <li><strong>Firebase Analytics, Crashlytics, and Performance Monitoring</strong> send usage events, crash/diagnostic data, and performance traces to Google.</li>
+        <li><strong>RevenueCat</strong> and the <strong>App Store / Google Play</strong> process your purchase and subscription state.</li>
+        <li>If you are a Pro user and enable <strong>Cloud Backup</strong>, your backup file is uploaded directly to <strong>your own</strong> Google Drive (Android) or iCloud (iOS) — not to us.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="en-s2">
+      <h2><span class="section-num">2</span> Data Controller</h2>
+      <p><strong>Data Controller:</strong> İMAN HÜSEYNLİ, an individual indie developer residing in Ankara, Turkey (referred to as "Insep", "we", "us", or "our").</p>
+      <p>Because Floorly operates entirely without backend servers, we do not directly receive, store, access, or process your property data, photos, voice notes, or any other user content created inside the App. The only personal data we directly receive is communications you voluntarily send to our support email address.</p>
+      <p>For the data transmitted to third-party SDKs listed in Section 4, we act as an <strong>Independent Data Controller</strong> solely for the phase of collection and initial transmission from the application. Once transmitted, the respective third-party SDK providers process this data as independent controllers under their own privacy policies, linked in Section 5.</p>
+    </section>
+
+    <section class="section" id="en-s3">
+      <h2><span class="section-num">3</span> Data Stored Only on Your Device (local-only)</h2>
+      <p>The following structured information and media files are created by you and stored <strong>locally</strong> within the app's secure sandbox database (SQLite/Drift) and private media folder. We do not have access to, nor do we collect or store this data:</p>
+      <ul>
+        <li><strong>Property records:</strong> name/nickname, address, price, deal type (sale/rent), room configuration, gross/net area, floor, building age, monthly dues, notes, star rating, visit date.</li>
+        <li><strong>Property location coordinates</strong> (latitude/longitude), <strong>only if</strong> you explicitly trigger the location capture feature (see Section 6).</li>
+        <li><strong>Facade orientation</strong> captured locally from the device compass.</li>
+        <li><strong>Rooms:</strong> type, custom name, dimensions, modifiers, doors/windows, tags, notes.</li>
+        <li><strong>Photos</strong> you attach (stored locally as binary files).</li>
+        <li><strong>Voice notes:</strong> Creating new voice notes is a Pro/Premium feature. Users on the free tier can only play existing voice notes.</li>
+        <li><strong>Checklists, scoring weights, and 2D floor-plan layouts.</strong></li>
+      </ul>
+      <p>This data remains on your device unless you actively choose to export it, share it via the system share sheet (Section 8), or enable Cloud Backup (Section 7). Uninstalling the App deletes this local data permanently from the device.</p>
+    </section>
+
+    <section class="section" id="en-s4">
+      <h2><span class="section-num">4</span> Data That Leaves Your Device & Legal Bases</h2>
+      <p>We map the specific data elements transmitted off your device to their exact legal bases under <strong>GDPR Article 6</strong> and <strong>KVKK Article 5</strong>:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Purpose</th>
+              <th>Sent To</th>
+              <th>GDPR Legal Basis</th>
+              <th>KVKK Legal Basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Advertising identifier (AAID/IDFA), device & network info, ad interactions</td>
+              <td>Serving and measuring personalized or contextual ads</td>
+              <td>Google AdMob, AppLovin MAX</td>
+              <td><span class="legal-basis">Consent (Art. 6(1)(a))</span> via App Tracking Transparency (iOS) or Consent Dialogs</td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>App usage events, screen views, app-generated analytics user ID</td>
+              <td>Product analytics to monitor and optimize user experience</td>
+              <td>Firebase Analytics (Google)</td>
+              <td><span class="legal-basis">Consent (Art. 6(1)(a))</span> via initial user setup prompt</td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>Crash reports, stack traces, device hardware state at time of crash</td>
+              <td>Diagnosing and resolving system bugs/crashes</td>
+              <td>Firebase Crashlytics (Google)</td>
+              <td><span class="legal-basis">Consent (Art. 6(1)(a))</span> via the in-app consent dialog</td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>Performance traces (e.g., export timing), network latency metrics</td>
+              <td>Monitoring internal application runtime performance</td>
+              <td>Firebase Performance Monitoring</td>
+              <td><span class="legal-basis">Consent (Art. 6(1)(a))</span> via the in-app consent dialog</td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>Subscription status, anonymized transaction ID, expiration timestamps</td>
+              <td>Validating and activating Pro features</td>
+              <td>RevenueCat, Apple App Store, Google Play</td>
+              <td><span class="legal-basis">Performance of a Contract (Art. 6(1)(b))</span></td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Md. 5(2)(c))</span></td>
+            </tr>
+            <tr>
+              <td>Your Google account email address</td>
+              <td>Displaying the currently authenticated account for cloud backup; processed locally on-device via Google Sign-In SDK. This data is temporary and never transmitted to or stored on the Developer's servers.</td>
+              <td>Processed locally on device</td>
+              <td><span class="legal-basis">Performance of a Contract (Art. 6(1)(b))</span></td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Md. 5(2)(c))</span></td>
+            </tr>
+            <tr>
+              <td>Your backup archive file (copy of local database and media)</td>
+              <td>Optional user-initiated secure cloud backup & restoration</td>
+              <td><strong>Your own</strong> Google Drive (Android) or iCloud (iOS)</td>
+              <td><span class="legal-basis">Performance of a Contract (Art. 6(1)(b))</span></td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Md. 5(2)(c))</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <p><strong>Note:</strong> We do not sell, rent, or trade your personal data.</p>
+        <p><strong>RevenueCat:</strong> We utilize RevenueCat to synchronize your subscription state across devices and validate your Pro tier access. RevenueCat processes anonymized transaction metadata on our behalf as a <strong>Data Processor</strong>. We do not receive or store any raw payment identifiers (credit card numbers, bank account details, or full billing addresses). The data processed is limited strictly to subscription tokens required to deliver the service you have purchased.</p>
+      </div>
+    </section>
+
+    <section class="section" id="en-s5">
+      <h2><span class="section-num">5</span> Third-Party SDKs and Privacy Policies</h2>
+      <p>Floorly integrates the following third-party operational SDKs. Their data processing operations are governed by their respective privacy disclosures:</p>
+      <div class="links-grid">
+        <div class="link-item"><span class="link-icon">📊</span><div><span class="link-name">Google AdMob (Google Mobile Ads)</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a><a class="link-url" href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">support.google.com/admob/answer/6128543</a></div></div>
+        <div class="link-item"><span class="link-icon">📢</span><div><span class="link-name">AppLovin MAX (Ad Mediation)</span><a class="link-url" href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🔥</span><div><span class="link-name">Firebase (Analytics, Crashlytics, Performance Monitoring)</span><a class="link-url" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">💳</span><div><span class="link-name">RevenueCat</span><a class="link-url" href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🍎</span><div><span class="link-name">Apple App Store</span><a class="link-url" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">▶️</span><div><span class="link-name">Google Play Services</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="en-s6">
+      <h2><span class="section-num">6</span> Permissions and Device Resource Access</h2>
+      <p>Floorly requests runtime device permissions only when you explicitly interact with a feature requiring that permission. You can revoke permissions at any time via your operating system settings.</p>
+      <div class="perm-grid">
+        <div class="perm-item"><span class="perm-icon">📷</span><div class="perm-name">Camera</div><div class="perm-desc">Used to take photos of rooms/properties directly within the app.</div></div>
+        <div class="perm-item"><span class="perm-icon">🖼️</span><div class="perm-name">Photo Library / Media Storage</div><div class="perm-desc">Used to select and attach existing property photos.</div></div>
+        <div class="perm-item"><span class="perm-icon">🎙️</span><div class="perm-name">Microphone</div><div class="perm-desc">Used to record room voice notes (Pro feature). Audio processing occurs locally.</div></div>
+        <div class="perm-item"><span class="perm-icon">📍</span><div class="perm-name">Location (Fine/Coarse)</div><div class="perm-desc">Used exclusively to capture a property's latitude/longitude when you tap the location capture button. No continuous background tracking is performed.</div></div>
+        <div class="perm-item"><span class="perm-icon">🧭</span><div class="perm-name">Device Sensors (Compass/Motion)</div><div class="perm-desc">Used to capture facade orientation locally. Does not require runtime prompts.</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="en-s7">
+      <h2><span class="section-num">7</span> Cloud Backup & Google API Limited Use Disclosure</h2>
+      <p>If you upgrade to Pro and enable Cloud Backup, a local backup archive is transmitted directly to your own personal cloud account.</p>
+      <ul>
+        <li><strong>Android (Google Drive):</strong> Backup data is confined strictly to a hidden, isolated private application data folder via the <code>drive.appdata</code> scope. This folder is completely inaccessible to other applications, is not visible in your standard Google Drive view, and is never accessed, read, or pooled by the Developer.</li>
+        <li><strong>iOS (iCloud):</strong> Backup data is saved securely to your personal iCloud container tied to your Apple ID.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Google API Services User Data Policy Compliance (Limited Use):</strong> Floorly's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the <strong>Limited Use requirements</strong> thereof. We do not use Google user data for serving ads, building user profiles, tracking behavior, training artificial intelligence (AI) models, or transmitting information to third parties outside of executing your automated personal backup storage.</p>
+      </div>
+    </section>
+
+    <section class="section" id="en-s8">
+      <h2><span class="section-num">8</span> Sharing and Export</h2>
+      <p>When executing a PDF/PNG export or manual backup export, the application generates the file locally and passes it to the native system <strong>share sheet</strong>. The file is transmitted exclusively to the destination endpoint selected entirely by you (e.g., instant messaging apps, email clients, or external cloud providers). This transfer occurs outside of our software layer and is governed by your destination provider's terms.</p>
+    </section>
+
+    <section class="section" id="en-s9">
+      <h2><span class="section-num">9</span> Advertising Identifiers and Opt-Out Mechanisms</h2>
+      <p>Free-tier users who have confirmed they are 18 or older may be shown advertisements. Subject to your consent (collected via the Google User Messaging Platform (UMP) / IAB TCF dialog and, on iOS, the App Tracking Transparency prompt), ad networks may use your device's hardware advertising identifier (IDFA on iOS, AAID on Android) to measure ad interactions and personalize ads. If you decline consent, you are shown only non-personalized (contextual) advertisements.</p>
+      <ul>
+        <li><strong>Consent Frameworks:</strong> We implement the standardized Google User Messaging Platform (UMP) complying with the IAB Europe Transparency and Consent Framework. Users in the EEA/UK and Turkey can configure, restrict, or deny tracking permissions directly via the consent banner.</li>
+        <li><strong>OS-Level Control:</strong> You can reset or fully opt out of personalized tracking via:
+          <ul>
+            <li><em>iOS:</em> Settings → Privacy & Security → Tracking (App Tracking Transparency).</li>
+            <li><em>Android:</em> Settings → Google → Ads → Delete/Reset Advertising ID.</li>
+          </ul>
+        </li>
+        <li><strong>Pro Tier:</strong> Purchasing any Pro subscription completely bypasses and deactivates all advertising SDK initialization blocks, eliminating ad tracking entirely.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="en-s10">
+      <h2><span class="section-num">10</span> Data Retention</h2>
+      <ul>
+        <li><strong>On-Device Data:</strong> Retained indefinitely inside the application sandbox until you clear app data, manually delete records within the app, or uninstall Floorly.</li>
+        <li><strong>Cloud Backups:</strong> Managed entirely by you; retained in your personal Google Drive or iCloud container until deleted by you.</li>
+        <li><strong>Telemetry and Crash Analytics:</strong> Retained by Google Firebase for up to 14 months before automated deletion, according to standard Firebase retention parameters.</li>
+        <li><strong>Financial Receipts:</strong> Transaction states are logged securely by RevenueCat and the app stores in accordance with financial retention laws.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="en-s11">
+      <h2><span class="section-num">11</span> Your Rights and Regulatory Compliance</h2>
+      <h3>11.1 KVKK (Turkey) Compliance — Law No. 6698</h3>
+      <p>Pursuant to Article 11 of the KVKK, users located in Turkey have the right to contact us at <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> to:</p>
+      <ol>
+        <li>Learn whether their personal data is being processed,</li>
+        <li>Request information if their data has been processed,</li>
+        <li>Learn the purpose of data processing and whether data is used in accordance with its purpose,</li>
+        <li>Know the third parties to whom personal data is transferred domestically or abroad,</li>
+        <li>Request rectification of incomplete or inaccurate data,</li>
+        <li>Request erasure or destruction of personal data under the conditions laid down in Article 7 of the KVKK,</li>
+        <li>Object to processing operations executed exclusively via automated systems which produce negative legal consequences for them.</li>
+      </ol>
+      <p><strong>International Data Transfer (Yurt Dışına Veri Aktarımı):</strong> Our integrated infrastructure partners (Google Firebase, AdMob, AppLovin, RevenueCat) maintain cloud infrastructure outside the territory of the Republic of Turkey, necessitating the international transfer of certain data.</p>
+      <p>Pursuant to the amended Article 9 of the Personal Data Protection Law (KVKK, No. 6698), these cross-border technical data transfers are executed based on your Explicit Consent (Açık Rıza, Art. 5(1)), which you provide via the in-app consent management platform before these services are initialized. In addition to your explicit consent, we ensure these transfers remain under Appropriate Safeguards (Uygun Güvenceler) by adhering to the Data Processing Addendums (DPA) and Standard Contractual Clauses (SCCs) provided by our global infrastructure partners. These mechanisms ensure an adequate level of data protection equivalent to that required under Turkish legislation.</p>
+
+      <h3>11.2 GDPR (EEA/UK) Compliance</h3>
+      <p>For users operating within the European Economic Area (EEA) and the United Kingdom, you possess the rights of access (Art. 15), rectification (Art. 16), erasure/forgetting (Art. 17), restriction of processing (Art. 18), data portability (Art. 20), and objection to processing (Art. 21).</p>
+      <p>To the extent that Insep acts as a controller under GDPR for the collection and instantaneous transit of SDK telemetry, our legal bases are explicitly itemized in Section 4. Where data resides downstream with third parties (Google, AppLovin, RevenueCat), you may exercise your rights directly against them or contact us at <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> to facilitate your requests. You have the right to lodge a complaint with an EU Supervisory Authority (Data Protection Authority) in your country of habitual residence.</p>
+
+      <h3>11.3 United States — State Privacy Rights (e.g., California / CCPA-CPRA)</h3>
+      <p>Floorly is a small, offline-first application and does not meet the revenue or volume thresholds that trigger the California Consumer Privacy Act (CCPA/CPRA) or comparable U.S. state privacy laws. Nonetheless, to the extent any such law applies to you:</p>
+      <ul>
+        <li>We do <strong>not</strong> sell your personal data for money.</li>
+        <li>Sharing your advertising identifier (IDFA/AAID) with ad networks to serve personalized ads may be treated as "selling" or "sharing" under certain U.S. state laws. You can <strong>opt out</strong> at any time by declining consent in the in-app privacy/ads dialog (Google UMP) or by using your device's "Limit Ad Tracking" / "Reset Advertising ID" controls described in Section 9.</li>
+        <li>We do not knowingly process the personal data of U.S. residents under 18 for targeted advertising; users who indicate they are under 18 receive no advertising or analytics processing (see Section 13).</li>
+      </ul>
+    </section>
+
+    <section class="section" id="en-s12">
+      <h2><span class="section-num">12</span> International Data Transfers (Non-Turkey / Non-EEA)</h2>
+      <p>Data processed by third-party SDK providers is transferred to and stored on servers located outside your home jurisdiction, primarily within the United States. These cross-border transfers are protected via appropriate legal frameworks, including the execution of standard contractual clauses (SCCs) approved by the European Commission, ensuring an equivalent level of data protection.</p>
+    </section>
+
+    <section class="section" id="en-s13">
+      <h2><span class="section-num">13</span> Children's Privacy</h2>
+      <p>Floorly is designed and intended for adults aged 18 and over. We do not target, market to, or knowingly collect personal data from anyone under 18.</p>
+      <p>During the initial onboarding flow, <strong>before any advertising or analytics SDK is initialized</strong>, the App presents a neutral age-confirmation screen. We store only a single on-device flag indicating whether you confirmed that you are 18 or older. <strong>We do not collect or store your date of birth.</strong></p>
+      <p>If a user indicates they are under 18:</p>
+      <ol>
+        <li>No advertising SDKs (Google AdMob, AppLovin MAX) are initialized, and no advertisements are served.</li>
+        <li>No advertising identifiers (IDFA/AAID) are accessed or transmitted.</li>
+        <li>Firebase Analytics collection is disabled (<code>setAnalyticsCollectionEnabled(false)</code>) and behavioral tracking is suppressed.</li>
+        <li>Access to the App is restricted to users aged 18 and over.</li>
+      </ol>
+      <p>We do not direct any data about users who indicate they are under 18 to AppLovin, Google AdMob, Firebase, or any other third-party SDK provider.</p>
+      <p>If you are a parent or legal guardian and believe a minor has provided personal data through Floorly, please contact us at <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> and we will delete it.</p>
+    </section>
+
+    <section class="section" id="en-s14">
+      <h2><span class="section-num">14</span> Data Security</h2>
+      <p>Local application files are isolated inside the operating system's application sandbox, benefiting from native full-disk hardware encryption, biometric access constraints, and passcode protection enabled at the OS layer. Internally, the SQLite/Drift database abstraction layer strictly utilizes parameterized query compiling to structurally eliminate any risk of local SQL Injection (SQLi) vulnerabilities. All network traffic generated by third-party SDKs enforces Transport Layer Security (TLS/HTTPS) protocols to protect data in transit against interception.</p>
+    </section>
+
+    <section class="section" id="en-s15">
+      <h2><span class="section-num">15</span> Changes to This Privacy Policy</h2>
+      <p>We reserve the right to revise this Privacy Policy to align with functional application updates or shifting statutory legal mandates. Material revisions will be signaled to users via prominent in-app notification flags or through clear version logs within our App Store and Google Play store listings before the changes take effect. Your continued use of Floorly following the posting of modifications indicates your acknowledgement of the updated terms.</p>
+    </section>
+
+    <section class="section" id="en-s16">
+      <h2><span class="section-num">16</span> Regulatory Contact Info</h2>
+      <div class="contact-card">
+        <h3>Insep Data Protection Desk</h3>
+        <p><strong style="color:#fff">Lead Developer:</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">For comprehensive data verification requests, privacy complaints, or to execute statutory data access rights.</p>
+      </div>
+    </section>
+
+    <section class="section" id="en-s17">
+      <h2><span class="section-num">17</span> Data Erasure & In-App Data Deletion</h2>
+      <p>Since Floorly operates as an offline-first application and does not store your content on centralized backend servers, you maintain absolute control over your records. You can permanently and irreversibly erase all your local data at any time by navigating to <strong>Settings > Delete My Data</strong> within the App interface.</p>
+      <p>Executing the "Delete My Data" protocol triggers a complete, end-to-end purge sequence that:</p>
+      <ol>
+        <li>Permanently destroys the local database (SQLite/Drift), deleting all stored properties, rooms, metric models, checklists, and local app configurations.</li>
+        <li>Purges the app's local private sandbox directory, fully deleting all attached room photographs and audio voice notes.</li>
+        <li>Automatically drops/invalidates memory states and volatile telemetry, ensuring that past analytical tracking vectors (Firebase Analytics IDs) are entirely disassociated from future device activity.</li>
+      </ol>
+      <p>If you have enabled Cloud Backups via Google Drive or iCloud, you can disconnect your account and purge all stored backup files directly from within the App by navigating to **Backup & Export > Delete Cloud Backup**. This action triggers an automated API call that permanently deletes the Floorly sandbox folder (<code>drive.appdata</code> or the iCloud container) from your personal cloud storage. Alternatively, you may revoke access at any time via your Google Account Security settings or Apple ID settings.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Effective date: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-tr" style="display:none">
+
+  <header class="header">
+    <div class="header-badge">Gizlilik Politikası</div>
+    <h1>Floorly <span>Gizlilik</span> Politikası</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Yürürlük: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS & Android</span>
+      <span class="meta-chip">🌍 Türkiye + Uluslararası</span>
+    </div>
+    <div class="callout">
+      <p><strong>Veri Sorumlusu:</strong> İMAN HÜSEYNLİ (Bireysel Geliştirici)</p>
+      <p>📍 Ulubatlı Hasan Mah. — Ankara, Türkiye &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="İçindekiler">
+      <div class="toc-title">İçindekiler</div>
+      <ul class="toc-list">
+        <li><a href="#tr-s1"><span class="num">1</span> Özet</a></li>
+        <li><a href="#tr-s2"><span class="num">2</span> Veri Sorumlusu</a></li>
+        <li><a href="#tr-s3"><span class="num">3</span> Sadece Cihazda Saklanan Veriler</a></li>
+        <li><a href="#tr-s4"><span class="num">4</span> Cihazınızdan Ayrılan Veriler</a></li>
+        <li><a href="#tr-s5"><span class="num">5</span> Üçüncü Taraf SDK'lar</a></li>
+        <li><a href="#tr-s6"><span class="num">6</span> İzinler</a></li>
+        <li><a href="#tr-s7"><span class="num">7</span> Bulut Yedekleme</a></li>
+        <li><a href="#tr-s8"><span class="num">8</span> Paylaşım ve Dışa Aktarma</a></li>
+        <li><a href="#tr-s9"><span class="num">9</span> Reklam Kimlikleri</a></li>
+        <li><a href="#tr-s10"><span class="num">10</span> Veri Saklama Süresi</a></li>
+        <li><a href="#tr-s11"><span class="num">11</span> Haklarınız</a></li>
+        <li><a href="#tr-s12"><span class="num">12</span> Uluslararası Veri Aktarımı</a></li>
+        <li><a href="#tr-s13"><span class="num">13</span> Çocukların Gizliliği</a></li>
+        <li><a href="#tr-s14"><span class="num">14</span> Veri Güvenliği</a></li>
+        <li><a href="#tr-s15"><span class="num">15</span> Değişiklikler</a></li>
+        <li><a href="#tr-s16"><span class="num">16</span> İletişim</a></li>
+        <li><a href="#tr-s17"><span class="num">17</span> Veri Silme</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="tr-s1">
+      <h2><span class="section-num">1</span> Özet (Yalın Dil)</h2>
+      <p>Floorly, <strong>öncelikli olarak çevrimdışı (offline-first)</strong> çalışan bir uygulamadır. Oluşturduğunuz konut, oda, fotoğraf, sesli not, kontrol listesi ve kat planı verileri <strong>yerel olarak cihazınızda</strong> saklanır ve sunucularımıza yüklenmez.</p>
+      <p>Bununla birlikte Floorly, "cihazınızdan hiçbir verinin çıkmadığı" bir uygulama değildir. Reklamları sunmak, çökmeleri analiz etmek, kullanımı ölçmek ve abonelik işlemlerini yürütmek amacıyla uygulama, belirli teknik verileri cihaz dışına aktaran üçüncü taraf Yazılım Geliştirme Kitleri (SDK'lar) entegre etmektedir:</p>
+      <ul>
+        <li><strong>Reklam SDK'ları</strong> (Google AdMob, AppLovin MAX), açık rızanıza tabi olarak, <strong>kişiselleştirilmiş reklamlar</strong> dahil olmak üzere reklam sunmak amacıyla <strong>reklam kimliğinizi</strong> ve cihaz/reklam etkileşim verilerinizi toplar.</li>
+        <li><strong>Firebase Analytics, Crashlytics ve Performance Monitoring</strong>; kullanım etkinliklerini, çökme/tanılama verilerini ve performans izlerini Google'a gönderir.</li>
+        <li><strong>RevenueCat</strong> ile <strong>App Store / Google Play</strong>, satın alım ve abonelik durumunuzu işler.</li>
+        <li>Pro kullanıcısıysanız ve <strong>Bulut Yedekleme</strong> özelliğini etkinleştirirseniz, yedekleme dosyanız bize değil, doğrudan <strong>kendi</strong> Google Drive (Android) veya iCloud (iOS) hesabınıza yüklenir.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="tr-s2">
+      <h2><span class="section-num">2</span> Veri Sorumlusu</h2>
+      <p><strong>Veri Sorumlusu:</strong> Ankara, Türkiye'de ikamet eden bireysel indie geliştirici İMAN HÜSEYNLİ ("Insep" veya "biz" olarak anılacaktır).</p>
+      <p>Floorly tamamen arka uç sunucuları olmadan çalıştığından; uygulama içinde oluşturulan mülk verilerinizi, fotoğraflarınızı, sesli notlarınızı veya diğer kullanıcı içeriklerini doğrudan almayız, saklamayız, bunlara erişmeyiz veya işlemeyiz. Doğrudan aldığımız tek kişisel veri, destek e-posta adresimize gönüllü olarak gönderdiğiniz iletişim iletileridir.</p>
+      <p>Bölüm 4'te listelenen üçüncü taraf SDK'lara aktarılan veriler için, yalnızca uygulamadan toplama ve ilk aktarım aşamasında <strong>Bağımsız Veri Sorumlusu</strong> olarak hareket ederiz. Aktarıldıktan sonra, ilgili üçüncü taraf SDK sağlayıcıları bu verileri Bölüm 5'te bağlantıları verilen kendi gizlilik politikaları kapsamında bağımsız veri sorumluları olarak işler.</p>
+    </section>
+
+    <section class="section" id="tr-s3">
+      <h2><span class="section-num">3</span> Sadece Cihazınızda Saklanan Veriler (Yerel Veriler)</h2>
+      <p>Aşağıdaki yapılandırılmış bilgiler ve medya dosyaları sizin tarafınızdan oluşturulur ve uygulamanın güvenli korumalı alan veritabanında (SQLite/Drift) ve özel medya klasöründe <strong>yerel olarak</strong> saklanır. Bu verilere erişimimiz yoktur, bunları toplamayız veya saklamayız:</p>
+      <ul>
+        <li><strong>Mülk kayıtları:</strong> ad/takma ad, adres, fiyat, işlem türü (satılık/kiralık), oda konfigürasyonu, brüt/net alan, kat, bina yaşı, aylık aidat, notlar, yıldız puanı, ziyaret tarihi.</li>
+        <li><strong>Mülk konum koordinatları</strong> (enlem/boylam), <strong>yalnızca</strong> konum yakalama özelliğini açıkça tetiklemeniz durumunda (bkz. Bölüm 6).</li>
+        <li>Cihaz pusulasından yerel olarak yakalanan <strong>cephe yönü</strong>.</li>
+        <li><strong>Odalar:</strong> tür, özel ad, boyutlar, düzenleyiciler, kapılar/pencereler, etiketler, notlar.</li>
+        <li>Eklediğiniz <strong>fotoğraflar</strong> (yerel olarak ikili dosyalar halinde saklanır).</li>
+        <li><strong>Sesli notlar:</strong> Yeni sesli notlar oluşturmak bir Pro/Premium özelliğidir. Ücretsiz plandaki kullanıcılar yalnızca mevcut sesli notları oynatabilir.</li>
+        <li><strong>Kontrol listeleri, puanlama ağırlıkları ve 2B kat planı düzenleri.</strong></li>
+      </ul>
+      <p>Bu veriler, siz aktif olarak dışa aktarmayı, sistem paylaşım sayfası aracılığıyla paylaşmayı (Bölüm 8) veya Bulut Yedeklemeyi etkinleştirmeyi (Bölüm 7) seçmediğiniz sürece cihazınızda kalır. Uygulamanın kaldırılması, bu yerel verileri cihazdan kalıcı olarak siler.</p>
+    </section>
+
+    <section class="section" id="tr-s4">
+      <h2><span class="section-num">4</span> Cihazınızdan Ayrılan Veriler & Hukuki Sebepler</h2>
+      <p>Cihazınızdan aktarılan belirli veri öğelerini <strong>GDPR Madde 6</strong> ve <strong>KVKK Madde 5</strong> kapsamındaki tam hukuki sebepleriyle eşleştiriyoruz:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Veri Türü</th>
+              <th>Amaç</th>
+              <th>Gönderilen Yer</th>
+              <th>GDPR Hukuki Sebebi</th>
+              <th>KVKK Hukuki Sebebi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reklam kimliği (AAID/IDFA), cihaz ve ağ bilgileri, reklam etkileşimleri</td>
+              <td>Kişiselleştirilmiş veya bağlamsal reklamların sunulması ve ölçülmesi</td>
+              <td>Google AdMob, AppLovin MAX</td>
+              <td><span class="legal-basis">Rıza (Madde 6(1)(a))</span> App Tracking Transparency (iOS) veya Rıza Diyalogları aracılığıyla</td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>Uygulama kullanım etkinlikleri, ekran görüntülemeleri, uygulama tarafından oluşturulan analitik kullanıcı kimliği</td>
+              <td>Kullanıcı deneyimini izlemek ve optimize etmek için ürün analitiği</td>
+              <td>Firebase Analytics (Google)</td>
+              <td><span class="legal-basis">Rıza (Madde 6(1)(a))</span> ilk kullanıcı kurulum istemi aracılığıyla</td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>Çökme raporları, yığın izleri (stack traces), çökme anındaki cihaz donanım durumu</td>
+              <td>Sistem hatalarını/çökmelerini teşhis etme ve giderme</td>
+              <td>Firebase Crashlytics (Google)</td>
+              <td><span class="legal-basis">Rıza (Madde 6(1)(a))</span> uygulama içi rıza diyalogu aracılığıyla</td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>Performans izleri (örn. dışa aktarma zamanlaması), ağ gecikme metrikleri</td>
+              <td>Uygulamanın iç çalışma zamanı performansını izleme</td>
+              <td>Firebase Performance Monitoring</td>
+              <td><span class="legal-basis">Rıza (Madde 6(1)(a))</span> uygulama içi rıza diyalogu aracılığıyla</td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>Abonelik durumu, anonimleştirilmiş işlem kimliği, son kullanma zaman damgaları</td>
+              <td>Pro özelliklerinin doğrulanması ve etkinleştirilmesi</td>
+              <td>RevenueCat, Apple App Store, Google Play</td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Madde 6(1)(b))</span></td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Md. 5(2)(c))</span></td>
+            </tr>
+            <tr>
+              <td>Google hesap e-posta adresiniz</td>
+              <td>Bulut yedeklemesi için oturum açmış olan hesabı görüntüleme; Google Sign-In SDK aracılığıyla cihaz üzerinde yerel olarak işlenir. Bu veri geçicidir; Geliştiricinin sunucularına asla iletilmez veya saklanmaz.</td>
+              <td>Cihaz üzerinde yerel olarak işlenir</td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Madde 6(1)(b))</span></td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Md. 5(2)(c))</span></td>
+            </tr>
+            <tr>
+              <td>Yedekleme arşiv dosyanız (yerel veritabanı ve medyanın kopyası)</td>
+              <td>İsteğe bağlı, kullanıcı tarafından başlatılan güvenli bulut yedekleme ve geri yükleme</td>
+              <td><strong>Kendi</strong> Google Drive (Android) veya iCloud (iOS) hesabınız</td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Madde 6(1)(b))</span></td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Md. 5(2)(c))</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <p><strong>Not:</strong> Kişisel verilerinizi satmayız, kiralamayız veya ticaretini yapmayız.</p>
+        <p><strong>RevenueCat:</strong> Abonelik durumunuzu cihazlar arasında senkronize etmek ve Pro katman erişiminizi doğrulamak için RevenueCat kullanıyoruz. RevenueCat, adımıza bir <strong>Veri İşleyen</strong> olarak anonimleştirilmiş işlem meta verilerini işler. Ham ödeme bilgilerini (kredi kartı numaraları, banka hesap bilgileri veya tam fatura adresleri) almayız veya saklamayız. İşlenen veriler, kesinlikle satın aldığınız hizmeti sunmak için gerekli olan abonelik belirteçleri (tokens) ile sınırlıdır.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s5">
+      <h2><span class="section-num">5</span> Üçüncü Taraf SDK'lar ve Gizlilik Politikaları</h2>
+      <p>Floorly aşağıdaki üçüncü taraf operasyonel SDK'ları entegre etmektedir. Bunların veri işleme faaliyetleri kendi gizlilik bildirimlerine tabidir:</p>
+      <div class="links-grid">
+        <div class="link-item"><span class="link-icon">📊</span><div><span class="link-name">Google AdMob (Google Mobile Ads)</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a><a class="link-url" href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">support.google.com/admob/answer/6128543</a></div></div>
+        <div class="link-item"><span class="link-icon">📢</span><div><span class="link-name">AppLovin MAX (Ad Mediation)</span><a class="link-url" href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🔥</span><div><span class="link-name">Firebase (Analytics, Crashlytics, Performance Monitoring)</span><a class="link-url" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">💳</span><div><span class="link-name">RevenueCat</span><a class="link-url" href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🍎</span><div><span class="link-name">Apple App Store</span><a class="link-url" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">▶️</span><div><span class="link-name">Google Play Services</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s6">
+      <h2><span class="section-num">6</span> İzinler ve Cihaz Kaynaklarına Erişim</h2>
+      <p>Floorly, çalışma zamanı cihaz izinlerini yalnızca bu izni gerektiren bir özellikle açıkça etkileşime girdiğinizde talep eder. İzinleri istediğiniz zaman işletim sisteminiz üzerinden iptal edebilirsiniz.</p>
+      <div class="perm-grid">
+        <div class="perm-item"><span class="perm-icon">📷</span><div class="perm-name">Kamera</div><div class="perm-desc">Uygulama içinden doğrudan oda/mülk fotoğrafları çekmek için kullanılır.</div></div>
+        <div class="perm-item"><span class="perm-icon">🖼️</span><div class="perm-name">Fotoğraf Kitaplığı / Medya Depolama</div><div class="perm-desc">Mevcut mülk fotoğraflarını seçmek ve eklemek için kullanılır.</div></div>
+        <div class="perm-item"><span class="perm-icon">🎙️</span><div class="perm-name">Mikrofon</div><div class="perm-desc">Oda sesli notlarını kaydetmek için kullanılır (Pro özelliği). Ses işleme yerel olarak gerçekleşir.</div></div>
+        <div class="perm-item"><span class="perm-icon">📍</span><div class="perm-name">Konum (Hassas/Yaklaşık)</div><div class="perm-desc">Yalnızca konum yakalama düğmesine dokunduğunuzda bir mülkün enlem/boylamını yakalamak için kullanılır. Sürekli arka plan takibi yapılmaz.</div></div>
+        <div class="perm-item"><span class="perm-icon">🧭</span><div class="perm-name">Cihaz Sensörleri (Pusula/Hareket)</div><div class="perm-desc">Yerel olarak cephe yönünü yakalamak için kullanılır. Çalışma zamanında kullanıcı onayı istemi gerektirmez.</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s7">
+      <h2><span class="section-num">7</span> Bulut Yedekleme & Google API Sınırlı Kullanım Beyanı</h2>
+      <p>Pro planına yükseltip Bulut Yedeklemeyi etkinleştirirseniz, yerel bir yedekleme arşivi doğrudan kendi kişisel bulut hesabınıza iletilir.</p>
+      <ul>
+        <li><strong>Android (Google Drive):</strong> Yedekleme verileri, <code>drive.appdata</code> kapsamı aracılığıyla kesinlikle gizli, izole edilmiş özel bir uygulama veri klasörüyle sınırlıdır. Bu klasöre diğer uygulamalar tarafından kesinlikle erişilemez, standart Google Drive görünümünüzde görünmez ve Geliştirici tarafından asla erişilmez, okunmaz veya havuzda toplanmaz.</li>
+        <li><strong>iOS (iCloud):</strong> Yedekleme verileri, Apple Kimliğinize bağlı kişisel iCloud konteynerinize güvenli bir şekilde kaydedilir.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Google API Hizmetleri Kullanıcı Verileri Politikası Uyum Beyanı (Sınırlı Kullanım):</strong> Floorly'nin Google API'lerinden alınan bilgileri kullanımı ve başka bir uygulamaya aktarımı, <strong>Sınırlı Kullanım gereksinimleri</strong> de dahil olmak üzere <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Hizmetleri Kullanıcı Verileri Politikası</a>'na tabi olacaktır. Google kullanıcı verilerini reklam sunmak, kullanıcı profilleri oluşturmak, davranışı izlemek, yapay zeka (AI) modellerini eğitmek veya otomatik kişisel yedekleme depolamanızı yürütmek dışında üçüncü taraflara iletmek için kullanmayız.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s8">
+      <h2><span class="section-num">8</span> Paylaşım ve Dışa Aktarma</h2>
+      <p>Bir PDF/PNG dışa aktarımı veya manuel yedekleme dışa aktarımı gerçekleştirirken, uygulama dosyayı yerel olarak oluşturur ve yerel sistem <strong>paylaşım sayfasına (share sheet)</strong> aktarır. Dosya, yalnızca sizin tarafınızdan seçilen varış noktasına (örn. anlık mesajlaşma uygulamaları, e-posta istemcileri veya harici bulut sağlayıcıları) iletilir. Bu aktarım yazılım katmanımızın dışında gerçekleşir ve hedef sağlayıcınızın şartlarına tabidir.</p>
+    </section>
+
+    <section class="section" id="tr-s9">
+      <h2><span class="section-num">9</span> Reklam Kimlikleri ve Devre Dışı Bırakma Mekanizmaları</h2>
+      <p>18 yaşında veya daha büyük olduğunu onaylayan ücretsiz plan kullanıcılarına reklamlar gösterilebilir. Onayınıza tabi olarak (Google Kullanıcı Mesajlaşma Platformu (UMP) / IAB TCF diyalogu ve iOS'ta Uygulama Takibi Şeffaflığı istemi aracılığıyla toplanır), reklam ağları reklam etkileşimlerini ölçmek ve reklamları kişiselleştirmek için cihazınızın donanım reklam kimliğini (iOS'ta IDFA, Android'de AAID) kullanabilir. Onay vermezseniz, size yalnızca kişiselleştirilmemiş (bağlamsal) reklamlar gösterilir.</p>
+      <ul>
+        <li><strong>Rıza Çerçeveleri:</strong> IAB Avrupa Şeffaflık ve Rıza Çerçevesi ile uyumlu standart Google Kullanıcı Mesajlaşma Platformunu (UMP) uyguluyoruz. AEA/Birleşik Krallık ve Türkiye'deki kullanıcılar takip izinlerini doğrudan rıza başlığı üzerinden yapılandırabilir, kısıtlayabilir veya reddedebilir.</li>
+        <li><strong>İşletim Sistemi Düzeyinde Kontrol:</strong> Kişiselleştirilmiş takibi aşağıdakiler üzerinden sıfırlayabilir veya tamamen devre dışı bırakabilirsiniz:
+          <ul>
+            <li><em>iOS:</em> Ayarlar → Gizlilik ve Güvenlik → Takip Etme (Uygulama Takibi Şeffaflığı).</li>
+            <li><em>Android:</em> Ayarlar → Google → Reklamlar → Reklam Kimliğini Sil/Sıfırla.</li>
+          </ul>
+        </li>
+        <li><strong>Pro Katmanı:</strong> Herhangi bir Pro aboneliği satın alındığında, tüm reklam SDK'sı başlatma blokları tamamen atlanır ve devre dışı bırakılır, böylece reklam takibi tamamen ortadan kalkar.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="tr-s10">
+      <h2><span class="section-num">10</span> Veri Saklama Süresi</h2>
+      <ul>
+        <li><strong>Cihaz İçi Veriler:</strong> Uygulama verilerini temizleyene, uygulama içindeki kayıtları manuel olarak silene veya Floorly'yi kaldırana kadar uygulama korumalı alanında süresiz olarak saklanır.</li>
+        <li><strong>Bulut Yedeklemeleri:</strong> Tamamen sizin tarafınızdan yönetilir; siz silesiye kadar kişisel Google Drive veya iCloud alanınızda saklanır.</li>
+        <li><strong>Telemetri ve Çökme Analitiği:</strong> Standart Firebase saklama parametrelerine göre otomatik silinmeden önce 14 aya kadar Google Firebase tarafından saklanır.</li>
+        <li><strong>Mali Makbuzlar:</strong> İşlem durumları, mali saklama yasalarına uygun olarak RevenueCat ve uygulama mağazaları tarafından güvenli bir şekilde günlüğe kaydedilir.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="tr-s11">
+      <h2><span class="section-num">11</span> Haklarınız ve Mevzuata Uyum</h2>
+      <h3>11.1 KVKK (Türkiye) Uyumu — 6698 Sayılı Kanun</h3>
+      <p>KVKK'nın 11. maddesi uyarınca, Türkiye'de bulunan kullanıcılar aşağıdaki hakları için <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> adresinden bizimle iletişime geçebilirler:</p>
+      <ol>
+        <li>Kişisel verilerinin işlenip işlenmediğini öğrenme,</li>
+        <li>Kişisel verileri işlenmişse buna ilişkin bilgi talep etme,</li>
+        <li>Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+        <li>Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme,</li>
+        <li>Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme,</li>
+        <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerin silinmesini veya yok edilmesini isteme,</li>
+        <li>Münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme.</li>
+      </ol>
+      <p><strong>Yurt Dışına Veri Aktarımı:</strong> Entegre altyapı ortaklarımız (Google Firebase, AdMob, AppLovin, RevenueCat), bulut altyapılarını Türkiye Cumhuriyeti sınırları dışında barındırmaktadır ve bu durum belirli verilerin uluslararası transferini zorunlu kılmaktadır.</p>
+      <p>6698 Sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) değiştirilen 9. maddesi uyarınca, bu sınır ötesi teknik veri aktarımları, bu hizmetler başlatılmadan önce uygulama içi rıza yönetim platformu aracılığıyla verdiğiniz <strong>Açık Rıza (Md. 5(1))</strong> esasına dayanarak gerçekleştirilmektedir. Açık rızanıza ek olarak, küresel altyapı ortaklarımız tarafından sağlanan Veri İşleme Eklerine (DPA) ve Standart Sözleşme Maddelerine (SCCs) bağlı kalarak bu aktarımların Uygun Güvenceler altında kalmasını sağlıyoruz. Bu mekanizmalar, Türk mevzuatının gerektirdiği düzeyde yeterli bir veri koruma seviyesini garanti altına almaktadır.</p>
+
+      <h3>11.2 GDPR (AEA/Birleşik Krallık) Uyumu</h3>
+      <p>Avrupa Ekonomik Alanı (AEA) ve Birleşik Krallık içinde faaliyet gösteren kullanıcılar için; erişim (Madde 15), düzeltme (Madde 16), silme/unutulma (Madde 17), işlemenin kısıtlanması (Madde 18), veri taşınabilirliği (Madde 20) ve işlemeye itiraz (Madde 21) haklarına sahipsiniz.</p>
+      <p>Insep'in SDK telemetrisinin toplanması ve anlık geçişi için GDPR kapsamında bir veri sorumlusu olarak hareket ettiği ölçüde, hukuki sebeplerimiz Bölüm 4'te açıkça belirtilmiştir. Verilerin üçüncü taraflarda (Google, AppLovin, RevenueCat) bulunduğu durumlarda, haklarınızı doğrudan onlara karşı kullanabilir veya taleplerinizi kolaylaştırmak için <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> adresinden bizimle iletişime geçebilirsiniz. Mutad meskeninizin bulunduğu ülkedeki bir AB Denetim Makamına (Veri Koruma Makamı) şikayette bulunma hakkınız vardır.</p>
+
+      <h3>11.3 Amerika Birleşik Devletleri — Eyalet Gizlilik Hakları (Örn. Kaliforniya / CCPA-CPRA)</h3>
+      <p>Floorly küçük, öncelikli olarak çevrimdışı çalışan bir uygulamadır ve Kaliforniya Tüketici Gizliliği Yasası'nı (CCPA/CPRA) veya benzer ABD eyalet gizlilik yasalarını tetikleyen gelir veya hacim eşiklerini karşılamamaktadır. Yine de, bu tür yasaların sizin için geçerli olduğu ölçüde:</p>
+      <ul>
+        <li>Kişisel verilerinizi para karşılığında <strong>satmayız</strong>.</li>
+        <li>Kişiselleştirilmiş reklamlar sunmak için reklam kimliğinizi (IDFA/AAID) reklam ağlarıyla paylaşmak, bazı ABD eyalet yasaları kapsamında "satış" veya "paylaşım" olarak değerlendirilebilir. Uygulama içi gizlilik/reklam diyalogunda (Google UMP) rızayı reddederek veya Bölüm 9'da açıklanan cihazınızın "Reklam Takibini Sınırla" / "Reklam Kimliğini Sıfırla" kontrollerini kullanarak istediğiniz zaman <strong>kapsam dışı kalabilirsiniz (opt-out)</strong>.</li>
+        <li>Hedefli reklamcılık için 18 yaşın altındaki ABD sakinlerinin kişisel verilerini bilerek işlemeyiz; 18 yaşın altında olduğunu belirten kullanıcılar reklam veya analitik işleminden muaf tutulur (bkz. Bölüm 13).</li>
+      </ul>
+    </section>
+
+    <section class="section" id="tr-s12">
+      <h2><span class="section-num">12</span> Uluslararası Veri Aktarımları (Türkiye Dışı / AEA Dışı)</h2>
+      <p>Üçüncü taraf SDK sağlayıcıları tarafından işlenen veriler, başta Amerika Birleşik Devletleri olmak üzere kendi ülkenizin dışındaki sunuculara aktarılır ve burada saklanır. Bu sınır ötesi aktarımlar, Avrupa Komisyonu tarafından onaylanan standart sözleşme maddelerinin (SCCs) yürütülmesi de dahil olmak üzere uygun yasal çerçeveler aracılığıyla korunmakta ve eşdeğer bir veri koruma düzeyi sağlanmaktadır.</p>
+    </section>
+
+    <section class="section" id="tr-s13">
+      <h2><span class="section-num">13</span> Çocukların Gizliliği</h2>
+      <p>Floorly, 18 yaş ve üzeri yetişkinler için tasarlanmış ve amaçlanmıştır. 18 yaşın altındaki hiç kimseden bilerek kişisel veri toplamıyoruz veya onlara pazarlama yapmıyoruz.</p>
+      <p>İlk kayıt akışı sırasında, <strong>herhangi bir reklam veya analitik SDK'sı başlatılmadan önce</strong>, Uygulama tarafsız bir yaş doğrulama ekranı sunar. Sadece 18 yaşında veya daha büyük olduğunuzu onaylayıp onaylamadığınızı belirten tek bir cihaz içi bayrak saklarız. <strong>Doğum tarihinizi toplamayız veya saklamayız.</strong></p>
+      <p>Bir kullanıcı 18 yaşın altında olduğunu belirtirse:</p>
+      <ol>
+        <li>Hiçbir reklam SDK'sı (Google AdMob, AppLovin MAX) başlatılmaz ve reklam gösterilmez.</li>
+        <li>Hiçbir reklam kimliğine (IDFA/AAID) erişilmez veya iletilmez.</li>
+        <li>Firebase Analytics koleksiyonu devre dışı bırakılır (<code>setAnalyticsCollectionEnabled(false)</code>) ve davranışsal takip engellenir.</li>
+        <li>Uygulamaya erişim 18 yaş ve üzeri kullanıcılarla sınırlandırılır.</li>
+      </ol>
+      <p>18 yaşın altında olduğunu belirten kullanıcılara ilişkin hiçbir veriyi AppLovin, Google AdMob, Firebase veya başka bir üçüncü taraf SDK sağlayıcısına yönlendirmeyiz.</p>
+      <p>Ebeveyn veya yasal vasiyseniz ve bir küçüğün Floorly aracılığıyla kişisel veri sağladığına inanıyorsanız, lütfen <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> adresinden bizimle iletişime geçin, verileri derhal silelim.</p>
+    </section>
+
+    <section class="section" id="tr-s14">
+      <h2><span class="section-num">14</span> Veri Güvenliği</h2>
+      <p>Yerel uygulama dosyaları, işletim sisteminin uygulama korumalı alanı (sandbox) içinde izole edilerek, işletim sistemi katmanında etkinleştirilen yerel tam disk donanım şifrelemesi, biyometrik erişim kısıtlamaları ve parola korumasından yararlanır. Yapısal olarak, SQLite/Drift veritabanı soyutlama katmanı, yerel SQL Enjeksiyonu (SQLi) güvenlik açıkları riskini tamamen ortadan kaldırmak için parametreli sorgu derlemesini kesinlikle kullanır. Üçüncü taraf SDK'lar tarafından üretilen tüm ağ trafiği, geçiş halindeki verileri dinlenmeye karşı korumak için Aktarım Katmanı Güvenliği (TLS/HTTPS) protokollerini zorunlu kılar.</p>
+    </section>
+
+    <section class="section" id="tr-s15">
+      <h2><span class="section-num">15</span> Bu Gizlilik Politikasındaki Değişiklikler</h2>
+      <p>Bu Gizlilik Politikasını, işlevsel uygulama güncellemelerine veya değişen yasal zorunluluklara uyum sağlamak amacıyla revize etme hakkımızı saklı tutarız. Önemli revizyonlar, değişiklikler yürürlüğe girmeden önce belirgin uygulama içi bildirim bayrakları veya App Store ve Google Play mağaza listelerimizdeki açık sürüm günlükleri aracılığıyla kullanıcılara bildirilecektir. Değişikliklerin yayınlanmasının ardından Floorly'yi kullanmaya devam etmeniz, güncellenen şartları kabul ettiğiniz anlamına gelir.</p>
+    </section>
+
+    <section class="section" id="tr-s16">
+      <h2><span class="section-num">16</span> Regülatör İletişim Bilgileri</h2>
+      <div class="contact-card">
+        <h3>Insep Veri Koruma Masası</h3>
+        <p><strong style="color:#fff">Baş Geliştirici:</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">Kapsamlı veri doğrulama talepleri, gizlilik şikayetleri veya yasal veri erişim haklarını kullanmak için.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tr-s17">
+      <h2><span class="section-num">17</span> Veri Silme & Uygulama İçi Veri Silme</h2>
+      <p>Floorly öncelikle çevrimdışı çalışan bir uygulama olduğundan ve içeriklerinizi merkezi arka uç sunucularında saklamadığından, kayıtlarınız üzerinde mutlak kontrole sahipsiniz. Uygulama arayüzündeki <strong>Ayarlar &gt; Verilerimi Sil</strong> bölümüne giderek istediğiniz zaman tüm yerel verilerinizi kalıcı ve geri alınamaz bir şekilde silebilirsiniz.</p>
+      <p>"Verilerimi Sil" protokolünün yürütülmesi, aşağıdaki adımları içeren eksiksiz bir temizleme dizisini tetikler:</p>
+      <ol>
+        <li>Yerel veritabanını (SQLite/Drift) kalıcı olarak imha ederek saklanan tüm mülkleri, odaları, metrik modellerini, kontrol listelerini ve yerel uygulama yapılandırmalarını siler.</li>
+        <li>Uygulamanın yerel özel korumalı alan dizinini temizleyerek ekli tüm oda fotoğraflarını ve sesli notları tamamen siler.</li>
+        <li>Bellek durumlarını ve geçici telemetriyi otomatik olarak sıfırlayarak, geçmiş analitik izleme vektörlerinin (Firebase Analitik Kimlikleri) gelecekteki cihaz etkinlikleriyle ilişkisini tamamen keser.</li>
+      </ol>
+      <p>Google Drive veya iCloud aracılığıyla Bulut Yedeklemelerini etkinleştirdiyseniz, uygulama içinden <strong>Yedekle ve Dışa Aktar &gt; Bulut Yedeğini Sil</strong> bölümüne giderek hesabınızın bağlantısını kesebilir ve saklanan tüm yedekleme dosyalarını temizleyebilirsiniz. Bu işlem, Floorly korumalı alan klasörünü (<code>drive.appdata</code> veya iCloud konteynerini) kişisel bulut depolama alanınızdan kalıcı olarak silen otomatik bir API çağrısını tetikler. Alternatif olarak, Google Hesabı Güvenlik ayarlarınız veya Apple Kimliği ayarlarınız üzerinden erişimi istediğiniz zaman iptal edebilirsiniz.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Yürürlük tarihi: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-es" style="display:none">
+
+  <header class="header">
+    <div class="header-badge">Política de Privacidad</div>
+    <h1>Política de <span>Privacidad</span> de Floorly</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Vigencia: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS y Android</span>
+      <span class="meta-chip">🌍 Turquía e Internacional</span>
+    </div>
+    <div class="callout">
+      <p><strong>Responsable del Tratamiento:</strong> İMAN HÜSEYNLİ (Desarrollador Independiente)</p>
+      <p>📍 Ulubatlı Hasan Mah. — Ankara, Turquía &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="Tabla de Contenidos">
+      <div class="toc-title">Tabla de Contenidos</div>
+      <ul class="toc-list">
+        <li><a href="#es-s1"><span class="num">1</span> Resumen</a></li>
+        <li><a href="#es-s2"><span class="num">2</span> Responsable del Tratamiento</a></li>
+        <li><a href="#es-s3"><span class="num">3</span> Datos Locales</a></li>
+        <li><a href="#es-s4"><span class="num">4</span> Salida de Datos y Bases Legales</a></li>
+        <li><a href="#es-s5"><span class="num">5</span> SDK de Terceros</a></li>
+        <li><a href="#es-s6"><span class="num">6</span> Permisos</a></li>
+        <li><a href="#es-s7"><span class="num">7</span> Copia de Seguridad</a></li>
+        <li><a href="#es-s8"><span class="num">8</span> Compartir y Exportar</a></li>
+        <li><a href="#es-s9"><span class="num">9</span> Identificadores Publicitarios</a></li>
+        <li><a href="#es-s10"><span class="num">10</span> Retención de Datos</a></li>
+        <li><a href="#es-s11"><span class="num">11</span> Sus Derechos</a></li>
+        <li><a href="#es-s12"><span class="num">12</span> Transferencias Internacionales</a></li>
+        <li><a href="#es-s13"><span class="num">13</span> Privacidad Infantil</a></li>
+        <li><a href="#es-s14"><span class="num">14</span> Seguridad de Datos</a></li>
+        <li><a href="#es-s15"><span class="num">15</span> Cambios</a></li>
+        <li><a href="#es-s16"><span class="num">16</span> Contacto</a></li>
+        <li><a href="#es-s17"><span class="num">17</span> Eliminación de Datos</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="es-s1">
+      <h2><span class="section-num">1</span> Resumen (Lenguaje Claro)</h2>
+      <p>Floorly es una aplicación <strong>local-first (orientada al almacenamiento local)</strong>. Los datos de viviendas, habitaciones, fotos, notas de voz, listas de verificación y planos que usted crea se almacenan <strong>localmente en su dispositivo</strong> y <strong>no</strong> se suben a nuestros servidores.</p>
+      <p>Sin embargo, Floorly <strong>no</strong> es una aplicación donde "nada sale nunca de su dispositivo". Para mostrar anuncios, comprender errores de la app, medir el uso y procesar suscripciones, la aplicación integra SDK de terceros que transmiten datos técnicos específicos fuera del dispositivo:</p>
+      <ul>
+        <li><strong>SDK de Publicidad</strong> (Google AdMob, AppLovin MAX) recopilan su identificador publicitario y datos de interacción con los anuncios/dispositivo para mostrar publicidad, incluyendo anuncios personalizados, sujeto a su consentimiento explícito.</li>
+        <li><strong>Firebase Analytics, Crashlytics y Performance Monitoring</strong> envían eventos de uso, datos de diagnóstico/errores y métricas de rendimiento a Google.</li>
+        <li><strong>RevenueCat</strong> y las tiendas <strong>App Store / Google Play</strong> procesan el estado de sus compras y suscripciones.</li>
+        <li>Si es un usuario Pro y activa la <strong>Copia de Seguridad en la Nube</strong>, su archivo de respaldo se sube directamente a <strong>su propia cuenta</strong> de Google Drive (Android) o iCloud (iOS), no a nosotros.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="es-s2">
+      <h2><span class="section-num">2</span> Responsable del Tratamiento</h2>
+      <p><strong>Responsable del Tratamiento:</strong> İMAN HÜSEYNLİ — un desarrollador independiente individual que reside en Ankara, Turquía (referido como "Insep", "nosotros", "nos" o "nuestro").</p>
+      <p>Debido a que Floorly funciona completamente sin servidores backend, no recibimos, almacenamos, accedemos ni procesamos directamente los datos de sus propiedades, fotos, notas de voz ni ningún otro contenido creado por el usuario dentro de la aplicación. Los únicos datos personales que recibimos directamente son las comunicaciones que usted envíe voluntariamente a nuestro correo electrónico de soporte.</p>
+    </section>
+
+    <section class="section" id="es-s3">
+      <h2><span class="section-num">3</span> Datos Almacenados Solo en su Dispositivo</h2>
+      <p>Los siguientes datos se almacenan <strong>localmente</strong> dentro de la base de datos segura SQLite/Drift de la aplicación y en la carpeta privada de medios. No tenemos acceso a estos datos:</p>
+      <ul>
+        <li><strong>Registros de propiedades:</strong> nombre, dirección, precio, tipo de operación, configuración de habitaciones, área, piso, antigüedad del edificio, cuotas de mantenimiento, notas, calificación con estrellas, fecha de visita.</li>
+        <li><strong>Coordenadas de ubicación</strong> — solo si activa explícitamente la función de captura de ubicación.</li>
+        <li><strong>Orientación de la fachada</strong> — capturada localmente mediante la brújula del dispositivo.</li>
+        <li><strong>Habitaciones:</strong> tipo, dimensiones, puertas/ventanas, etiquetas, notas.</li>
+        <li><strong>Fotos</strong> (almacenadas localmente como archivos binarios).</li>
+        <li><strong>Notas de voz</strong> (función Pro).</li>
+        <li><strong>Listas de verificación, ponderaciones de puntuación y diseños de planos en 2D.</strong></li>
+      </ul>
+      <p>Estos datos permanecen en su dispositivo a menos que decida exportarlos activamente o habilitar la Copia de Seguridad en la Nube. Al desinstalar la aplicación, estos datos locales se eliminarán de forma permanente.</p>
+    </section>
+
+    <section class="section" id="es-s4">
+      <h2><span class="section-num">4</span> Datos que Salen de su Dispositivo y Bases Legales</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo de Dato</th>
+              <th>Finalidad</th>
+              <th>Enviado A</th>
+              <th>Base Legal (RGPD)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Identificador publicitario (AAID/IDFA), información del dispositivo y red, interacciones con anuncios</td>
+              <td>Mostrar y medir anuncios personalizados o contextuales</td>
+              <td>Google AdMob, AppLovin MAX</td>
+              <td><span class="legal-basis">Consentimiento (Art. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Eventos de uso de la app, vistas de pantalla, ID de usuario analítico</td>
+              <td>Análisis del producto para optimizar la experiencia del usuario</td>
+              <td>Firebase Analytics (Google)</td>
+              <td><span class="legal-basis">Consentimiento (Art. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Informes de errores, trazas de pila, estado del dispositivo al momento del fallo</td>
+              <td>Diagnosticar y resolver errores del sistema</td>
+              <td>Firebase Crashlytics (Google)</td>
+              <td><span class="legal-basis">Consentimiento (Art. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Trazas de rendimiento, métricas de latencia de red</td>
+              <td>Supervisar el rendimiento en tiempo de ejecución de la aplicación</td>
+              <td>Firebase Performance Monitoring</td>
+              <td><span class="legal-basis">Consentimiento (Art. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Estado de suscripción, ID de transacción anonimizado, marcas de tiempo de vencimiento</td>
+              <td>Validar y activar las funciones Pro</td>
+              <td>RevenueCat, App Store, Google Play</td>
+              <td><span class="legal-basis">Contrato (Art. 6(1)(b))</span></td>
+            </tr>
+            <tr>
+              <td>Archivo de copia de seguridad (copia de la base de datos local y archivos multimedia)</td>
+              <td>Copia de seguridad opcional en la nube iniciada por el usuario</td>
+              <td>Su propio Google Drive o iCloud</td>
+              <td><span class="legal-basis">Contrato (Art. 6(1)(b))</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <p><strong>Nota:</strong> No vendemos, alquilamos ni comercializamos sus datos personales.</p>
+      </div>
+    </section>
+
+    <section class="section" id="es-s5">
+      <h2><span class="section-num">5</span> SDK de Terceros y Políticas de Privacidad</h2>
+      <div class="links-grid">
+        <div class="link-item"><span class="link-icon">📊</span><div><span class="link-name">Google AdMob</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">📢</span><div><span class="link-name">AppLovin MAX</span><a class="link-url" href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🔥</span><div><span class="link-name">Firebase (Analytics, Crashlytics, Performance)</span><a class="link-url" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">💳</span><div><span class="link-name">RevenueCat</span><a class="link-url" href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🍎</span><div><span class="link-name">Apple App Store</span><a class="link-url" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">▶️</span><div><span class="link-name">Google Play Services</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="es-s6">
+      <h2><span class="section-num">6</span> Permisos y Acceso a Recursos del Dispositivo</h2>
+      <div class="perm-grid">
+        <div class="perm-item"><span class="perm-icon">📷</span><div class="perm-name">Cámara</div><div class="perm-desc">Se utiliza para tomar fotografías de habitaciones/propiedades dentro de la app.</div></div>
+        <div class="perm-item"><span class="perm-icon">🖼️</span><div class="perm-name">Fototeca</div><div class="perm-desc">Se utiliza para seleccionar y adjuntar fotos de propiedades existentes.</div></div>
+        <div class="perm-item"><span class="perm-icon">🎙️</span><div class="perm-name">Micrófono</div><div class="perm-desc">Se utiliza para grabar notas de voz de las habitaciones (función Pro). El procesamiento de audio es local.</div></div>
+        <div class="perm-item"><span class="perm-icon">📍</span><div class="perm-name">Ubicación</div><div class="perm-desc">La latitud/longitud se captura solo al pulsar el botón de obtención de ubicación. Sin seguimiento en segundo plano.</div></div>
+        <div class="perm-item"><span class="perm-icon">🧭</span><div class="perm-name">Sensores</div><div class="perm-desc">La brújula se usa para capturar la orientación de la fachada de forma local. No requiere confirmación en tiempo de ejecución.</div></div>
+      </div>
+      <p>Puede revocar cualquier permiso en cualquier momento a través de los ajustes del sistema operativo.</p>
+    </section>
+
+    <section class="section" id="es-s7">
+      <h2><span class="section-num">7</span> Copia de Seguridad en la Nube y Uso Limitado de la API de Google</h2>
+      <p>Si actualiza a Pro y activa la Copia de Seguridad en la Nube, se transmitirá un archivo de respaldo local directamente a su propia cuenta personal de almacenamiento en la nube.</p>
+      <ul>
+        <li><strong>Android (Google Drive):</strong> Los datos de respaldo se limitan a una carpeta de datos privada, oculta y aislada de la aplicación mediante el alcance <code>drive.appdata</code>, inaccesible para otras aplicaciones e invisible en su vista estándar de Drive.</li>
+        <li><strong>iOS (iCloud):</strong> Los datos de respaldo se guardan en su contenedor personal de iCloud vinculado a su Apple ID.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Cumplimiento de la Política de Datos del Usuario de los Servicios de la API de Google (Uso Limitado):</strong> El uso y la transferencia por parte de Floorly de la información recibida de las API de Google a cualquier otra aplicación se atendrán a la Política de Datos del Usuario de los Servicios de la API de Google, incluidas las condiciones de Uso Limitado. No utilizamos los datos de usuario de Google para mostrar anuncios, crear perfiles de usuario ni transmitirlos a terceros.</p>
+      </div>
+    </section>
+
+    <section class="section" id="es-s8">
+      <h2><span class="section-num">8</span> Compartir y Exportar</h2>
+      <p>Al realizar una exportación a PDF/PNG o una exportación manual de copia de seguridad, la aplicación genera el archivo localmente y lo envía a la <strong>hoja para compartir</strong> nativa del sistema. El archivo se transmite exclusivamente al destino que usted seleccione. Esta transferencia ocurre fuera de nuestra capa de software.</p>
+    </section>
+
+    <section class="section" id="es-s9">
+      <h2><span class="section-num">9</span> Identificadores Publicitarios y Mecanismos de Exclusión</h2>
+      <p>A los usuarios del nivel gratuito que hayan confirmado tener 18 años o más se les pueden mostrar anuncios. Sujeto a su consentimiento, las redes publicitarias pueden utilizar el identificador publicitario de su dispositivo (IDFA/AAID) para medir las interacciones y personalizar los anuncios. Si rechaza el consentimiento, solo se mostrarán anuncios no personalizados (contextuales).</p>
+      <ul>
+        <li><strong>Marcos de Consentimiento:</strong> Implementamos Google UMP cumpliendo con el TCF de IAB Europe.</li>
+        <li><strong>Control a Nivel del SO:</strong>
+          <ul>
+            <li><em>iOS:</em> Ajustes → Privacidad y seguridad → Rastreo</li>
+            <li><em>Android:</em> Ajustes → Google → Anuncios → Eliminar/Restablecer ID de publicidad</li>
+          </ul>
+        </li>
+        <li><strong>Nivel Pro:</strong> Cualquier suscripción Pro desactiva por completo la inicialización de todos los SDK de publicidad.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="es-s10">
+      <h2><span class="section-num">10</span> Retención de Datos</h2>
+      <ul>
+        <li><strong>Datos en el Dispositivo:</strong> Se conservan indefinidamente hasta que borre los datos de la aplicación, elimine los registros o desinstale Floorly.</li>
+        <li><strong>Copias de Seguridad en la Nube:</strong> Gestionadas por usted; se conservan hasta que usted las elimine.</li>
+        <li><strong>Telemetría y Análisis de Errores:</strong> Conservados por Google Firebase hasta 14 meses antes de su eliminación automática.</li>
+        <li><strong>Recibos Financieros:</strong> Registrados por RevenueCat y las tiendas de aplicaciones de acuerdo con las leyes de retención financiera.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="es-s11">
+      <h2><span class="section-num">11</span> Sus Derechos y Cumplimiento Normativo</h2>
+      <h3>11.1 Cumplimiento de KVKK (Turquía) — Ley N.º 6698</h3>
+      <p>De conformidad con el Artículo 11 de la KVKK, los usuarios en Turquía pueden ponerse en contacto con <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> para: conocer si se procesan sus datos personales; solicitar información; conocer la finalidad del procesamiento; conocer los terceros a quienes se transfieren los datos; solicitar la rectificación, eliminación o destrucción; y oponerse al procesamiento automatizado.</p>
+      <h3>11.2 Cumplimiento del RGPD (EEE/Reino Unido)</h3>
+      <p>Para los usuarios del EEE y del Reino Unido, dispone de los derechos de acceso (Art. 15), rectificación (Art. 16), supresión (Art. 17), limitación (Art. 18), portabilidad de datos (Art. 20) y oposición (Art. 21). Puede presentar una reclamación ante su Autoridad de Protección de Datos nacional.</p>
+      <h3>11.3 Estados Unidos — Derechos de Privacidad Estatales (CCPA/CPRA)</h3>
+      <p>Floorly no alcanza los umbrales de la CCPA/CPRA. No obstante, no vendemos datos personales y no procesamos datos de residentes de EE. UU. menores de 18 años para publicidad dirigida.</p>
+    </section>
+
+    <section class="section" id="es-s12">
+      <h2><span class="section-num">12</span> Transferencias Internacionales de Datos</h2>
+      <p>Los datos procesados por los proveedores de SDK de terceros se transfieren a servidores ubicados principalmente en los Estados Unidos, protegidos mediante Cláusulas Contractuales Tipo (SCC) aprobadas por la Comisión Europea.</p>
+    </section>
+
+    <section class="section" id="es-s13">
+      <h2><span class="section-num">13</span> Privacidad Infantil</h2>
+      <p>Floorly está diseñada para adultos mayores de 18 años. No recopilamos a sabiendas datos personales de menores de 18 años.</p>
+      <div class="callout callout-warn">
+        <p>Si un usuario indica que es menor de 18 años: no se inicializa ningún SDK de publicidad, no se accede a los identificadores publicitarios, se desactiva Firebase Analytics y se restringe el acceso a la aplicación.</p>
+        <p>Si usted es padre/tutor y cree que un menor proporcionó datos a través de Floorly, contáctenos en <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="es-s14">
+      <h2><span class="section-num">14</span> Seguridad de los Datos</h2>
+      <p>Los archivos locales están aislados en el entorno de pruebas (sandbox) de la aplicación del sistema operativo con cifrado de hardware, acceso biométrico y protección por código de acceso. La capa SQLite/Drift utiliza consultas parametrizadas para eliminar los riesgos de inyección SQL (SQLi). Todo el tráfico de red de los SDK de terceros aplica protocolos TLS/HTTPS.</p>
+    </section>
+
+    <section class="section" id="es-s15">
+      <h2><span class="section-num">15</span> Cambios a esta Política de Privacidad</h2>
+      <p>Las revisiones sustanciales se indicarán mediante avisos destacados dentro de la aplicación o a través de los registros de versiones en las descripciones de App Store y Google Play antes de que los cambios entren en vigor.</p>
+    </section>
+
+    <section class="section" id="es-s16">
+      <h2><span class="section-num">16</span> Información de Contacto Regulatoria</h2>
+      <div class="contact-card">
+        <h3>Oficina de Protección de Datos de Insep</h3>
+        <p><strong style="color:#fff">Desarrollador Principal:</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">Para solicitudes de verificación de datos, reclamaciones de privacidad o para ejercer los derechos legales de acceso a los datos.</p>
+      </div>
+    </section>
+
+    <section class="section" id="es-s17">
+      <h2><span class="section-num">17</span> Eliminación de Datos y Supresión dentro de la Aplicación</h2>
+      <p>Puede borrar de forma permanente todos los datos locales en cualquier momento a través de <strong>Ajustes → Eliminar mis datos</strong>. Esto activa una purga completa que:</p>
+      <ol>
+        <li>Destruye permanentemente la base de datos local (SQLite/Drift).</li>
+        <li>Elimina todas las fotografías adjuntas y las notas de voz de audio.</li>
+        <li>Restablece los estados de la memoria y la telemetría, desvinculando el seguimiento analítico pasado de la actividad futura.</li>
+      </ol>
+      <p>Las copias de seguridad en la nube se pueden eliminar a través de <strong>Copia de seguridad y exportación → Eliminar copia de seguridad en la nube</strong>, o revocando el acceso a través de la Configuración de seguridad de su cuenta de Google o los ajustes de su Apple ID.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Fecha de vigencia: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-de" style="display:none">
+
+  <header class="header">
+    <div class="header-badge">Datenschutzerklärung</div>
+    <h1>Floorly <span>Datenschutzerklärung</span></h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Gültig ab: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS & Android</span>
+      <span class="meta-chip">🌍 Türkei + International</span>
+    </div>
+    <div class="callout">
+      <p><strong>Verantwortlicher:</strong> İMAN HÜSEYNLİ (Unabhängiger Entwickler)</p>
+      <p>📍 Ulubatlı Hasan Mah. — Ankara, Türkei &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="Inhaltsverzeichnis">
+      <div class="toc-title">Inhaltsverzeichnis</div>
+      <ul class="toc-list">
+        <li><a href="#de-s1"><span class="num">1</span> Zusammenfassung</a></li>
+        <li><a href="#de-s2"><span class="num">2</span> Verantwortlicher</a></li>
+        <li><a href="#de-s3"><span class="num">3</span> Lokale Daten</a></li>
+        <li><a href="#de-s4"><span class="num">4</span> Datenübertragung</a></li>
+        <li><a href="#de-s5"><span class="num">5</span> Drittanbieter-SDKs</a></li>
+        <li><a href="#de-s6"><span class="num">6</span> Berechtigungen</a></li>
+        <li><a href="#de-s7"><span class="num">7</span> Cloud-Backup</a></li>
+        <li><a href="#de-s8"><span class="num">8</span> Teilen & Export</a></li>
+        <li><a href="#de-s9"><span class="num">9</span> Werbe-IDs</a></li>
+        <li><a href="#de-s10"><span class="num">10</span> Datenspeicherung</a></li>
+        <li><a href="#de-s11"><span class="num">11</span> Ihre Rechte</a></li>
+        <li><a href="#de-s12"><span class="num">12</span> Internationale Transfers</a></li>
+        <li><a href="#de-s13"><span class="num">13</span> Schutz von Minderjährigen</a></li>
+        <li><a href="#de-s14"><span class="num">14</span> Datensicherheit</a></li>
+        <li><a href="#de-s15"><span class="num">15</span> Änderungen</a></li>
+        <li><a href="#de-s16"><span class="num">16</span> Kontakt</a></li>
+        <li><a href="#de-s17"><span class="num">17</span> Datenlöschung</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="de-s1">
+      <h2><span class="section-num">1</span> Zusammenfassung (In verständlicher Sprache)</h2>
+      <p>Floorly ist eine <strong>Offline-First-App</strong>. Die von Ihnen erstellten Daten zu Immobilien, Räumen, Fotos, Sprachnotizen, Checklisten und Grundrissen werden <strong>lokal auf Ihrem Gerät</strong> gespeichert und <strong>nicht</strong> auf unsere Server hochgeladen.</p>
+      <p>Floorly ist jedoch <strong>keine</strong> App, bei der „niemals Daten Ihr Gerät verlassen“. Um Werbung anzuzeigen, Abstürze zu analysieren, die Nutzung zu messen und Abonnements zu verarbeiten, integriert die App SDKs von Drittanbietern, die bestimmte technische Daten übertragen:</p>
+      <ul>
+        <li><strong>Werbe-SDKs</strong> (Google AdMob, AppLovin MAX) erfassen Ihre Werbe-ID und Geräte-/Werbeinteraktionsdaten, um Anzeigen zu schalten, einschließlich personalisierter Werbung, sofern Sie Ihre ausdrückliche Einwilligung erteilt haben.</li>
+        <li><strong>Firebase Analytics, Crashlytics und Performance Monitoring</strong> senden Nutzungsevents, Absturz-/Diagnosedaten und Leistungsdaten an Google.</li>
+        <li><strong>RevenueCat</strong> und der <strong>App Store / Google Play</strong> verarbeiten Ihren Kauf- und Abonnementstatus.</li>
+        <li>Wenn Sie Pro-Nutzer sind und das <strong>Cloud-Backup</strong> aktivieren, wird Ihre Backup-Datei direkt in Ihr <strong>eigenes</strong> Google Drive (Android) oder iCloud (iOS) hochgeladen – nicht an uns.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="de-s2">
+      <h2><span class="section-num">2</span> Verantwortlicher für die Datenverarbeitung</h2>
+      <p><strong>Verantwortlicher:</strong> İMAN HÜSEYNLİ – ein unabhängiger Indie-Entwickler mit Wohnsitz in Ankara, Türkei (bezeichnet als „Insep“, „wir“, „uns“ oder „unser“).</p>
+      <p>Da Floorly vollständig ohne Backend-Server arbeitet, empfangen, speichern, lesen oder verarbeiten wir Ihre in der App erstellten Immobiliendaten, Fotos, Sprachnotizen oder sonstigen Nutzerinhalte nicht direkt. Die einzigen personenbezogenen Daten, die wir direkt erhalten, sind Mitteilungen, die Sie freiwillig an unsere Support-E-Mail-Adresse senden.</p>
+    </section>
+
+    <section class="section" id="de-s3">
+      <h2><span class="section-num">3</span> Ausschließlich auf Ihrem Gerät gespeicherte Daten</h2>
+      <p>Die folgenden strukturierten Informationen und Mediendateien werden von Ihnen erstellt und <strong>lokal</strong> in der sicheren Sandbox-Datenbank (SQLite/Drift) der App und im privaten Medienordner gespeichert. Wir haben keinen Zugriff auf diese Daten und erfassen oder speichern sie nicht:</p>
+      <ul>
+        <li><strong>Immobiliendatensätze:</strong> Name/Name der Immobilie, Adresse, Preis, Art des Geschäfts (Kauf/Miete), Raumaufteilung, Brutto-/Nettofläche, Etage, Baujahr, monatliches Hausgeld, Notizen, Sternebewertung, Besichtigungsdatum.</li>
+        <li><strong>Standortkoordinaten</strong> (Breitengrad/Längengrad) der Immobilie – <strong>nur dann</strong>, wenn Sie die Standorterfassungsfunktion explizit auslösen.</li>
+        <li><strong>Fassadenausrichtung</strong>, die lokal über den Kompass des Geräts erfasst wird.</li>
+        <li><strong>Räume:</strong> Typ, benutzerdefinierter Name, Abmessungen, Modifikatoren, Türen/Fenster, Tags, Notizen.</li>
+        <li><strong>Fotos</strong>, die Sie anhängen (lokal als Binärdateien gespeichert).</li>
+        <li><strong>Sprachnotizen</strong> (Pro-Funktion).</li>
+        <li><strong>Checklisten, Bewertungsgewichtungen und 2D-Grundrisslayouts.</strong></li>
+      </ul>
+      <p>Diese Daten verbleiben auf Ihrem Gerät, es sei denn, Sie exportieren sie aktiv oder aktivieren das Cloud-Backup. Durch die Deinstallation der App werden diese lokalen Daten dauerhaft vom Gerät gelöscht.</p>
+    </section>
+
+    <section class="section" id="de-s4">
+      <h2><span class="section-num">4</span> Daten, die Ihr Gerät verlassen & Rechtsgrundlagen</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Datentyp</th>
+              <th>Zweck</th>
+              <th>Gesendet an</th>
+              <th>Rechtsgrundlage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Werbe-ID (AAID/IDFA), Geräte- und Netzwerkinformationen, Werbeinteraktionen</td>
+              <td>Bereitstellung und Messung personalisierter oder kontextueller Werbung</td>
+              <td>Google AdMob, AppLovin MAX</td>
+              <td><span class="legal-basis">Einwilligung (DSGVO Art. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>App-Nutzungsevents, Bildschirmaufrufe, app-generierte Analytics-Nutzer-ID</td>
+              <td>Produktanalysen zur Überwachung und Optimierung der Nutzererfahrung</td>
+              <td>Firebase Analytics (Google)</td>
+              <td><span class="legal-basis">Einwilligung (DSGVO Art. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Absturzberichte, Stack-Traces, Hardware-Status des Geräts zum Zeitpunkt des Absturzes</td>
+              <td>Diagnose und Behebung von Systemfehlern/Abstürzen</td>
+              <td>Firebase Crashlytics (Google)</td>
+              <td><span class="legal-basis">Einwilligung (DSGVO Art. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Leistungsdaten (z. B. Export-Dauer), Netzwerklatenz-Metriken</td>
+              <td>Überwachung der internen Laufzeitperformance der Anwendung</td>
+              <td>Firebase Performance Monitoring</td>
+              <td><span class="legal-basis">Einwilligung (DSGVO Art. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Abonnementstatus, anonymisierte Transaktions-ID, Ablaufzeitstempel</td>
+              <td>Validierung und Aktivierung von Pro-Funktionen</td>
+              <td>RevenueCat, App Store, Google Play</td>
+              <td><span class="legal-basis">Vertragserfüllung (DSGVO Art. 6(1)(b))</span></td>
+            </tr>
+            <tr>
+              <td>Ihre Google-Konto-E-Mail-Adresse</td>
+              <td>Anzeige des aktuell authentifizierten Kontos für das Cloud-Backup (wird rein lokal verarbeitet). Spiegelt sich nicht auf Entwickler-Servern wider.</td>
+              <td>Lokal auf dem Gerät verarbeitet</td>
+              <td><span class="legal-basis">Vertragserfüllung (DSGVO Art. 6(1)(b))</span></td>
+            </tr>
+            <tr>
+              <td>Ihre Backup-Archivdatei (Kopie der lokalen Datenbank und Medien)</td>
+              <td>Optionales, vom Nutzer initiiertes sicheres Cloud-Backup und Wiederherstellung</td>
+              <td>Ihr eigenes Google Drive oder iCloud</td>
+              <td><span class="legal-basis">Vertragserrung (DSGVO Art. 6(1)(b))</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <p><strong>Hinweis:</strong> Wir verkaufen, vermieten oder handeln nicht mit Ihren personenbezogenen Daten.</p>
+        <p><strong>RevenueCat:</strong> Wir nutzen RevenueCat, um Ihren Abonnementstatus geräteübergreifend zu synchronisieren und Ihren Pro-Zugang zu validieren. RevenueCat verarbeitet anonymisierte Transaktions-Metadaten in unserem Auftrag als Auftragsverarbeiter.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s5">
+      <h2><span class="section-num">5</span> Drittanbieter-SDKs und Datenschutzrichtlinien</h2>
+      <div class="links-grid">
+        <div class="link-item"><span class="link-icon">📊</span><div><span class="link-name">Google AdMob</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">📢</span><div><span class="link-name">AppLovin MAX</span><a class="link-url" href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🔥</span><div><span class="link-name">Firebase (Analytics, Crashlytics, Performance)</span><a class="link-url" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">💳</span><div><span class="link-name">RevenueCat</span><a class="link-url" href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🍎</span><div><span class="link-name">Apple App Store</span><a class="link-url" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">▶️</span><div><span class="link-name">Google Play Services</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="de-s6">
+      <h2><span class="section-num">6</span> Berechtigungen und Zugriff auf Geräteressourcen</h2>
+      <div class="perm-grid">
+        <div class="perm-item"><span class="perm-icon">📷</span><div class="perm-name">Kamera</div><div class="perm-desc">Wird verwendet, um Fotos von Räumen/Immobilien direkt in der App aufzunehmen.</div></div>
+        <div class="perm-item"><span class="perm-icon">🖼️</span><div class="perm-name">Fotomediathek</div><div class="perm-desc">Wird verwendet, um vorhandene Immobilienfotos auszuwählen und anzuhängen.</div></div>
+        <div class="perm-item"><span class="perm-icon">🎙️</span><div class="perm-name">Mikrofon</div><div class="perm-desc">Wird zur Aufnahme von Raumsprachnotizen verwendet (Pro-Funktion). Die Audioverarbeitung erfolgt rein lokal.</div></div>
+        <div class="perm-item"><span class="perm-icon">📍</span><div class="perm-name">Standort</div><div class="perm-desc">Breiten-/Längengrad werden nur erfasst, wenn Sie aktiv auf die Standorterfassungsschaltfläche tippen. Kein Hintergrund-Tracking.</div></div>
+        <div class="perm-item"><span class="perm-icon">🧭</span><div class="perm-name">Gerätesensoren</div><div class="perm-desc">Der Kompass wird verwendet, um die Fassadenausrichtung lokal zu erfassen. Keine Systemabfrage erforderlich.</div></div>
+      </div>
+      <p>Sie können Berechtigungen jederzeit über die Einstellungen Ihres Betriebssystems widerrufen.</p>
+    </section>
+
+    <section class="section" id="de-s7">
+      <h2><span class="section-num">7</span> Cloud-Backup & Google API-Erklärung zur eingeschränkten Nutzung</h2>
+      <p>Wenn Sie auf Pro upgraden und das Cloud-Backup aktivieren, wird ein lokales Backup-Archiv direkt an Ihr persönliches Cloud-Konto übertragen.</p>
+      <ul>
+        <li><strong>Android (Google Drive):</strong> Die Backup-Daten sind über den Scope <code>drive.appdata</code> strikt auf einen versteckten, isolierten privaten Anwendungsdatenordner beschränkt, der für andere Apps unzugänglich und in Ihrem Standard-Drive nicht sichtbar ist.</li>
+        <li><strong>iOS (iCloud):</strong> Die Backup-Daten werden sicher in Ihrem persönlichen iCloud-Container gespeichert, der mit Ihrer Apple-ID verknüpft ist.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Einhaltung der Google API Services-Nutzerdatenrichtlinie:</strong> Die Nutzung und Übertragung von Informationen aus Google-APIs durch Floorly an eine andere App erfolgt unter Einhaltung der Google API Services-Nutzerdatenrichtlinie, einschließlich der Anforderungen für die eingeschränkte Nutzung (Limited Use). Wir nutzen Google-Nutzerdaten nicht für Werbung, Profilbildung oder KI-Training.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s8">
+      <h2><span class="section-num">8</span> Teilen und Export</h2>
+      <p>Beim Ausführen eines PDF/PNG-Exports oder eines manuellen Backup-Exports generiert die Anwendung die Datei lokal und übergibt sie an das native <strong>Share-Sheet</strong> des Systems. Die Datei wird ausschließlich an das von Ihnen ausgewählte Ziel übertragen (z. B. Messenger-Apps, E-Mail-Clients oder externe Cloud-Anbieter). Dieser Transfer erfolgt außerhalb unserer Softwareebene.</p>
+    </section>
+
+    <section class="section" id="de-s9">
+      <h2><span class="section-num">9</span> Werbe-IDs und Opt-Out-Mechanismen</h2>
+      <p>Nutzern der kostenlosen Version, die bestätigt haben, dass sie 18 Jahre oder älter sind, kann Werbung angezeigt werden. Vorbehaltlich Ihrer Einwilligung (erfasst über das Google UMP / IAB TCF-Banner) können Werbenetzwerke die Werbe-ID Ihres Geräts (IDFA unter iOS, AAID unter Android) verwenden, um Werbeinteraktionen zu messen und Anzeigen zu personalisieren. Wenn Sie die Einwilligung ablehnen, wird Ihnen nur nicht-personalisierte (kontextuelle) Werbung angezeigt.</p>
+      <ul>
+        <li><strong>Einwilligungs-Frameworks:</strong> Wir implementieren die standardisierte Google User Messaging Platform (UMP), die dem IAB Europe Transparency and Consent Framework entspricht.</li>
+        <li><strong>Kontrolle auf OS-Ebene:</strong> Sie können das personalisierte Tracking deaktivieren oder zurücksetzen über:
+          <ul>
+            <li><em>iOS:</em> Einstellungen → Datenschutz & Sicherheit → Tracking</li>
+            <li><em>Android:</em> Einstellungen → Google → Werbeanzeigen → Werbe-ID löschen/zurücksetzen</li>
+          </ul>
+        </li>
+        <li><strong>Pro-Version:</strong> Der Kauf eines Pro-Abonnements deaktiviert die Initialisierung aller Werbe-SDKs vollständig, wodurch jegliches Werbe-Tracking entfällt.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="de-s10">
+      <h2><span class="section-num">10</span> Datenspeicherung</h2>
+      <ul>
+        <li><strong>Auf dem Gerät befindliche Daten:</strong> Werden unbegrenzt in der Sandbox der Anwendung gespeichert, bis Sie die App-Daten löschen, Datensätze manuell in der App entfernen oder Floorly deinstallieren.</li>
+        <li><strong>Cloud-Backups:</strong> Werden vollständig von Ihnen verwaltet; verbleiben in Ihrem persönlichen Google Drive- oder iCloud-Container, bis sie von Ihnen gelöscht werden.</li>
+        <li><strong>Telemetrie und Absturzananalysen:</strong> Werden von Google Firebase gemäß den Firebase-Standardlaufzeiten für bis zu 14 Monate aufbewahrt, bevor sie automatisiert gelöscht werden.</li>
+        <li><strong>Finanzbelege:</strong> Transaktionszustände werden von RevenueCat und den App-Stores in Übereinstimmung mit den gesetzlichen Aufbewahrungsfristen für Finanzdaten sicher protokolliert.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="de-s11">
+      <h2><span class="section-num">11</span> Ihre Rechte und gesetzliche Einhaltung</h2>
+      <h3>11.1 Einhaltung des KVKK (Türkei) — Gesetz Nr. 6698</h3>
+      <p>Gemäß Artikel 11 des KVKK haben Nutzer in der Türkei das Recht, uns unter <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> zu kontaktieren, um: zu erfahren, ob ihre Daten verarbeitet werden; Informationen zu verlangen; den Zweck der Verarbeitung zu erfahren; Dritten zu kennen, an die Daten übermittelt werden; Berichtigung, Löschung oder Vernichtung zu verlangen; sowie einer ausschließlich automatisierten Verarbeitung zu widersprechen.</p>
+      <p>Unsere integrierten Infrastrukturpartner unterhalten Server außerhalb der Türkei. Diese grenzüberschreitenden technischen Datenübertragungen erfolgen auf Grundlage Ihrer ausdrücklichen Einwilligung (Açık Rıza, Art. 5(1)), die Sie über die Plattform zur Einwilligungsverwaltung in der App erteilen, bevor diese Dienste initialisiert werden. Zudem stellen wir über Auftragsverarbeitungsverträge (DPA) und Standardvertragsklauseln (SCCs) angemessene Garantien sicher.</p>
+      
+      <h3>11.2 Einhaltung der DSGVO (EWR/UK)</h3>
+      <p>Für Nutzer innerhalb des Europäischen Wirtschaftsraums (EWR) und des Vereinigten Königreichs gelten die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung/Vergessenwerden (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen die Verarbeitung (Art. 21).</p>
+      <p>Soweit Insep als Verantwortlicher für die Erfassung und den unmittelbaren Transit von SDK-Telemetriedaten agiert, sind unsere Rechtsgrundlagen in Abschnitt 4 aufgeführt. Bei nachgelagerten Daten bei Dritten (Google, AppLovin, RevenueCat) können Sie Ihre Rechte direkt gegenüber diesen ausüben oder uns kontaktieren. Sie haben das Recht, eine Beschwerde bei einer Datenschutz-Aufsichtsbehörde an Ihrem gewöhnlichen Aufenthaltsort einzureichen.</p>
+      
+      <h3>11.3 Vereinigte Staaten — Datenschutzrechte von Bundesstaaten (z. B. Kalifornien / CCPA-CPRA)</h3>
+      <p>Floorly ist eine kleine Offline-First-Anwendung und erreicht nicht die Umsatz- oder Volumenschwellenwerte des CCPA/CPRA. Dennoch verkaufen wir Ihre Daten nicht gegen Geld. Die Weitergabe Ihrer Werbe-ID zur Schaltung personalisierter Werbung kann unter bestimmten US-Gesetzen als „Verkauf“ oder „Teilen“ gelten. Sie können dem jederzeit widersprechen, indem Sie die Einwilligung im Datenschutzdialog der App ablehnen oder die Tracking-Limits Ihres Geräts nutzen (siehe Abschnitt 9).</p>
+    </section>
+
+    <section class="section" id="de-s12">
+      <h2><span class="section-num">12</span> Internationale Datenübermittlungen (Außerhalb der Türkei / des EWR)</h2>
+      <p>Die von Drittanbieter-SDK-Anbietern verarbeiteten Daten werden auf Servern außerhalb Ihrer Heimatjurisdiktion übertragen und dort gespeichert, primär in den Vereinigten Staaten. Diese grenzüberschreitenden Übertragungen werden durch angemessene rechtliche Rahmenbedingungen geschützt, einschließlich der Anwendung von von der Europäischen Kommission genehmigten Standardvertragsklauseln (SCCs), die ein gleichwertiges Datenschutzniveau gewährleisten.</p>
+    </section>
+
+    <section class="section" id="de-s13">
+      <h2><span class="section-num">13</span> Privatsphäre von Kindern und Minderjährigen</h2>
+      <p>Floorly ist für Erwachsene ab 18 Jahren konzipiert und bestimmt. Wir richten uns nicht an Personen unter 18 Jahren und erfassen wissentlich keine personenbezogenen Daten von ihnen.</p>
+      <p>Während des ersten Onboarding-Prozesses, <strong>bevor ein Werbe- oder Analyse-SDK initialisiert wird</strong>, zeigt die App einen neutralen Bildschirm zur Altersbestätigung an. Wir speichern rein ein lokales Flag auf dem Gerät, das angibt, ob Sie bestätigt haben, 18 Jahre oder älter zu sein. <strong>Wir erfassen oder speichern Ihr Geburtsdatum nicht.</strong></p>
+      <div class="callout callout-warn">
+        <p>Wenn ein Nutzer angibt, unter 18 Jahre alt zu sein:</p>
+        <ol>
+          <li>Werden keine Werbe-SDKs (Google AdMob, AppLovin MAX) initialisiert und es wird keine Werbung geschaltet.</li>
+          <li>Wird auf keine Werbe-IDs (IDFA/AAID) zugegriffen und diese werden nicht übertragen.</li>
+          <li>Wird die Firebase-Analytics-Erfassung vollständig deaktiviert (<code>setAnalyticsCollectionEnabled(false)</code>) und verhaltensbasiertes Tracking unterdrückt.</li>
+          <li>Wird der Zugriff auf die App auf Nutzer ab 18 Jahren beschränkt.</li>
+        </ol>
+        <p>Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und vermuten, dass ein Minderjähriger personenbezogene Daten über Floorly übermittelt hat, kontaktieren Sie uns unter <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a>, damit wir diese Daten löschen können.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s14">
+      <h2><span class="section-num">14</span> Datensicherheit</h2>
+      <p>Lokale Anwendungsdateien sind innerhalb der Betriebssystem-Sandbox isoliert und profitieren von nativer Festplatten-Verschlüsselung auf Hardwareebene, biometrischen Zugriffsbeschränkungen und Passcode-Schutz des Betriebssystems. Intern nutzt die SQLite/Drift-Datenbankabstraktionsschicht strikt parametrisierte Abfragen, um das Risiko lokaler SQL-Injection-Schachstellen (SQLi) strukturell auszuschließen. Der gesamte von Drittanbieter-SDKs erzeugte Netzwerkverkehr erzwingt Transport Layer Security (TLS/HTTPS-Protokolle), um Daten während der Übertragung gegen Abfangen zu schützen.</p>
+    </section>
+
+    <section class="section" id="de-s15">
+      <h2><span class="section-num">15</span> Änderungen an dieser Datenschutzerklärung</h2>
+      <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung zu überarbeiten, um sie an funktionale App-Updates oder veränderte gesetzliche Vorgaben anzupassen. Wesentliche Überarbeitungen werden den Nutzern durch gut sichtbare Hinweise in der App oder durch eindeutige Versionsprotokolle in unseren App-Store- und Google Play-Einträgen signalisiert, bevor die Änderungen in Kraft treten. Ihre fortgesetzte Nutzung von Floorly nach der Veröffentlichung von Änderungen gilt als Kenntnisnahme der aktualisierten Bedingungen.</p>
+    </section>
+
+    <section class="section" id="de-s16">
+      <h2><span class="section-num">16</span> Kontaktinformationen der Aufsicht</h2>
+      <div class="contact-card">
+        <h3>Insep Data Protection Desk</h3>
+        <p><strong style="color:#fff">Hauptentwickler:</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">Für Datenüberprüfungsanträge, Datenschutzbeschwerden oder zur Wahrnehmung gesetzlicher Auskunftsrechte.</p>
+      </div>
+    </section>
+
+    <section class="section" id="de-s17">
+      <h2><span class="section-num">17</span> Datenlöschung & In-App-Datenentfernung</h2>
+      <p>Da Floorly als Offline-First-Anwendung arbeitet und Ihre Inhalte nicht auf zentralen Backend-Servern speichert, behalten Sie die absolute Kontrolle über Ihre Daten. Sie können all Ihre lokalen Daten jederzeit unwiderruflich löschen, indem Sie in der App zu <strong>Einstellungen → Meine Daten löschen</strong> navigieren. Das Auslösen dieses Protokolls startet eine vollständige Löschsequenz, die:</p>
+      <ol>
+        <li>Die lokale Datenbank (SQLite/Drift) dauerhaft zerstört und alle gespeicherten Immobilien, Räume, metrischen Modelle, Checklisten und lokalen App-Konfigurationen löscht.</li>
+        <li>Das lokale private Sandbox-Verzeichnis der App bereinigt und alle angehängten Raumfotos und Audio-Sprachnotizen vollständig löscht.</li>
+        <li>Speicherzustände und flüchtige Telemetriedaten automatisch verwirft, wodurch sichergestellt wird, dass frühere analytische Tracking-Vektoren (Firebase-Analytics-IDs) vollständig von zukünftigen Geräteaktivitäten entkoppelt werden.</li>
+      </ol>
+      <p>Wenn Sie Cloud-Backups über Google Drive oder iCloud aktiviert haben, können Sie Ihr Konto trennen und alle gespeicherten Backup-Dateien direkt aus der App heraus entfernen, indem Sie zu <strong>Backup & Export → Cloud-Backup löschen</strong> navigieren. Diese Aktion löst einen automatisierten API-Aufruf aus, der den Floorly-Sandbox-Ordner (<code>drive.appdata</code> bzw. den iCloud-Container) dauerhaft aus Ihrem persönlichen Cloud-Speicher löscht. Alternativ können Sie den Zugriff jederzeit über die Sicherheitseinstellungen Ihres Google-Kontos oder Ihre Apple-ID-Einstellungen widerrufen.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Gültig ab: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-ru" style="display:none">
+
+  <header class="header">
+    <div class="header-badge">Политика конфиденциальности</div>
+    <h1>Политика <span>конфиденциальности</span> Floorly</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 Вступает в силу: <strong>03.06.2026</strong></span>
+      <span class="meta-chip">📱 iOS и Android</span>
+      <span class="meta-chip">🌍 Турция и международный рынок</span>
+    </div>
+    <div class="callout">
+      <p><strong>Оператор данных:</strong> ИМАН ГУСЕЙНЛИ (İMAN HÜSEYNLİ) (Независимый разработчик)</p>
+      <p>📍 Ulubatlı Hasan Mah. — Анкара, Турция &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="Таблица содержания">
+      <div class="toc-title">Таблица содержания</div>
+      <ul class="toc-list">
+        <li><a href="#ru-s1"><span class="num">1</span> Краткое резюме</a></li>
+        <li><a href="#ru-s2"><span class="num">2</span> Оператор данных</a></li>
+        <li><a href="#ru-s3"><span class="num">3</span> Данные на устройстве</a></li>
+        <li><a href="#ru-s4"><span class="num">4</span> Передача данных и правовые основания</a></li>
+        <li><a href="#ru-s5"><span class="num">5</span> Сторонние SDK</a></li>
+        <li><a href="#ru-s6"><span class="num">6</span> Разрешения</a></li>
+        <li><a href="#ru-s7"><span class="num">7</span> Резервное копирование</a></li>
+        <li><a href="#ru-s8"><span class="num">8</span> Общий доступ и экспорт</a></li>
+        <li><a href="#ru-s9"><span class="num">9</span> Рекламные идентификаторы</a></li>
+        <li><a href="#ru-s10"><span class="num">10</span> Хранение данных</a></li>
+        <li><a href="#ru-s11"><span class="num">11</span> Ваши права</a></li>
+        <li><a href="#ru-s12"><span class="num">12</span> Международная передача</a></li>
+        <li><a href="#ru-s13"><span class="num">13</span> Конфиденциальность детей</a></li>
+        <li><a href="#ru-s14"><span class="num">14</span> Безопасность данных</a></li>
+        <li><a href="#ru-s15"><span class="num">15</span> Изменения</a></li>
+        <li><a href="#ru-s16"><span class="num">16</span> Контакты</a></li>
+        <li><a href="#ru-s17"><span class="num">17</span> Удаление данных</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="ru-s1">
+      <h2><span class="section-num">1</span> Краткое резюме (простым языком)</h2>
+      <p>Floorly — это приложение, работающее по принципу <strong>offline-first (локальное хранение в приоритете)</strong>. Данные о домах, комнатах, фотографии, голосовые заметки, чек-листы и планы этажей, которые вы создаете, сохраняются <strong>локально на вашем устройстве</strong> и <strong>не</strong> загружаются на наши серверы.</p>
+      <p>Тем не менее, Floorly <strong>не</strong> является приложением, из которого «вообще ничего и никогда не покидает ваше устройство». Для показа рекламы, анализа сбоев приложения, оценки использования и обработки подписок в приложение интегрированы сторонние SDK, которые передают определенные технические данные за пределы устройства:</p>
+      <ul>
+        <li><strong>Рекламные SDK</strong> (Google AdMob, AppLovin MAX) собирают ваш рекламный идентификатор и данные о взаимодействии с устройством/рекламой для показа объявлений, включая персонализированную рекламу, при условии получения вашего явного согласия.</li>
+        <li><strong>Firebase Analytics, Crashlytics и Performance Monitoring</strong> отправляют в Google события использования, диагностические данные/данные о сбоях и метрики производительности.</li>
+        <li><strong>RevenueCat</strong> и магазины приложений <strong>App Store / Google Play</strong> обрабатывают статус ваших покупок и подписок.</li>
+        <li>Если вы являетесь пользователем Pro-версии и активируете <strong>Резервное копирование в облако</strong>, файл вашей резервной копии загружается непосредственно в <strong>ваше собственное</strong> хранилище Google Drive (Android) или iCloud (iOS), а не нам.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="ru-s2">
+      <h2><span class="section-num">2</span> Оператор данных</h2>
+      <p><strong>Оператор данных:</strong> ИМАН ГУСЕЙНЛИ (İMAN HÜSEYNLİ) — независимый индивидуальный разработчик, проживающий в Анкаре, Турция (далее именуемый «Insep», «мы», «нас» или «наш»).</p>
+      <p>Поскольку Floorly функционирует полностью без серверной части (backend), мы не получаем, не храним, не имеем доступа и не обрабатываем напрямую данные о вашей недвижимости, фотографии, голосовые заметки или любой другой пользовательский контент, созданный внутри Приложения. Единственные персональные данные, которые мы получаем напрямую, — это сообщения, которые вы добровольно отправляете на адрес нашей службы поддержки.</p>
+    </section>
+
+    <section class="section" id="ru-s3">
+      <h2><span class="section-num">3</span> Данные, хранящиеся только на вашем устройстве</h2>
+      <p>Следующие данные хранятся <strong>локально</strong> в защищенной базе данных SQLite/Drift приложения и личной папке мультимедиа. Мы не имеем доступа к этим данным:</p>
+      <ul>
+        <li><strong>Записи о недвижимости:</strong> название, адрес, цена, тип сделки, конфигурация комнат, площадь, этаж, возраст здания, коммунальные платежи, заметки, звездный рейтинг, дата визита.</li>
+        <li><strong>Координаты местоположения</strong> — только если вы явно активируете функцию фиксации местоположения.</li>
+        <li><strong>Ориентация фасада</strong> — фиксируется локально с помощью компаса устройства.</li>
+        <li><strong>Комнаты:</strong> тип, размеры, двери/окна, теги, заметки.</li>
+        <li><strong>Фотографии</strong> (хранятся локально в виде бинарных файлов).</li>
+        <li><strong>Голосовые заметки</strong> (функция Pro-версии).</li>
+        <li><strong>Чек-листы, весовые коэффициенты оценок и 2D-планировки этажей.</strong></li>
+      </ul>
+      <p>Эти данные остаются на вашем устройстве, если вы сами не решите экспортировать их или включить резервное копирование в облако. Удаление Приложения навсегда стирает эти локальные данные.</p>
+    </section>
+
+    <section class="section" id="ru-s4">
+      <h2><span class="section-num">4</span> Данные, покидающие ваше устройство, и правовые основания</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Тип данных</th>
+              <th>Цель</th>
+              <th>Кому отправляются</th>
+              <th>Правовое основание (GDPR)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Рекламный идентификатор (AAID/IDFA), информация об устройстве и сети, взаимодействия с рекламой</td>
+              <td>Показ и оценка персонализированной или контекстной рекламы</td>
+              <td>Google AdMob, AppLovin MAX</td>
+              <td><span class="legal-basis">Согласие (Ст. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>События использования приложения, просмотры экранов, аналитический ID пользователя</td>
+              <td>Аналитика продукта для оптимизации пользовательского опыта</td>
+              <td>Firebase Analytics (Google)</td>
+              <td><span class="legal-basis">Согласие (Ст. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Отчеты о сбоях, трассировки стека, состояние устройства в момент сбоя</td>
+              <td>Диагностика и устранение системных ошибок</td>
+              <td>Firebase Crashlytics (Google)</td>
+              <td><span class="legal-basis">Согласие (Ст. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Трассировка производительности, метрики задержки сети</td>
+              <td>Мониторинг производительности приложения во время работы</td>
+              <td>Firebase Performance Monitoring</td>
+              <td><span class="legal-basis">Согласие (Ст. 6(1)(a))</span></td>
+            </tr>
+            <tr>
+              <td>Статус подписки, анонимизированный ID транзакции, метки времени истечения срока действия</td>
+              <td>Проверка и активация функций Pro-версии</td>
+              <td>RevenueCat, App Store, Google Play</td>
+              <td><span class="legal-basis">Договор (Ст. 6(1)(b))</span></td>
+            </tr>
+            <tr>
+              <td>Архивный файл резервной копии (копия локальной базы данных и медиафайлов)</td>
+              <td>Дополнительное резервное копирование в облако по инициативе пользователя</td>
+              <td>Ваш собственный Google Drive или iCloud</td>
+              <td><span class="legal-basis">Договор (Ст. 6(1)(b))</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <p><strong>Примечание:</strong> Мы не продаем, не сдаем в аренду и не торгуем вашими персональными данными.</p>
+      </div>
+    </section>
+
+    <section class="section" id="ru-s5">
+      <h2><span class="section-num">5</span> Сторонние SDK и их политики конфиденциальности</h2>
+      <div class="links-grid">
+        <div class="link-item"><span class="link-icon">📊</span><div><span class="link-name">Google AdMob</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">📢</span><div><span class="link-name">AppLovin MAX</span><a class="link-url" href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🔥</span><div><span class="link-name">Firebase (Analytics, Crashlytics, Performance)</span><a class="link-url" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">💳</span><div><span class="link-name">RevenueCat</span><a class="link-url" href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🍎</span><div><span class="link-name">Apple App Store</span><a class="link-url" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">▶️</span><div><span class="link-name">Google Play Services</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="ru-s6">
+      <h2><span class="section-num">6</span> Разрешения и доступ к ресурсам устройства</h2>
+      <div class="perm-grid">
+        <div class="perm-item"><span class="perm-icon">📷</span><div class="perm-name">Камера</div><div class="perm-desc">Используется для создания снимков комнат/объектов недвижимости внутри приложения.</div></div>
+        <div class="perm-item"><span class="perm-icon">🖼️</span><div class="perm-name">Фотогалерея</div><div class="perm-desc">Используется для выбора и прикрепления существующих фотографий недвижимости.</div></div>
+        <div class="perm-item"><span class="perm-icon">🎙️</span><div class="perm-name">Микрофон</div><div class="perm-desc">Используется для записи голосовых заметок к комнатам (функция Pro). Обработка аудио происходит локально.</div></div>
+        <div class="perm-item"><span class="perm-icon">📍</span><div class="perm-name">Местоположение</div><div class="perm-desc">Широта/долгота фиксируются только при нажатии на кнопку фиксации местоположения. Отслеживание в фоновом режиме отсутствует.</div></div>
+        <div class="perm-item"><span class="perm-icon">🧭</span><div class="perm-name">Датчики устройства</div><div class="perm-desc">Компас используется для локального определения ориентации фасада. Запрос разрешения во время работы не требуется.</div></div>
+      </div>
+      <p>Вы можете отозвать любое разрешение в любой момент через настройки вашей операционной системы.</p>
+    </section>
+
+    <section class="section" id="ru-s7">
+      <h2><span class="section-num">7</span> Резервное копирование в облако и ограниченное использование Google API</h2>
+      <p>Если вы перейдете на Pro-версию и включите резервное копирование в облако, локальный архив резервной копии будет передан напрямую в ваш личный аккаунт облачного хранилища.</p>
+      <ul>
+        <li><strong>Android (Google Drive):</strong> Данные резервной копии ограничиваются скрытой, изолированной приватной папкой данных приложения через область доступа <code>drive.appdata</code> — она недоступна для других приложений и не видна в вашем стандартном интерфейсе Диска.</li>
+        <li><strong>iOS (iCloud):</strong> Данные резервной копии сохраняются в ваш личный контейнер iCloud, привязанный к вашему Apple ID.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Соответствие Политике в отношении данных пользователей в службах Google API (ограниченное использование):</strong> Использование и передача Floorly информации, полученной от Google API, в любое другое приложение осуществляется в соответствии с Политикой в отношении данных пользователей в службах Google API, включая требования об ограниченном использовании. Мы не используем пользовательские данные Google для показа рекламы, создания профилей пользователей или передачи третьим лицам.</p>
+      </div>
+    </section>
+
+    <section class="section" id="ru-s8">
+      <h2><span class="section-num">8</span> Общий доступ и экспорт</h2>
+      <p>При выполнении экспорта в PDF/PNG или ручного экспорта резервной копии, приложение генерирует файл локально и передает его системному <strong>меню «Поделиться» (share sheet)</strong>. Файл передается исключительно в то место назначения, которое вы выберете сами. Эта передача происходит за пределами нашего программного уровня.</p>
+    </section>
+
+    <section class="section" id="ru-s9">
+      <h2><span class="section-num">9</span> Рекламные идентификаторы и механизмы отказа</h2>
+      <p>Пользователям бесплатной версии, подтвердившим, что им исполнилось 18 лет или больше, может демонстрироваться реклама. При наличии вашего согласия рекламные сети могут использовать рекламный идентификатор вашего устройства (IDFA/AAID) для оценки взаимодействия и персонализации рекламы. Если вы отклоните согласие, будет отображаться только неперсонализированная (контекстная) реклама.</p>
+      <ul>
+        <li><strong>Платформы управления согласием:</strong> Мы внедряем платформу Google UMP, соответствующую требованиям IAB Europe TCF.</li>
+        <li><strong>Управление на уровне ОС:</strong>
+          <ul>
+            <li><em>iOS:</em> Настройки → Конфиденциальность и безопасность → Отслеживание</li>
+            <li><em>Android:</em> Настройки → Google → Реклама → Сбросить/Удалить рекламный идентификатор</li>
+          </ul>
+        </li>
+        <li><strong>Pro-версия:</strong> Любая подписка Pro полностью деактивирует инициализацию всех рекламных SDK.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="ru-s10">
+      <h2><span class="section-num">10</span> Хранение данных</h2>
+      <ul>
+        <li><strong>Данные на устройстве:</strong> Хранятся неограниченно долго, пока вы не очистите данные приложения, не удалите записи вручную или не удалите Floorly.</li>
+        <li><strong>Облачные резервные копии:</strong> Управляются вами; хранятся до тех пор, пока вы их не удалите.</li>
+        <li><strong>Телеметрия и аналитика сбоев:</strong> Хранятся в Google Firebase до 14 месяцев перед автоматическим удалением.</li>
+        <li><strong>Финансовые квитанции:</strong> Фиксируются RevenueCat и магазинами приложений в соответствии с законодательством о хранении финансовой отчетности.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="ru-s11">
+      <h2><span class="section-num">11</span> Ваши права и соответствие нормативным требованиям</h2>
+      <h3>11.1 Соответствие KVKK (Турция) — Закон № 6698</h3>
+      <p>В соответствии со статьей 11 Закона KVKK, пользователи в Турции могут связаться с нами по адресу <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a>, чтобы: узнать, обрабатываются ли их персональные данные; запросить информацию; узнать цель обработки; узнать третьих лиц, которым передаются данные; потребовать исправления, удаления или уничтожения; а также заявить возражение против автоматизированной обработки.</p>
+      <h3>11.2 Соответствие GDPR (ЕЭЗ/Великобритания)</h3>
+      <p>Для пользователей из ЕЭЗ и Великобритании у вас есть права на доступ (Ст. 15), исправление (Ст. 16), удаление (Ст. 17), ограничение обработки (Ст. 18), переносимость данных (Ст. 20) и возражение против обработки (Ст. 21). Вы имеете право подать жалобу в ваш национальный надзорный орган по защите данных.</p>
+      <h3>11.3 США — Права на конфиденциальность на уровне штатов (CCPA/CPRA)</h3>
+      <p>Floorly не подпадает под пороговые значения CCPA/CPRA. Тем не менее, мы не продаем персональные данные и не обрабатываем данные жителей США младше 18 лет для таргетированной рекламы.</p>
+    </section>
+
+    <section class="section" id="ru-s12">
+      <h2><span class="section-num">12</span> Международная передача данных</h2>
+      <p>Данные, обрабатываемые сторонними поставщиками SDK, передаются на серверы, расположенные в основном в США, и защищены Стандартными договорными условиями (SCC), утвержденными Европейской комиссией.</p>
+    </section>
+
+    <section class="section" id="ru-s13">
+      <h2><span class="section-num">13</span> Конфиденциальность детей</h2>
+      <p>Приложение Floorly разработано для взрослых в возрасте от 18 лет и старше. Мы намеренно не собираем персональные данные лиц младше 18 лет.</p>
+      <div class="callout callout-warn">
+        <p>Если пользователь указывает, что ему меньше 18 лет: рекламные SDK не инициализируются, доступ к рекламным идентификаторам не осуществляется, Firebase Analytics отключается, а доступ к Приложению ограничивается.</p>
+        <p>Если вы являетесь родителем/опекуном и полагаете, что несовершеннолетний предоставил данные через Floorly, свяжитесь с нами по адресу <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="ru-s14">
+      <h2><span class="section-num">14</span> Безопасность данных</h2>
+      <p>Локальные файлы изолированы в песочнице (sandbox) приложения операционной системы с использованием аппаратного шифрования, биометрического доступа и защиты паролем. Уровень SQLite/Drift использует параметризованные запросы для исключения рисков SQL-инъекций (SQLi). Весь сетевой трафик сторонних SDK принудительно использует протоколы TLS/HTTPS.</p>
+    </section>
+
+    <section class="section" id="ru-s15">
+      <h2><span class="section-num">15</span> Изменения в настоящей Политике конфиденциальности</h2>
+      <p>Существенные изменения будут обозначаться заметными уведомлениями внутри приложения или в описании версий (changelog) в App Store и Google Play до вступления изменений в силу.</p>
+    </section>
+
+    <section class="section" id="ru-s16">
+      <h2><span class="section-num">16</span> Контактная информация контролирующего органа</h2>
+      <div class="contact-card">
+        <h3>Служба защиты данных Insep</h3>
+        <p><strong style="color:#fff">Ведущий разработчик:</strong> ИМАН ГУСЕЙНЛИ (İMAN HÜSEYNLİ)</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">Для запросов на проверку данных, жалоб на конфиденциальность или реализации законных прав на доступ к данным.</p>
+      </div>
+    </section>
+
+    <section class="section" id="ru-s17">
+      <h2><span class="section-num">17</span> Удаление данных и стирание информации внутри приложения</h2>
+      <p>Вы можете навсегда стереть все локальные данные в любой момент, перейдя в <strong>Настройки → Удалить мои данные</strong>. Это запускает процедуру полной очистки, которая:</p>
+      <ol>
+        <li>Безвозвратно уничтожает локальную базу данных (SQLite/Drift).</li>
+        <li>Стирает все прикрепленные фотографии и аудиозаписи голосовых заметок.</li>
+        <li>Сбрасывает состояния памяти и телеметрию, полностью отвязывая прошлые идентификаторы аналитического отслеживания от будущих действий.</li>
+      </ol>
+      <p>Облачные резервные копии можно удалить через <strong>Резервное копирование и экспорт → Удалить резервную копию из облака</strong> или отозвав доступ в настройках безопасности вашего аккаунта Google или настройках Apple ID.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 ИМАН ГУСЕЙНЛИ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">Дата вступления в силу: 03.06.2026</p>
+  </footer>
+</div>
+
+<div id="content-zh_Hant" style="display:none">
+
+  <header class="header">
+    <div class="header-badge">隱私權政策</div>
+    <h1>Floorly <span>隱私權</span>政策</h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 生效日期：<strong>2026 年 6 月 3 日</strong></span>
+      <span class="meta-chip">📱 iOS & Android</span>
+      <span class="meta-chip">🌍 土耳其 + 國際市場</span>
+    </div>
+    <div class="callout">
+      <p><strong>資料控制者：</strong>İMAN HÜSEYNLİ（獨立開發者）</p>
+      <p>📍 Ulubatlı Hasan Mah. — Ankara, Turkey &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="目錄">
+      <div class="toc-title">目錄</div>
+      <ul class="toc-list">
+        <li><a href="#zh-s1"><span class="num">1</span> 摘要說明</a></li>
+        <li><a href="#zh-s2"><span class="num">2</span> 資料控制者</a></li>
+        <li><a href="#zh-s3"><span class="num">3</span> 僅留存於裝置之資料</a></li>
+        <li><a href="#zh-s4"><span class="num">4</span> 離開裝置之資料與法律依據</a></li>
+        <li><a href="#zh-s5"><span class="num">5</span> 第三方 SDK 政策</a></li>
+        <li><a href="#zh-s6"><span class="num">6</span> 裝置權限</a></li>
+        <li><a href="#zh-s7"><span class="num">7</span> 雲端備份</a></li>
+        <li><a href="#zh-s8"><span class="num">8</span> 分享與匯出</a></li>
+        <li><a href="#zh-s9"><span class="num">9</span> 廣告識別碼</a></li>
+        <li><a href="#zh-s10"><span class="num">10</span> 資料保留期限</a></li>
+        <li><a href="#zh-s11"><span class="num">11</span> 您的權利</a></li>
+        <li><a href="#zh-s12"><span class="num">12</span> 跨境傳輸</a></li>
+        <li><a href="#zh-s13"><span class="num">13</span> 兒童隱私保護</a></li>
+        <li><a href="#zh-s14"><span class="num">14</span> 資料安全機制</a></li>
+        <li><a href="#zh-s15"><span class="num">15</span> 政策變更說明</a></li>
+        <li><a href="#zh-s16"><span class="num">16</span> 聯絡資訊</a></li>
+        <li><a href="#zh-s17"><span class="num">17</span> 資料刪除與清除</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="zh-s1">
+      <h2><span class="section-num">1</span> 摘要說明（淺白語言）</h2>
+      <p>Floorly 是一款<strong>線下優先（Offline-first）</strong>的應用程式。您所建立的房屋、房間、照片、語音備忘錄、檢查清單和平面圖資料皆<strong>儲存於您的本機裝置中</strong>，<strong>絕不會</strong>上傳至我們的伺服器。</p>
+      <p>然而，Floorly 並<strong>非</strong>完全不傳輸任何資料。為了投放廣告、分析崩潰原因、評估使用量以及處理訂閱流程，本 App 整合了第三方軟體開發工具包（SDK），這些工具包會將特定的技術資料傳輸至裝置之外：</p>
+      <ul>
+        <li><strong>廣告 SDK</strong>（Google AdMob、AppLovin MAX）會在取得您的明確同意後，收集您的<strong>廣告識別碼</strong>以及裝置/廣告互動資料，用以投放廣告（包含<strong>個人化廣告</strong>）。</li>
+        <li><strong>Firebase Analytics、Crashlytics 和 Performance Monitoring</strong> 會向 Google 發送使用事件、崩潰/診斷資料以及效能追蹤數據。</li>
+        <li><strong>RevenueCat</strong> 以及 <strong>App Store / Google Play</strong> 會處理您的購買與訂閱狀態。</li>
+        <li>如果您是 Pro 專業版用戶並啟動了<strong>雲端備份</strong>，您的備份檔案將直接上傳至<strong>您自己的</strong> Google 雲端硬碟（Android）或 iCloud（iOS）— 而非我們。</li>
+      </ul>
+    </section>
+
+    <section class="section" id="zh-s2">
+      <h2><span class="section-num">2</span> 誰對您的資料負責（資料控制者）</h2>
+      <p><strong>資料控制者：</strong>İMAN HÜSEYNLİ，一名居住於土耳其安卡拉的獨立開發者（於本政策中稱為「Insep」、「我們」或「我們的」）。</p>
+      <p>由於 Floorly 完全在沒有後端伺服器的情況下運作，我們不會直接接收、儲存、存取或處理您在 App 內建立的物業資料、照片、語音備忘錄或任何其他使用者內容。我們直接接收到的唯一個人資料，僅限於您自願發送至我們支援電子郵件的溝通內容。</p>
+      <p>對於第 4 節中所列傳輸至第三方 SDK 的資料，我們僅在從應用程式收集和初始傳輸的階段擔任<strong>獨立資料控制者</strong>。一旦資料傳輸完成，各第三方 SDK 提供商將作為獨立控制者，依據其各自的隱私權政策（連結見第 5 節）處理這些資料。</p>
+    </section>
+
+    <section class="section" id="zh-s3">
+      <h2><span class="section-num">3</span> 僅儲存於您裝置之資料（本機專用）</h2>
+      <p>以下結構化資訊與媒體檔案是由您建立，並<strong>本機儲存</strong>於 App 安全的沙盒資料庫（SQLite/Drift）與私人媒體資料夾中。我們<strong>無法</strong>存取，亦不會收集或儲存這些資料：</p>
+      <ul>
+        <li><strong>物業紀錄：</strong>名稱/暱稱、地址、價格、交易類型（出售/出租）、房間配置、總/淨面積、樓層、屋齡、每月管理費、備忘錄、星級評等、訪問日期。</li>
+        <li><strong>物業定位座標</strong>（緯度/經度）— <strong>僅在</strong>您明確觸發定位擷取功能時才會執行（參閱第 6 節）。</li>
+        <li><strong>朝向方位：</strong>從裝置指南針本機擷取。</li>
+        <li><strong>房間：</strong>類型、自訂名稱、尺寸、修正參數、門窗、標籤、備忘錄。</li>
+        <li><strong>照片：</strong>由您附加（以二進位檔案本機儲存）。</li>
+        <li><strong>語音備忘錄：</strong>建立新語音備忘錄為 Pro 專業版功能。免費版用戶僅能播放現有語音。</li>
+        <li><strong>檢查清單、評分權重以及 2D 平面圖版面配置。</strong></li>
+      </ul>
+      <p>除非<strong>您</strong>主動選擇匯出資料、透過系統分享頁（第 8 節）分享，或啟用雲端備份（第 7 節），否則此類資料將一直保留在您的裝置上。解除安裝本 App 將會從裝置中永久刪除這些本機資料。</p>
+    </section>
+
+    <section class="section" id="zh-s4">
+      <h2><span class="section-num">4</span> 離開裝置之資料與法律依據</h2>
+      <p>我們將傳輸至裝置外的特定資料元素與其在 <strong>GDPR 第 6 條</strong>及 <strong>KVKK 第 5 條</strong>下的確切法律依據進行對照：</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>資料類型</th>
+              <th>目的</th>
+              <th>發送至</th>
+              <th>GDPR 法律依據</th>
+              <th>KVKK 法律依據</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>廣告識別碼（AAID/IDFA）、裝置與網路資訊、廣告互動</td>
+              <td>投放並評估個人化或關聯性廣告</td>
+              <td>Google AdMob, AppLovin MAX</td>
+              <td><span class="legal-basis">同意 (Art. 6(1)(a))</span></td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>App 使用事件、螢幕瀏覽、App 產生的分析用戶 ID</td>
+              <td>產品分析，用以監控並最佳化用戶體驗</td>
+              <td>Firebase Analytics (Google)</td>
+              <td><span class="legal-basis">同意 (Art. 6(1)(a))</span></td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>崩潰報告、堆疊追蹤、崩潰時的裝置硬體狀態</td>
+              <td>診斷並修復系統程式錯誤/崩潰問題</td>
+              <td>Firebase Crashlytics (Google)</td>
+              <td><span class="legal-basis">同意 (Art. 6(1)(a))</span></td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>效能追蹤數據（例如匯出時間）、網路延遲指標</td>
+              <td>監控應用程式內部的執行期效能</td>
+              <td>Firebase Performance Monitoring</td>
+              <td><span class="legal-basis">同意 (Art. 6(1)(a))</span></td>
+              <td><span class="legal-basis">Açık Rıza (Md. 5(1))</span></td>
+            </tr>
+            <tr>
+              <td>訂閱狀態、匿名化交易 ID、到期時間戳記</td>
+              <td>驗證並啟用 Pro 專業版功能</td>
+              <td>RevenueCat, Apple App Store, Google Play</td>
+              <td><span class="legal-basis">履行合約 (Art. 6(1)(b))</span></td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Md. 5(2)(c))</span></td>
+            </tr>
+            <tr>
+              <td>您的 Google 帳戶電子郵件地址</td>
+              <td>用於在雲端備份時顯示當前已驗證的帳戶；透過 Google 登入 SDK 在裝置本機處理。此資料為暫時性，絕不會傳輸或儲存於開發者伺服器。</td>
+              <td>本機裝置處理</td>
+              <td><span class="legal-basis">履行合約 (Art. 6(1)(b))</span></td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Md. 5(2)(c))</span></td>
+            </tr>
+            <tr>
+              <td>您的備份封存檔案（本機資料庫與媒體的複本）</td>
+              <td>由用戶發起的選擇性安全雲端備份與還原</td>
+              <td>您自己的 Google Drive 或 iCloud</td>
+              <td><span class="legal-basis">履行合約 (Art. 6(1)(b))</span></td>
+              <td><span class="legal-basis">Sözleşmenin İfası (Md. 5(2)(c))</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <p><strong>說明：</strong>我們絕不販售、出租或交易您的個人資料。</p>
+        <p><strong>RevenueCat：</strong>我們使用 RevenueCat 來跨裝置同步您的訂閱狀態並驗證您的 Pro 權限。RevenueCat 作為<strong>資料處理者</strong>代表我們處理匿名化交易元數據。我們不會收到或儲存任何原始支付識別碼（如信用卡號、銀行帳戶明細或完整帳單地址）。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s5">
+      <h2><span class="section-num">5</span> 第三方 SDK 與隱私權政策</h2>
+      <p>Floorly 整合了下列第三方營運 SDK。其資料處理行為受其各自之隱私權聲明約束：</p>
+      <div class="links-grid">
+        <div class="link-item"><span class="link-icon">📊</span><div><span class="link-name">Google AdMob (Google Mobile Ads)</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">📢</span><div><span class="link-name">AppLovin MAX (Ad Mediation)</span><a class="link-url" href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🔥</span><div><span class="link-name">Firebase (Analytics, Crashlytics, Performance Monitoring)</span><a class="link-url" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">💳</span><div><span class="link-name">RevenueCat</span><a class="link-url" href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🍎</span><div><span class="link-name">Apple App Store</span><a class="link-url" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">▶️</span><div><span class="link-name">Google Play Services</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s6">
+      <h2><span class="section-num">6</span> 權限與裝置資源存取</h2>
+      <p>Floorly 僅在您明確使用需要該權限的功能時，才會要求執行期裝置權限。您隨時可以透過作業系統設定撤銷權限。</p>
+      <div class="perm-grid">
+        <div class="perm-item"><span class="perm-icon">📷</span><div class="perm-name">相機</div><div class="perm-desc">用於直接在 App 內拍攝房間或物業照片。</div></div>
+        <div class="perm-item"><span class="perm-icon">🖼️</span><div class="perm-name">照片圖庫 / 媒體儲存</div><div class="perm-desc">用於選取並附加現有的物業照片。</div></div>
+        <div class="perm-item"><span class="perm-icon">🎙️</span><div class="perm-name">麥克風</div><div class="perm-desc">用於錄製房間語音備忘錄（Pro 功能）。音訊處理皆在本機進行。</div></div>
+        <div class="perm-item"><span class="perm-icon">📍</span><div class="perm-name">精確 / 概略定位</div><div class="perm-desc">專用於您點擊定位擷取按鈕時，擷取該物業之經緯度。絕不進行持續性的背景追蹤。</div></div>
+        <div class="perm-item"><span class="perm-icon">🧭</span><div class="perm-name">裝置感應器（指南針/動作）</div><div class="perm-desc">用於在本機擷取正面朝向方位。不需執行期權限提示。</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s7">
+      <h2><span class="section-num">7</span> 雲端備份與 Google API 有限使用披露</h2>
+      <p>如果您升級至 Pro 版並啟用雲端備份功能，本機備份保存檔將直接傳輸至您個人的雲端帳戶中。</p>
+      <ul>
+        <li><strong>Android (Google Drive)：</strong> 備份資料透過 <code>drive.appdata</code> 範圍限制在隱藏、隔離的私有應用程式資料資料夾中。此資料夾其他應用程式完全無法存取，不會顯示在您標準的 Google 雲端硬碟檢視畫面中，且開發者絕不會存取、讀取或彙整。</li>
+        <li><strong>iOS (iCloud)：</strong> 備份資料安全地儲存至與您 Apple ID 綁定的個人 iCloud 容器中。</li>
+      </ul>
+      <div class="callout">
+        <p><strong>符合 Google API 服務使用者資料政策（有限使用）：</strong> Floorly 使用並轉移從 Google API 接收到的資訊至任何其他 App 時，將遵循 <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API 服務使用者資料政策</a>，包括其<strong>有限使用要求</strong>。我們不會將 Google 使用者資料用於投放廣告、建立用戶設定檔、追蹤行為、訓練人工智慧（AI）模型，或在執行自動化個人備份儲存之外將資訊傳輸給第三方。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s8">
+      <h2><span class="section-num">8</span> 分享與匯出</h2>
+      <p>在執行 PDF/PNG 匯出或手動備份匯出時，應用程式會在本地產生檔案，並將其傳遞至原生系統的<strong>分享頁（share sheet）</strong>。該檔案僅會傳輸至完全由您選取的目的地端點（例如即時通訊軟體、電子郵件客戶端或外部雲端服務商）。此傳輸發生在我們的軟體層之外，受目的地服務商的條款約束。</p>
+    </section>
+
+    <section class="section" id="zh-s9">
+      <h2><span class="section-num">9</span> 廣告識別碼與退訂機制</h2>
+      <p>已確認年滿 18 歲（或以上）的免費版用戶可能會看到廣告。在取得您的同意後（透過 Google 使用者訊息平台 (UMP) / IAB TCF 對話框，以及在 iOS 上的 App 追蹤透明度提示收集），廣告網路可能會使用您裝置的硬體廣告識別碼（iOS 上的 IDFA，Android 上的 AAID）來評估廣告互動並個人化廣告。如果您拒絕同意，系統僅會向您顯示非個人化（關聯性）廣告。</p>
+      <ul>
+        <li><strong>同意架構：</strong> 我們實作標準化的 Google 使用者訊息平台 (UMP)，符合 IAB Europe 透明度與同意架構。位於 EWR/英國及土耳其的用戶可直接透過同意橫幅配置、限制或拒絕追蹤權限。</li>
+        <li><strong>作業系統級控制：</strong> 您可以透過以下路徑重設或完全退出個人化追蹤：
+          <ul>
+            <li>*iOS：* 設定 → 隱私權與安全性 → 追蹤 (App 追蹤透明度)。</li>
+            <li>*Android：* 設定 → Google → 廣告 → 刪除/重設廣告 ID。</li>
+          </ul>
+        </li>
+        <li><strong>Pro 專業版：</strong> 購買任何 Pro 訂閱會完全跳過並停用所有廣告 SDK 初始區塊，完全消除廣告追蹤。</li>
+      </ul>
+    </section>
+
+    <section class="section" id="zh-s10">
+      <h2><span class="section-num">10</span> 資料保留期限</h2>
+      <ul>
+        <li><strong>本機裝置資料：</strong> 無期限留存於應用程式沙盒內，直至您清除 App 資料、在 App 內手動刪除紀錄或解除安裝 Floorly。</li>
+        <li><strong>雲端備份：</strong> 完全由您管理；留存於您個人 Google 雲端硬碟或 iCloud 容器內，直至您將其刪除。</li>
+        <li><strong>遙測與崩潰分析：</strong> 根據標準 Firebase 保留參數，由 Google Firebase 保留最多 14 個月後自動刪除。</li>
+        <li><strong>財務收據：</strong> 交易狀態由 RevenueCat 和 App 商店依據財務保留法律安全記錄。</li>
+      </ul>
+    </section>
+
+    <section class="section" id="zh-s11">
+      <h2><span class="section-num">11</span> 您的權利與合規性說明</h2>
+      <h3>11.1 土耳其 KVKK 合規性 — 第 6698 號法律</h3>
+      <p>根據 KVKK 第 11 條，位於土耳其的用戶可透過 <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> 聯絡我們以行使以下權利：了解其個人資料是否正在被處理；若已被處理則要求提供相關資訊；了解處理目的及是否符合目的使用；了解資料在國內外傳輸的第三方；要求更正不完整或不正確的資料；在 KVKK 第 7 條規定的條件下要求刪除或銷毀個人資料；反對完全透過自動化系統處理並對其產生負面法律後果之行為。</p>
+      <p><strong>跨境資料傳輸（Yurt Dışına Veri Aktarımı）：</strong> 我們的整合基礎設施合作夥伴（Google Firebase, AdMob, AppLovin, RevenueCat）在土耳其共和國境外設有雲端基礎設施，因此需要將特定技術資料進行國際傳輸。此傳輸基於您在服務啟動前，透過 App 內同意管理平台提供的「明確同意（Açık Rıza，Art. 5(1))」。此外，我們透過遵守全球基礎設施合作夥伴提供的資料處理附錄（DPA）和標準契約條款（SCC），確保傳輸處於「適當保護（Uygun Güvenceler）」之下。</p>
+
+      <h3>11.2 歐盟 GDPR (EWR/UK) 合規性</h3>
+      <p>針對在歐洲經濟區（EEA）和英國境內營運的用戶，您擁有存取權（第 15 條）、更正權（第 16 條）、刪除權/被遺忘權（第 17 條）、限制處理權（第 18 條）、資料可攜權（第 20 條）及反對處理權（第 21 條）。</p>
+      <p>在 Insep 作為 GDPR 項下收集與即時傳輸 SDK 遙測資料之控制者的範圍內，我們的法律依據已於第 4 節中明確列出。若資料位於第三方（Google、AppLovin、RevenueCat）下游，您可以直接對其 exercise 您的權利，或聯絡我們協助。您有權向您常住國的歐盟監管機構（資料保護主管機關）提出申訴。</p>
+
+      <h3>11.3 美國 — 州隱私權（例如：加州 / CCPA-CPRA）</h3>
+      <p>Floorly 是一款小型、線下優先的應用程式，未達到觸發加州消費者隱私法（CCPA/CPRA）或其他美國州級隱私法的收入或量級門檻。儘管如此，在該類法律適用於您的範圍內：我們<strong>不會</strong>為了金錢販售您的個人資料。與廣告網路分享您的廣告識別碼以投放個人化廣告，在某些美國州法下可能被視為「販售」或「分享」。您隨時可以透過在 App 內的隱私/廣告對話框中拒絕同意，或利用第 9 節所述的裝置控制項來退出。</p>
+    </section>
+
+    <section class="section" id="zh-s12">
+      <h2><span class="section-num">12</span> 國際資料傳輸（非土耳其 / 非歐盟地區）</h2>
+      <p>由第三方 SDK 提供商處理的資料會傳輸至並儲存於位於您本國管轄區以外的伺服器，主要是美國。這些跨境傳輸透過適當的法律框架受到保護，包括執行歐盟委員會核准的標準契約條款（SCC），確保同等水平的資料保護。</p>
+    </section>
+
+    <section class="section" id="zh-s13">
+      <h2><span class="section-num">13</span> 兒童隱私保護</h2>
+      <p>Floorly 是為年滿 18 歲及以上的成年人設計與提供的。我們不會針對、行銷或故意收集任何未滿 18 歲者的個人資料。</p>
+      <p>在初始新手導引流程中，<strong>在任何廣告或分析 SDK 初始化之前</strong>，本 App 會呈現一個中立的年齡確認畫面。我們僅在裝置本機儲存一個單一的標記，用以記錄您是否確認自己已年滿 18 歲。<strong>我們不會收集或儲存您的出生日期。</strong></p>
+      <div class="callout callout-warn">
+        <p>如果使用者表示其未滿 18 歲：</p>
+        <ol>
+          <li>不會初始化任何廣告 SDK（Google AdMob、AppLovin MAX），亦不投放任何廣告。</li>
+          <li>不會存取或傳輸任何廣告識別碼（IDFA/AAID）。</li>
+          <li>Firebase Analytics 收集功能將被停用（執行 <code>setAnalyticsCollectionEnabled(false)</code>）並抑制行為追蹤。</li>
+          <li>App 的存取權限將限制為年滿 18 歲及以上的用戶。</li>
+        </ol>
+        <p>我們不會將任何關於表示未滿 18 歲之用戶的資料導向 AppLovin、Google AdMob、Firebase 或任何其他第三方 SDK 提供商。如果您是家長或法定監護人，且認為未成年人已透過 Floorly 提供了個人資料，請透過 <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> 與我們聯絡，我們將予以刪除。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s14">
+      <h2><span class="section-num">14</span> 資料安全機制</h2>
+      <p>本機應用程式檔案隔離在作業系統的應用程式沙盒內，享有作業系統層級啟用的原生全磁碟硬體加密、生物辨識存取限制以及密碼保護。在內部，SQLite/Drift 資料庫編譯層嚴格利用參數化查詢（Parameterized Query）編譯，從結構上消除了本機 SQL 注入（SQLi）漏洞的所有風險。所有由第三方 SDK 產生的網路流量皆強制執行傳輸層安全性協定（TLS/HTTPS），以保護傳輸中的資料免受攔截。</p>
+    </section>
+
+    <section class="section" id="zh-s15">
+      <h2><span class="section-num">15</span> 隱私權政策變更說明</h2>
+      <p>我們保留修訂本隱私權政策的權利，以配合應用程式的功能更新或法規變更。重大修訂將在變更生效前，透過 App 介面內顯著的通知標記，或透過我們 App Store 和 Google Play 商店資訊中的明確版本日誌向用戶發出訊號。您在修訂公布後繼續使用 Floorly，即代表您知悉更新後的條款。</p>
+    </section>
+
+    <section class="section" id="zh-s16">
+      <h2><span class="section-num">16</span> 監管聯絡資訊</h2>
+      <div class="contact-card">
+        <h3>Insep 資料保護窗口</h3>
+        <p><strong style="color:#fff">首席開發者：</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">適用於完整的資料查驗請求、隱私權申訴或執行法定資料存取權利。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s17">
+      <h2><span class="section-num">17</span> 資料刪除與 App 內資料清除機制</h2>
+      <p>由於 Floorly 採線下優先模式運作，且不將您的內容儲存在中央後端伺服器上，因此您對自身紀錄保有絕對控制權。您隨時可以透過在 App 介面內導覽至<strong>設定 &gt; 刪除我的資料</strong>，永久且不可逆地清除您所有的本機資料。</p>
+      <p>執行「刪除我的資料」流程將觸發完整的端到端清除程序：</p>
+      <ol>
+        <li>永久銷毀本機資料庫（SQLite/Drift），刪除所有儲存的物業、房間、評估模型、檢查清單和本機 App 配置。</li>
+        <li>清除 App 的本機私有沙盒目錄，完全刪除所有附加的房間照片和語音音訊檔。</li>
+        <li>自動捨棄/使記憶體狀態和揮發性遙測失效，確保過去的分析追蹤向量（Firebase Analytics ID）與未來的裝置活動完全脫鉤。</li>
+      </ol>
+      <p>如果您已透過 Google Drive 或 iCloud 啟用雲端備份，您可以透過導覽至<strong>備份與匯出 &gt; 刪除雲端備份</strong>，直接在 App 內斷開帳戶連結並清除所有儲存的備份檔案。此操作會觸發自動化 API 呼叫，從您的個人雲端儲存空間中永久刪除 Floorly 沙盒資料夾（<code>drive.appdata</code> 或 iCloud 容器）。或者，您也可以隨時透過 Google 帳戶安全性設定或 Apple ID 設定撤銷存取權限。</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">生效日期：2026 年 6 月 3 日</p>
+  </footer>
+</div>
+
+<div id="content-zh_Hans" style="display:none">
+
+  <header class="header">
+    <div class="header-badge">隐私政策</div>
+    <h1>Floorly <span>隐私政策</span></h1>
+    <div class="header-meta">
+      <span class="meta-chip">📅 生效日期：<strong>2026.06.03</strong></span>
+      <span class="meta-chip">📱 iOS & Android</span>
+      <span class="meta-chip">🌍 土耳其及国际市场</span>
+    </div>
+    <div class="callout">
+      <p><strong>数据控制者：</strong> İMAN HÜSEYNLİ（独立开发者）</p>
+      <p>📍 Ulubatlı Hasan Mah. — 土耳其安卡拉 &nbsp;·&nbsp; ✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main class="layout">
+
+    <nav class="toc" aria-label="目录">
+      <div class="toc-title">目录</div>
+      <ul class="toc-list">
+        <li><a href="#zh-s1"><span class="num">1</span> 摘要</a></li>
+        <li><a href="#zh-s2"><span class="num">2</span> 数据控制者</a></li>
+        <li><a href="#zh-s3"><span class="num">3</span> 仅限设备本地的数据</a></li>
+        <li><a href="#zh-s4"><span class="num">4</span> 离开设备的数据与法律依据</a></li>
+        <li><a href="#zh-s5"><span class="num">5</span> 第三方 SDK</a></li>
+        <li><a href="#zh-s6"><span class="num">6</span> 设备权限</a></li>
+        <li><a href="#zh-s7"><span class="num">7</span> 云端备份</a></li>
+        <li><a href="#zh-s8"><span class="num">8</span> 分享与导出</a></li>
+        <li><a href="#zh-s9"><span class="num">9</span> 广告标识符</a></li>
+        <li><a href="#zh-s10"><span class="num">10</span> 数据留存</a></li>
+        <li><a href="#zh-s11"><span class="num">11</span> 您的权利</a></li>
+        <li><a href="#zh-s12"><span class="num">12</span> 国际数据传输</a></li>
+        <li><a href="#zh-s13"><span class="num">13</span> 儿童隐私</a></li>
+        <li><a href="#zh-s14"><span class="num">14</span> 数据安全</a></li>
+        <li><a href="#zh-s15"><span class="num">15</span> 政策修订</a></li>
+        <li><a href="#zh-s16"><span class="num">16</span> 联系方式</a></li>
+        <li><a href="#zh-s17"><span class="num">17</span> 数据擦除</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="zh-s1">
+      <h2><span class="section-num">1</span> 摘要（通俗语言）</h2>
+      <p>Floorly 是一款<strong>本地优先（offline-first）</strong>的应用程序。您创建的房屋、房间、照片、语音备忘录、清单和户型图等数据均<strong>存储在您的设备本地</strong>，<strong>不会</strong>上传到我们的服务器。</p>
+      <p>然而，Floorly <strong>并非</strong>完全不传输任何数据。为了投放广告、分析应用崩溃、衡量使用情况和处理订阅，本应用集成了第三方 SDK，用于将特定的技术数据传输到设备之外：</p>
+      <ul>
+        <li><strong>广告 SDK</strong>（Google AdMob、AppLovin MAX）在取得您明确同意的前提下，收集您的广告标识符和设备/广告交互数据，用于投放包括个性化广告在内的广告内容。</li>
+        <li><strong>Firebase Analytics、Crashlytics 和 Performance Monitoring</strong> 向 Google 发送应用使用事件、崩溃/诊断数据以及性能追踪指标。</li>
+        <li><strong>RevenueCat</strong>、<strong>App Store</strong> 和 <strong>Google Play</strong> 处理您的购买与订阅状态。</li>
+        <li>如果您是 Pro 专业版用户并启用了<strong>云端备份</strong>，您的备份文件将直接上传至<strong>您自己的</strong> Google Drive（Android）或 iCloud（iOS）——而非我们的服务器。</li>
+      </ul>
+    </section>
+
+    <section class="section" id="zh-s2">
+      <h2><span class="section-num">2</span> 数据控制者</h2>
+      <p><strong>数据控制者：</strong> İMAN HÜSEYNLİ — 居住在土耳其安卡拉的独立开发者（以下称为“Insep”、“我们”或“我们的”）。</p>
+      <p>由于 Floorly 完全不依赖后端服务器运行，我们无法直接接收、存储、访问或处理您在应用内创建的房产数据、照片、语音备忘录或任何其他用户内容。我们直接收到的唯一个人数据仅限于您自愿发送至我们支持邮箱的沟通邮件。</p>
+    </section>
+
+    <section class="section" id="zh-s3">
+      <h2><span class="section-num">3</span> 仅存储在您设备上的数据</h2>
+      <p>以下结构化信息和媒体文件由您创建并存储在应用安全的 SQLite/Drift 本地数据库及私有媒体文件夹内。我们无法访问、收集或存储这些数据：</p>
+      <ul>
+        <li><strong>房产记录：</strong> 名称/别名、地址、价格、交易类型（出售/出租）、房间配置、建筑/套内面积、楼层、建筑工龄、物业费、备注、星级评定、看房日期。</li>
+        <li><strong>位置坐标</strong> —— 仅在您明确触发位置获取功能时记录。</li>
+        <li><strong>朝向</strong> —— 通过设备指南针在本地获取。</li>
+        <li><strong>房间：</strong> 类型、自定义名称、尺寸、修饰符、门窗、标签、备注。</li>
+        <li><strong>照片</strong>（作为二进制文件本地存储）。</li>
+        <li><strong>语音备忘录</strong>（Pro 专业版功能）。</li>
+        <li><strong>检查清单、评分权重和 2D 户型图布局。</strong></li>
+      </ul>
+      <p>除非您主动选择导出、分享或启用云端备份，否则这些数据将保留在您的设备中。卸载本应用将永久删除这些本地数据。</p>
+    </section>
+
+    <section class="section" id="zh-s4">
+      <h2><span class="section-num">4</span> 离开设备的数据与法律依据</h2>
+      <p>我们根据 <strong>GDPR（欧盟通用数据保护条例）第 6 条</strong> 将传输至设备外的特定数据与对应法律依据进行了归类：</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>数据类型</th>
+              <th>处理目的</th>
+              <th>发送至</th>
+              <th>法律依据（GDPR）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>广告标识符（AAID/IDFA）、设备及网络信息、广告互动数据</td>
+              <td>投放和衡量个性化或上下文广告</td>
+              <td>Google AdMob, AppLovin MAX</td>
+              <td><span class="legal-basis">同意（第 6(1)(a) 条）</span></td>
+            </tr>
+            <tr>
+              <td>应用使用事件、屏幕浏览、应用生成的分析用户 ID</td>
+              <td>产品分析以优化用户体验</td>
+              <td>Firebase Analytics (Google)</td>
+              <td><span class="legal-basis">同意（第 6(1)(a) 条）</span></td>
+            </tr>
+            <tr>
+              <td>崩溃报告、堆栈轨迹、发生崩溃时的设备硬件状态</td>
+              <td>诊断并修复系统错误与崩溃</td>
+              <td>Firebase Crashlytics (Google)</td>
+              <td><span class="legal-basis">同意（第 6(1)(a) 条）</span></td>
+            </tr>
+            <tr>
+              <td>性能追踪、网络延迟指标</td>
+              <td>监控应用运行时的内部性能</td>
+              <td>Firebase Performance Monitoring</td>
+              <td><span class="legal-basis">同意（第 6(1)(a) 条）</span></td>
+            </tr>
+            <tr>
+              <td>订阅状态、匿名交易 ID、过期时间戳</td>
+              <td>验证并激活 Pro 专业版功能</td>
+              <td>RevenueCat, App Store, Google Play</td>
+              <td><span class="legal-basis">履行合同（第 6(1)(b) 条）</span></td>
+            </tr>
+            <tr>
+              <td>备份存档文件（本地数据库及媒体副本）</td>
+              <td>可选的用户自发云端备份与恢复</td>
+              <td>您自己的 Google Drive 或 iCloud</td>
+              <td><span class="legal-basis">履行合同（第 6(1)(b) 条）</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <p><strong>注：</strong> 我们不会出售、出租或交易您的个人数据。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s5">
+      <h2><span class="section-num">5</span> 第三方 SDK 及其隐私政策</h2>
+      <div class="links-grid">
+        <div class="link-item"><span class="link-icon">📊</span><div><span class="link-name">Google AdMob</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">📢</span><div><span class="link-name">AppLovin MAX</span><a class="link-url" href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🔥</span><div><span class="link-name">Firebase (Analytics, Crashlytics, Performance)</span><a class="link-url" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">💳</span><div><span class="link-name">RevenueCat</span><a class="link-url" href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">🍎</span><div><span class="link-name">Apple App Store</span><a class="link-url" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></div></div>
+        <div class="link-item"><span class="link-icon">▶️</span><div><span class="link-name">Google Play Services</span><a class="link-url" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s6">
+      <h2><span class="section-num">6</span> 权限与设备资源访问</h2>
+      <div class="perm-grid">
+        <div class="perm-item"><span class="perm-icon">📷</span><div class="perm-name">相机</div><div class="perm-desc">用于在应用内直接拍摄房间或房产照片。</div></div>
+        <div class="perm-item"><span class="perm-icon">🖼️</span><div class="perm-name">照片库</div><div class="perm-desc">用于选择并添加现有的房产照片。</div></div>
+        <div class="perm-item"><span class="perm-icon">🎙️</span><div class="perm-name">麦克风</div><div class="perm-desc">用于录制房间语音备忘录（Pro 功能）。音频处理完全在本地进行。</div></div>
+        <div class="perm-item"><span class="perm-icon">📍</span><div class="perm-name">地理位置</div><div class="perm-desc">仅在您点击位置获取按钮时记录经纬度。无持续的后台追踪。</div></div>
+        <div class="perm-item"><span class="perm-icon">🧭</span><div class="perm-name">设备传感器</div><div class="perm-desc">利用指南针在本地获取房屋朝向。无需运行时弹窗权限。</div></div>
+      </div>
+      <p>您可以随时通过操作系统设置撤销已授予 circular 的任何权限。</p>
+    </section>
+
+    <section class="section" id="zh-s7">
+      <h2><span class="section-num">7</span> 云端备份与 Google API 有限使用披露</h2>
+      <p>如果您升级到 Pro 并启用云端备份，本地备份文件将直接传输到您的个人云账户。</p>
+      <ul>
+        <li><strong>Android (Google Drive)：</strong> 备份数据严格限制在通过 <code>drive.appdata</code> 作用域隔离的隐藏私有应用数据文件夹中。其他应用无法访问该文件夹，它在您的标准云端硬盘视图中也不可见。</li>
+        <li><strong>iOS (iCloud)：</strong> 备份数据将安全地保存至与您的 Apple ID 绑定的个人 iCloud 容器中。</li>
+      </ul>
+      <div class="callout">
+        <p><strong>符合 Google API 服务用户数据政策（有限使用要求）：</strong> Floorly 对从 Google API 接收的信息的使用和传输将遵循《Google API 服务用户数据政策》，包括其“有限使用”要求。我们不会将 Google 用户数据用于投放广告、构建用户画像或传输给第三方。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s8">
+      <h2><span class="section-num">8</span> 分享与导出</h2>
+      <p>当执行 PDF/PNG 导出或手动备份导出时，应用会在本地生成文件并将其传递给系统的<strong>原生分享菜单（share sheet）</strong>。该文件仅会传输至您完全自选的目的地。此传输发生在我们软件层之外。</p>
+    </section>
+
+    <section class="section" id="zh-s9">
+      <h2><span class="section-num">9</span> 广告标识符与拒绝机制</h2>
+      <p>确认年满 18 岁及以上的免费层用户可能会看到广告。在取得您同意的前提下（通过 Google UMP / IAB TCF 弹窗以及 iOS 上的 ATT 提示进行收集），广告网络可能会使用您设备的广告标识符（IDFA/AAID）来衡量广告互动并定制个性化广告。如果您拒绝同意，则仅向您展示非个性化（上下文相关）的广告。</p>
+      <ul>
+        <li><strong>同意管理框架：</strong> 我们采用了符合 IAB Europe TCF 标准的 Google UMP 框架。</li>
+        <li><strong>系统级控制：</strong> 您可以通过以下路径重置或完全关闭广告追踪：
+          <ul>
+            <li><em>iOS：</em> 设置 → 隐私与安全性 → 跟踪</li>
+            <li><em>Android：</em> 设置 → Google → 广告 → 重置/删除广告 ID</li>
+          </ul>
+        </li>
+        <li><strong>Pro 专业版：</strong> 购买任何 Pro 订阅将完全跳过并停用所有广告 SDK 的初始化，从而彻底消除广告追踪。</li>
+      </ul>
+    </section>
+
+    <section class="section" id="zh-s10">
+      <h2><span class="section-num">10</span> 数据留存</h2>
+      <ul>
+        <li><strong>设备端数据：</strong> 无期限保留在应用内，直到您清除应用数据、手动删除记录或卸载 Floorly。</li>
+        <li><strong>云端备份：</strong> 完全由您管理；保留在您的个人 Google Drive 或 iCloud 中，直至您将其删除。</li>
+        <li><strong>遥测与崩溃分析：</strong> 根据标准留存参数，由 Google Firebase 保留最多 14 个月，到期后自动删除。</li>
+        <li><strong>财务凭证：</strong> 交易状态由 RevenueCat 和应用商店根据财务留存法律安全记录。</li>
+      </ul>
+    </section>
+
+    <section class="section" id="zh-s11">
+      <h2><span class="section-num">11</span> 您的权利与法规合规性</h2>
+      <h3>11.1 土耳其 KVKK（第 6698 号法律）合规性</h3>
+      <p>根据 KVKK 第 11 条，位于土耳其的用户可随时通过 <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> 联系我们以：了解个人数据是否被处理；请求相关信息；了解处理目的；知晓境内外数据传输的第三方；要求更正、擦除或销毁数据；以及反对纯自动化处理。</p>
+      <h3>11.2 欧盟 GDPR 合规性</h3>
+      <p>对于在欧洲经济区（EEA）和英国境内使用本应用的用户，您拥有访问权（第15条）、更正权（第16条）、擦除/被遗忘权（第17条）、限制处理权（第18条）、数据可携权（第20条）及反对权（第21条）。您有权向您居住地的数据保护监管机构提出申诉。</p>
+      <h3>11.3 美国州级隐私权（如 CCPA/CPRA）</h3>
+      <p>Floorly 属于本地优先的轻量应用，未达到触发 CCPA/CPRA 等美国州级隐私法的收入或数据量阈值。尽管如此，我们绝不会为获取商业利益而出售您的个人数据。</p>
+    </section>
+
+    <section class="section" id="zh-s12">
+      <h2><span class="section-num">12</span> 国际数据传输</h2>
+      <p>由第三方 SDK 提供商处理的数据会被传输至主要位于美国境内的服务器。此类跨国传输通过执行欧盟委员会批准的《标准合同条款》（SCCs）受到保护，以确保护航等同的数据保护水平。</p>
+    </section>
+
+    <section class="section" id="zh-s13">
+      <h2><span class="section-num">13</span> 儿童隐私</h2>
+      <p>Floorly 专为 18 岁及以上的成年人设计。我们不会故意收集或要求未满 18 岁用户的个人数据。</p>
+      <div class="callout callout-warn">
+        <p>如果用户指示其未满 18 岁：应用将不初始化任何广告 SDK、不访问广告标识符、禁用 Firebase Analytics 数据收集，并限制对应用的访问。</p>
+        <p>如果您是家长或监护人，并认为未成年人通过 Floorly 提供了个人数据，请通过 <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a> 与我们联系，我们将予以删除。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s14">
+      <h2><span class="section-num">14</span> 数据安全</h2>
+      <p>本地应用文件在操作系统的沙盒保护下相互隔离，得益于系统层面的原生全盘硬件加密和访问密码保护。在应用内部，SQLite/Drift 数据库抽象层严格使用参数化查询编译，从根本上消除了本地 SQL 注入（SQLi）漏洞。第三方 SDK 生成的所有网络流量均强制执行 TLS/HTTPS 协议，以防止传输中被截获。</p>
+    </section>
+
+    <section class="section" id="zh-s15">
+      <h2><span class="section-num">15</span> 隐私政策的修订</h2>
+      <p>重大修订将在变更生效前通过应用内显著的通知标记或通过 App Store 和 Google Play 商店的版本日志向用户进行公示。</p>
+    </section>
+
+    <section class="section" id="zh-s16">
+      <h2><span class="section-num">16</span> 监管联系信息</h2>
+      <div class="contact-card">
+        <h3>Insep 数据保护处</h3>
+        <p><strong style="color:#fff">主开发者：</strong> İMAN HÜSEYNLİ</p>
+        <p>✉️ <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+        <p style="margin-top:10px;font-size:13px;">用于数据验证请求、隐私投诉或行使法定数据访问权。</p>
+      </div>
+    </section>
+
+    <section class="section" id="zh-s17">
+      <h2><span class="section-num">17</span> 数据擦除与应用内数据删除</h2>
+      <p>由于 Floorly 采用本地优先模式，您可以随时通过应用内的 <strong>设置 → 删除我的数据</strong> 永久且不可逆地清除所有本地记录。该操作将触发完全清除程序：</p>
+      <ol>
+        <li>永久销毁本地数据库（SQLite/Drift），删除所有房产、房间、检查清单及本地应用配置。</li>
+        <li>清空应用本地私有沙盒目录，彻底删除所有附加的房产照片和语音备忘录。</li>
+        <li>自动重置内存状态与易失性遥测，确保过往的分析追踪向量（Firebase Analytics ID）与未来的设备活动完全脱钩。</li>
+      </ol>
+      <p>如果您启用了云端备份，您可以通过 <strong>备份与导出 → 删除云端备份</strong> 移除存储在 Google Drive 或 iCloud 中的备份文件夹，或者随时通过您的 Google 账户安全设置或 Apple ID 设置撤销访问权限。</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 İMAN HÜSEYNLİ · Floorly · <a href="mailto:insep9597@gmail.com">insep9597@gmail.com</a></p>
+    <p style="margin-top:6px;">生效日期：2026.06.03</p>
+  </footer>
+</div>
+
+<script>
+  const LANGS = ['en', 'tr', 'es', 'de', 'ru', 'zh_Hant', 'zh_Hans'];
+
+  function setLang(lang) {
+    LANGS.forEach(l => {
+      const el = document.getElementById('content-' + l);
+      if (el) el.style.display = (l === lang) ? '' : 'none';
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    document.documentElement.lang = lang;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    try { localStorage.setItem('floorly-pp-lang', lang); } catch(e) {}
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    document.getElementById('themeBtn').textContent = isDark ? '🌙' : '☀️';
+    try { localStorage.setItem('floorly-pp-theme', next); } catch(e) {}
+    }
+
+  try {
+    const savedTheme = localStorage.getItem('floorly-pp-theme') || 'dark';
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('themeBtn');
+      if (btn) btn.textContent = '☀️';
+      });
+    }
+  } catch(e) {}
+
+  try {
+    const savedLang = localStorage.getItem('floorly-pp-lang') || 'en';
+    if (LANGS.includes(savedLang)) setLang(savedLang);
+  } catch(e) {}
+</script>
+
+</body>
+</html>
